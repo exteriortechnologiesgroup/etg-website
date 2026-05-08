@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products — Premium Cladding Lines | ETG</title>
+<meta name="description" content="Discover top-quality exterior wall cladding products from trusted Canadian suppliers. Alpolic, Kalzip, elZinc, EPIC Metals, Radius Track, TAC Spacer, ForMe Design, Favemanc Terracotta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300&family=Barlow:wght@300;400;500&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+<style>
+/* Service support strip */
+.service-support {
+  background: var(--ink);
+  padding: 56px 48px;
+  border-bottom: 1px solid var(--rule);
+}
+.support-title {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: rgba(240,237,232,.5);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.support-item {
+  text-align: center;
+  padding: 16px;
+  border-right: 1px solid rgba(240,237,232,.08);
+}
+.support-item:last-child { border-right: none; }
+.support-item-icon {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 200;
+  font-size: 32px;
+  color: var(--red);
+  margin-bottom: 10px;
+  line-height: 1;
+  font-style: italic;
+}
+.support-item-text {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9px;
+  color: rgba(240,237,232,.65);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+@media (max-width: 900px) {
+  .support-grid { grid-template-columns: repeat(2,1fr); }
+  .support-item { border-right: none; border-bottom: 1px solid rgba(240,237,232,.08); padding: 14px; }
+  .service-support { padding: 40px 24px; }
+}
+
+/* Product list */
+.products-list {
+  background: var(--white);
+  border-bottom: 1px solid var(--rule);
+}
+.product-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 1.4fr;
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none;
+  background: var(--white);
+  transition: background .25s;
+  align-items: stretch;
+  min-height: 280px;
+}
+.product-row:last-child { border-bottom: none; }
+.product-row:hover { background: var(--bg); }
+.product-row-num {
+  background: var(--ink);
+  color: rgba(240,237,232,.55);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 28px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  letter-spacing: .12em;
+  transition: background .25s, color .25s;
+}
+.product-row:hover .product-row-num { background: var(--red); color: var(--white); }
+.product-row-img {
+  overflow: hidden;
+  background: var(--bg2);
+  border-right: 1px solid var(--rule);
+}
+.product-row-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: saturate(.85) contrast(1.05);
+  transition: transform .8s ease;
+}
+.product-row:hover .product-row-img img { transform: scale(1.04); }
+.product-row-content {
+  padding: 36px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.product-row-tag {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: var(--red);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.product-row-logo {
+  height: 36px;
+  margin-bottom: 18px;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+}
+.product-row-logo svg { height: 100%; width: auto; max-width: 220px; }
+.product-row-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 200;
+  font-size: 34px;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+.product-row-name em { font-style: italic; color: var(--red); font-weight: 200; }
+.product-row-desc {
+  font-size: 14px;
+  color: var(--ink3);
+  line-height: 1.78;
+  max-width: 540px;
+  margin-bottom: 18px;
+}
+.product-row-arrow {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--red);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap .25s;
+}
+.product-row:hover .product-row-arrow { gap: 16px; }
+
+@media (max-width: 1024px) {
+  .product-row { grid-template-columns: 1fr; min-height: 0; }
+  .product-row-num { padding: 14px; }
+  .product-row-img { aspect-ratio: 16/10; border-right: none; border-bottom: 1px solid var(--rule); }
+  .product-row-content { padding: 32px 24px; }
+  .product-row-name { font-size: 28px; }
+}
+</style>
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="cur-ring"></div><nav class="site-nav">
+  <div class="nav-left">
+    <a href="index.html" class="nav-logo">Exterior Technologies Group</a>
+    <div class="nav-logo-tag">EST. 2004 — CANADA<br>BLDG. ENVELOPE SPECIALISTS</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="products.html" class="active">Products</a></li>
+    <li><a href="news.html">News</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Contact Us</a>
+  <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<!-- BANNER -->
+<section class="page-banner">
+  <div>
+    <div class="page-banner-crumbs"><a href="index.html">Home</a> / <span>Products</span></div>
+    <p class="s-eyebrow">Product Lines</p>
+    <h1 class="h-large">Trusted<br><em>Leading</em><br><span class="outline">Brands</span></h1>
+  </div>
+  <div class="page-banner-meta">
+    Discover our range of high-performance exterior wall cladding products designed for durability and sustainability. Each product line is supported by local technical expertise, specification consultation, and field review across Canada.
+  </div>
+</section>
+
+<!-- SERVICE SUPPORT BAR -->
+<div class="service-support">
+  <div class="support-title">// FOR EVERY PRODUCT WE PROVIDE</div>
+  <div class="support-grid">
+    <div class="support-item"><div class="support-item-icon">01</div><div class="support-item-text">Local Technical<br>Support</div></div>
+    <div class="support-item"><div class="support-item-icon">02</div><div class="support-item-text">Specification<br>Consultation</div></div>
+    <div class="support-item"><div class="support-item-icon">03</div><div class="support-item-text">Literature<br>&amp; Samples</div></div>
+    <div class="support-item"><div class="support-item-icon">04</div><div class="support-item-text">Value<br>Engineering</div></div>
+    <div class="support-item"><div class="support-item-icon">05</div><div class="support-item-text">Custom<br>Detailing</div></div>
+    <div class="support-item"><div class="support-item-icon">06</div><div class="support-item-text">Field<br>Review</div></div>
+  </div>
+</div>
+
+<!-- PRODUCTS LIST -->
+<section class="products-list">
+
+  <a href="products/alpolic-materials.html" class="product-row reveal">
+    <div class="product-row-num">PRD-01</div>
+    <div class="product-row-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272783_edit.webp" alt="Alpolic — Moody Center"></div>
+    <div class="product-row-content">
+      <div class="product-row-tag">// ACM-MCM / Aluminum Composite</div>
+      <div class="product-row-logo"><object type="image/svg+xml" data="assets/svg/logo-alpolic.svg" aria-label="Alpolic Materials"></object></div>
+      <p class="product-row-desc">Aluminum and metal composite materials taken to a level that is nothing short of visionary. Versatile, durable, and architecturally expressive — with finishes spanning Matte Series, Timber Series, Pigmento Zinc, and graffiti-resistant coatings.</p>
+      <span class="product-row-arrow">View Product →</span>
+    </div>
+  </a>
+  <a href="products/kalzip.html" class="product-row reveal">
+    <div class="product-row-num">PRD-02</div>
+    <div class="product-row-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272458_edit.webp" alt="Kalzip — TTC York"></div>
+    <div class="product-row-content">
+      <div class="product-row-tag">// STANDING SEAM / Aluminum</div>
+      <div class="product-row-logo"><object type="image/svg+xml" data="assets/svg/logo-kalzip.svg" aria-label="Kalzip"></object></div>
+      <p class="product-row-desc">The world-leading standing seam roofing and wall cladding system. Over 1.3 billion square feet have been installed worldwide. Innovative, long-lasting, high-performance building envelope solutions using aluminum profiled panels and inspiring metal finishes.</p>
+      <span class="product-row-arrow">View Product →</span>
+    </div>
+  </a>
+  <a href="products/elzinc.html" class="product-row reveal">
+    <div class="product-row-num">PRD-03</div>
+    <div class="product-row-img"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=900&q=80" alt="elZinc cladding"></div>
+    <div class="product-row-content">
+      <div class="product-row-tag">// ZINC / Roofing &amp; Cladding</div>
+      <div class="product-row-logo"><object type="image/svg+xml" data="assets/svg/logo-elzinc.svg" aria-label="elZinc"></object></div>
+      <p class="product-row-desc">A premium product offered in over 40 countries. Zinc's impermeability makes it impervious to freeze-thaw cycles that damage other roofing materials. Available in Alkimi pre-weathered finishes and Rainbow coloured variants.</p>
+      <span class="product-row-arrow">View Product →</span>
+    </div>
+  </a>
+  <a href="products/tac-thermal-spacer.html" class="product-row reveal">
+    <div class="product-row-num">PRD-04</div>
+    <div class="product-row-img"><img src="https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?w=900&q=80" alt="TAC Thermal Spacer"></div>
+    <div class="product-row-content">
+      <div class="product-row-tag">// THERMAL / Rainscreen</div>
+      <div class="product-row-logo"><object type="image/svg+xml" data="assets/svg/logo-tac.svg" aria-label="TAC Thermal Spacer"></object></div>
+      <p class="product-row-desc">An affordable solution to effectively reduce thermal bridging by at least 97% for rainscreen exterior wall systems. Three configurations: fiberglass, galvanized steel, and clip with girt — building code compliant.</p>
+      <span class="product-row-arrow">View Product →</span>
+    </div>
+  </a>
+  <a href="products/epic-metals.html" class="product-row reveal">
+    <div class="product-row-num">PRD-05</div>
+    <div class="product-row-img"><img src="https://images.unsplash.com/photo-1503328427499-d92d1ac3d174?w=900&q=80" alt="EPIC Metals deck"></div>
+    <div class="product-row-content">
+      <div class="product-row-tag">// DECK SYSTEMS / Architectural</div>
+      <div class="product-row-logo"><object type="image/svg+xml" data="assets/svg/logo-epic.svg" aria-label="EPIC Metals"></object></div>
+      <p class="product-row-desc">For more than 45 years, EPIC Metals has been practising the Art and Science of structural deck engineering. Wideck and Epicore systems enable designers to create unique, visually open public spaces with exposed structural deck ceiling appearances.</p>
+      <span class="product-row-arrow">View Product →</span>
+    </div>
+  </a>
+  <a href="products/radius-track.html" class="product-row reveal">
+    <div class="product-row-num">PRD-06</div>
+    <div class="product-row-img"><img src="https://images.unsplash.com/photo-1567521464027-f127ff144326?w=900&q=80" alt="Radius Track curved framing"></div>
+    <div class="product-row-content">
+      <div class="product-row-tag">// FRAMING / Curved &amp; Complex</div>
+      <div class="product-row-logo"><object type="image/svg+xml" data="assets/svg/logo-radius.svg" aria-label="Radius Track"></object></div>
+      <p class="product-row-desc">The premier provider of cold-formed steel framing solutions for curved and complex surfaces. Domes, curved ceilings, walls, façades, and other complex surfaces. Curved-Right custom framing, BIM/3D modeling, and unitized solutions.</p>
+      <span class="product-row-arrow">View Product →</span>
+    </div>
+  </a>
+  <a href="products/forme-design.html" class="product-row reveal">
+    <div class="product-row-num">PRD-07</div>
+    <div class="product-row-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272785_edit.webp" alt="ForMe Design soffits"></div>
+    <div class="product-row-content">
+      <div class="product-row-tag">// CLADDING / Italian Aluminum</div>
+      <div class="product-row-logo"><object type="image/svg+xml" data="assets/svg/logo-forme.svg" aria-label="ForMe Design"></object></div>
+      <p class="product-row-desc">Italian-crafted SKIN cladding and BATTENS made from 100% extruded aluminum. World-class powder coating and woodgrain solutions — Powder on Powder, Sublimation, HD printing — with 15-year warranty and 50+ years of industry expertise.</p>
+      <span class="product-row-arrow">View Product →</span>
+    </div>
+  </a>
+  <a href="products/terracotta-favemanc.html" class="product-row reveal">
+    <div class="product-row-num">PRD-08</div>
+    <div class="product-row-img"><img src="https://images.unsplash.com/photo-1518562180175-34a163b1a9a6?w=900&q=80" alt="Terracotta Favemanc"></div>
+    <div class="product-row-content">
+      <div class="product-row-tag">// CERAMIC / Ventilated Façade</div>
+      <div class="product-row-logo"><object type="image/svg+xml" data="assets/svg/logo-favemanc.svg" aria-label="Terracotta Favemanc"></object></div>
+      <p class="product-row-desc">Ventilated ceramic façade systems — a leading solution in terms of energy efficiency, innovative design, and advanced functionality. Handcrafted terracotta cladding bringing warmth, texture, and timeless materiality to contemporary architecture.</p>
+      <span class="product-row-arrow">View Product →</span>
+    </div>
+  </a>
+</section>
+
+<!-- CTA -->
+<section style="background: var(--red); padding: 72px 48px; text-align: center; border-bottom: 1px solid var(--rule);">
+  <div style="max-width: 720px; margin: 0 auto;">
+    <h2 class="s-title" style="color: var(--bg); margin-bottom: 20px;">Need help <em style="color:var(--bg); font-style:italic;">specifying</em><br>the right product?</h2>
+    <p style="color: rgba(240,237,232,.85); margin-bottom: 32px; font-size: 14px; line-height: 1.78;">Our team provides specification consultation and design assist for every product line we represent.</p>
+    <a href="contact.html" class="btn-solid-light" style="background: var(--bg); color: var(--ink);">Talk to a Specialist →</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">Exterior Technologies Group</div>
+      <div class="footer-brand-tag">EST. 2004 — CANADA<br>BLDG. ENVELOPE SPECIALISTS</div>
+      <p class="footer-brand-body">Building envelope specialists. Premium exterior cladding systems for architects, specification writers, and contractors across Canada.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">// Site</div>
+      <ul class="footer-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">// Products</div>
+      <ul class="footer-list">
+        <li><a href="products/alpolic-materials.html">Alpolic</a></li>
+        <li><a href="products/kalzip.html">Kalzip</a></li>
+        <li><a href="products/elzinc.html">elZinc</a></li>
+        <li><a href="products/epic-metals.html">EPIC Metals</a></li>
+        <li><a href="products/radius-track.html">Radius Track</a></li>
+        <li><a href="products/tac-thermal-spacer.html">TAC Spacer</a></li>
+        <li><a href="products/forme-design.html">ForMe Design</a></li>
+        <li><a href="products/terracotta-favemanc.html">Favemanc</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">// Contact</div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-label">Phone</div>
+        <div class="footer-contact-value">1 (844) 240-0452</div>
+      </div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-label">Email</div>
+        <div class="footer-contact-value">info@etgcc.com</div>
+      </div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-label">Service Area</div>
+        <div class="footer-contact-value">Canada-wide</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 EXTERIOR TECHNOLOGIES GROUP. ALL RIGHTS RESERVED.</div>
+    <ul class="footer-policy">
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Terms</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

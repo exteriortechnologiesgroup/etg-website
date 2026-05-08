@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" preserveAspectRatio="xMinYMid meet">
+  <text x="0" y="29" font-family="Barlow Condensed, sans-serif" font-weight="600" font-size="28" letter-spacing="2" font-style="italic" fill="currentColor">ForMe</text>
+  <text x="80" y="29" font-family="Barlow Condensed, sans-serif" font-weight="300" font-size="14" letter-spacing="2" fill="currentColor" opacity=".7">DESIGN</text>
+  <line x1="0" y1="35" x2="200" y2="35" stroke="currentColor" stroke-width="0.5" opacity=".3"/>
+</svg>

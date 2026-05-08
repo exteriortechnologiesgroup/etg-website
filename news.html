@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News &amp; Insights | ETG</title>
+<meta name="description" content="Latest news, project features, product updates, and technical insights from Exterior Technologies Group across Canada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300&family=Barlow:wght@300;400;500&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+<style>
+/* Featured article */
+.news-featured {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  background: var(--white);
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none;
+  transition: background .25s;
+}
+.news-featured:hover { background: var(--bg); }
+.news-featured-img {
+  position: relative;
+  overflow: hidden;
+  min-height: 480px;
+}
+.news-featured-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: saturate(.9);
+  transition: transform 1.2s ease;
+}
+.news-featured:hover .news-featured-img img { transform: scale(1.04); }
+.news-featured-tag {
+  position: absolute;
+  top: 24px; left: 24px;
+  background: var(--red);
+  color: var(--white);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  z-index: 5;
+}
+.news-featured-content {
+  padding: 64px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid var(--rule);
+}
+.news-featured-cat {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: var(--red);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.news-featured-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 200;
+  font-size: clamp(34px, 4vw, 56px);
+  text-transform: uppercase;
+  line-height: .98;
+  letter-spacing: -.005em;
+  color: var(--ink);
+  margin-bottom: 22px;
+}
+.news-featured-excerpt {
+  font-size: 14.5px;
+  color: var(--ink2);
+  line-height: 1.78;
+  max-width: 480px;
+  margin-bottom: 28px;
+}
+.news-featured-meta {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: var(--ink3);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-top: auto;
+}
+.news-featured-arrow { color: var(--red); display: flex; gap: 6px; align-items: center; transition: gap .25s; }
+.news-featured:hover .news-featured-arrow { gap: 14px; }
+@media (max-width: 1024px) {
+  .news-featured { grid-template-columns: 1fr; }
+  .news-featured-img { min-height: 320px; }
+  .news-featured-content { padding: 48px 24px; border-left: none; border-top: 1px solid var(--rule); }
+}
+
+/* News grid */
+.news-section { background: var(--bg); padding: 72px 0 0; border-bottom: 1px solid var(--rule); }
+.news-section-head {
+  max-width: 1300px;
+  margin: 0 auto 40px;
+  padding: 0 48px;
+}
+.news-list-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--rule);
+}
+.news-cell {
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none;
+  display: block;
+  background: var(--bg);
+  transition: background .25s;
+  overflow: hidden;
+}
+.news-cell:nth-child(3n) { border-right: none; }
+.news-cell:hover { background: var(--white); }
+.news-cell-img {
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
+.news-cell-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: saturate(.85);
+  transition: transform .8s ease;
+}
+.news-cell:hover img { transform: scale(1.04); }
+.news-cell-body { padding: 26px 28px 32px; }
+.news-cell-cat {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9px;
+  color: var(--red);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.news-cell-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--ink);
+  line-height: 1.18;
+  margin-bottom: 12px;
+  transition: color .2s;
+}
+.news-cell:hover .news-cell-title { color: var(--red); }
+.news-cell-excerpt { font-size: 12.5px; color: var(--ink3); line-height: 1.7; margin-bottom: 14px; }
+.news-cell-date {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9px;
+  color: var(--ink3);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+@media (max-width: 1024px) {
+  .news-list-grid { grid-template-columns: repeat(2, 1fr); }
+  .news-cell:nth-child(3n) { border-right: 1px solid var(--rule); }
+  .news-cell:nth-child(2n) { border-right: none; }
+  .news-section-head { padding: 0 24px; }
+}
+@media (max-width: 600px) {
+  .news-list-grid { grid-template-columns: 1fr; }
+  .news-cell { border-right: none !important; }
+}
+</style>
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="cur-ring"></div><nav class="site-nav">
+  <div class="nav-left">
+    <a href="index.html" class="nav-logo">Exterior Technologies Group</a>
+    <div class="nav-logo-tag">EST. 2004 — CANADA<br>BLDG. ENVELOPE SPECIALISTS</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="news.html" class="active">News</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Contact Us</a>
+  <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<!-- BANNER -->
+<section class="page-banner">
+  <div>
+    <div class="page-banner-crumbs"><a href="index.html">Home</a> / <span>News</span></div>
+    <p class="s-eyebrow">Latest</p>
+    <h1 class="h-large">News &amp;<br><em>Insights</em></h1>
+  </div>
+  <div class="page-banner-meta">
+    Project features, product updates, technical insights, and industry perspectives from across the ETG portfolio. New articles published regularly.
+  </div>
+</section>
+
+<!-- FEATURED -->
+<a class="news-featured reveal" href="news/alpolic-fr-moody-center.html">
+  <div class="news-featured-img">
+    <span class="news-featured-tag">// FEATURED</span>
+    <img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272783_edit.webp" alt="ALPOLIC-fr: Shaping Architectural Marvels at the Moody Center">
+  </div>
+  <div class="news-featured-content">
+    <div class="news-featured-cat">// PROJECT FEATURE</div>
+    <h2 class="news-featured-title">ALPOLIC-fr: Shaping Architectural Marvels at the Moody Center</h2>
+    <p class="news-featured-excerpt">ALPOLIC/fr metal composite materials, integrated by KSC, Inc., define the Moody Center's aesthetic identity. The 50,000 sq ft of aluminum panels feature complex origami geometry that contributes to LEED Gold certification.</p>
+    <div class="news-featured-meta">
+      <span>// AUG-27-2024</span>
+      <span class="news-featured-arrow">Read Article →</span>
+    </div>
+  </div>
+</a>
+
+<!-- NEWS GRID -->
+<section class="news-section">
+  <div class="news-section-head reveal">
+    <p class="s-eyebrow">More Articles</p>
+    <h2 class="s-title">From the<br><em>Archive</em></h2>
+  </div>
+  <div class="news-list-grid">
+    <a class="news-cell reveal" href="news/alpolic-timber-series.html">
+      <div class="news-cell-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272783_edit.webp" alt="ALPOLIC Timber Series: Japanese Birch &amp; Wild Plum"></div>
+      <div class="news-cell-body">
+        <div class="news-cell-cat">// PRODUCT NEWS</div>
+        <h3 class="news-cell-title">ALPOLIC Timber Series: Japanese Birch &amp; Wild Plum</h3>
+        <p class="news-cell-excerpt">Discover the new Japanese Birch and Wild Plum finishes in the ALPOLIC Timber Series — wood-inspired aesthetics with the high performance of metal composite materials.</p>
+        <div class="news-cell-date">// APR-02-2026</div>
+      </div>
+    </a>
+    <a class="news-cell reveal" href="news/pickering-town-centre.html">
+      <div class="news-cell-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3310451_edit.webp" alt="Pedestrian Bridge in Pickering: Modern Bridge Design"></div>
+      <div class="news-cell-body">
+        <div class="news-cell-cat">// PROJECT FEATURE</div>
+        <h3 class="news-cell-title">Pedestrian Bridge in Pickering: Modern Bridge Design</h3>
+        <p class="news-cell-excerpt">A landmark in modern Canadian bridge design, featuring ALPOLIC composite materials and innovative cladding strategies.</p>
+        <div class="news-cell-date">// AUG-15-2025</div>
+      </div>
+    </a>
+    <a class="news-cell reveal" href="news/elzinc-epd-sustainability.html">
+      <div class="news-cell-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272784_edit.webp" alt="Sustainability &amp; Innovation: elZinc's EPDs"></div>
+      <div class="news-cell-body">
+        <div class="news-cell-cat">// SUSTAINABILITY</div>
+        <h3 class="news-cell-title">Sustainability &amp; Innovation: elZinc's EPDs</h3>
+        <p class="news-cell-excerpt">How Exterior Technologies Group and elZinc are leading the way in sustainable cladding solutions through Environmental Product Declarations and EPD certification.</p>
+        <div class="news-cell-date">// MAY-28-2025</div>
+      </div>
+    </a>
+    <a class="news-cell reveal" href="news/forme-design-soffits.html">
+      <div class="news-cell-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272785_edit.webp" alt="Enhance Your Building with ForMe Design Soffits"></div>
+      <div class="news-cell-body">
+        <div class="news-cell-cat">// PRODUCT INSIGHT</div>
+        <h3 class="news-cell-title">Enhance Your Building with ForMe Design Soffits</h3>
+        <p class="news-cell-excerpt">ForMe Design soffits offer a blend of style and functionality that elevates your exterior beyond the façade. Explore the SKIN line of architectural soffits.</p>
+        <div class="news-cell-date">// DEC-28-2023</div>
+      </div>
+    </a>
+    <a class="news-cell reveal" href="news/zinc-cold-climates.html">
+      <div class="news-cell-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272784_edit.webp" alt="Zinc Roofing in Cold Climates: Design and Durability"></div>
+      <div class="news-cell-body">
+        <div class="news-cell-cat">// TECHNICAL</div>
+        <h3 class="news-cell-title">Zinc Roofing in Cold Climates: Design and Durability</h3>
+        <p class="news-cell-excerpt">Zinc's impermeability makes it impervious to the freeze-thaw cycles that damage other roofing materials in Canada.</p>
+        <div class="news-cell-date">// DEC-20-2023</div>
+      </div>
+    </a>
+    <a class="news-cell reveal" href="news/forme-powder-on-powder.html">
+      <div class="news-cell-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272785_edit.webp" alt="ForMe Design: Powder on Powder Innovation"></div>
+      <div class="news-cell-body">
+        <div class="news-cell-cat">// PRODUCT NEWS</div>
+        <h3 class="news-cell-title">ForMe Design: Powder on Powder Innovation</h3>
+        <p class="news-cell-excerpt">The new Powder on Powder technology brings authentic woodgrain finishes to extruded aluminum cladding, with industry-leading 15-year warranty coverage.</p>
+        <div class="news-cell-date">// NOV-15-2024</div>
+      </div>
+    </a>
+    <a class="news-cell reveal" href="news/canoe-landing.html">
+      <div class="news-cell-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3310451_edit.webp" alt="Canoe Landing Campus: A $65M Community Anchor"></div>
+      <div class="news-cell-body">
+        <div class="news-cell-cat">// PROJECT FEATURE</div>
+        <h3 class="news-cell-title">Canoe Landing Campus: A $65M Community Anchor</h3>
+        <p class="news-cell-excerpt">Three L-shaped buildings clad in 6mm Alpolic ACP define this innovative downtown Toronto campus housing schools, recreation, and childcare.</p>
+        <div class="news-cell-date">// SEP-10-2021</div>
+      </div>
+    </a>
+    <a class="news-cell reveal" href="news/sait-trades-complex.html">
+      <div class="news-cell-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272458_edit.webp" alt="SAIT Trades &amp; Technology: 750,000 sq ft of Kalzip"></div>
+      <div class="news-cell-body">
+        <div class="news-cell-cat">// PROJECT FEATURE</div>
+        <h3 class="news-cell-title">SAIT Trades &amp; Technology: 750,000 sq ft of Kalzip</h3>
+        <p class="news-cell-excerpt">A LEED-accredited expansion to Calgary's SAIT campus — Kalzip standing seam delivered the performance, geometry, and sustainability the project required.</p>
+        <div class="news-cell-date">// OCT-01-2012</div>
+      </div>
+    </a>
+    <a class="news-cell reveal" href="news/ttc-york-station.html">
+      <div class="news-cell-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272458_edit.webp" alt="TTC York University Station: Free-Form Aluminum"></div>
+      <div class="news-cell-body">
+        <div class="news-cell-cat">// PROJECT FEATURE</div>
+        <h3 class="news-cell-title">TTC York University Station: Free-Form Aluminum</h3>
+        <p class="news-cell-excerpt">AECOM &amp; Aedas's 407 TTC subway station combines Kalzip XT Standing Seam with Radius Track curved framing for a stunning free-form aluminum roof.</p>
+        <div class="news-cell-date">// DEC-17-2017</div>
+      </div>
+    </a>
+    <a class="news-cell reveal" href="news/sheraton-halifax.html">
+      <div class="news-cell-img"><img src="https://d2wvwvig0d1mx7.cloudfront.net/data/org/28575/media/img/source/edit/3369754_edit.jpg" alt="Sheraton Halifax: Atlantic Coast Cladding"></div>
+      <div class="news-cell-body">
+        <div class="news-cell-cat">// PROJECT FEATURE</div>
+        <h3 class="news-cell-title">Sheraton Halifax: Atlantic Coast Cladding</h3>
+        <p class="news-cell-excerpt">Marine-grade cladding for an Atlantic-coast hospitality landmark, balancing salt exposure resistance with refined aesthetics.</p>
+        <div class="news-cell-date">// JUN-05-2022</div>
+      </div>
+    </a>
+    <a class="news-cell reveal" href="news/emerald-hills-aquatic.html">
+      <div class="news-cell-img"><img src="https://d2wvwvig0d1mx7.cloudfront.net/data/org/28575/media/img/source/edit/3364386_edit.png" alt="Pan Am Aquatic Centre: TAC Spacer at Scale"></div>
+      <div class="news-cell-body">
+        <div class="news-cell-cat">// PROJECT FEATURE</div>
+        <h3 class="news-cell-title">Pan Am Aquatic Centre: TAC Spacer at Scale</h3>
+        <p class="news-cell-excerpt">Emerald Hills Aquatic facility leverages TAC Thermal Spacer to achieve 97% reduction in thermal bridging across its rainscreen wall system.</p>
+        <div class="news-cell-date">// APR-22-2020</div>
+      </div>
+    </a>
+    <a class="news-cell reveal" href="news/elzinc-rainbow.html">
+      <div class="news-cell-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272784_edit.webp" alt="elZinc Rainbow: Six Coloured Variations"></div>
+      <div class="news-cell-body">
+        <div class="news-cell-cat">// PRODUCT NEWS</div>
+        <h3 class="news-cell-title">elZinc Rainbow: Six Coloured Variations</h3>
+        <p class="news-cell-excerpt">The elZinc Rainbow range delivers natural, warm, attractive graded colours — red, blue, green, black, gold, and brown — for distinctive architectural projects.</p>
+        <div class="news-cell-date">// MAR-12-2024</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">Exterior Technologies Group</div>
+      <div class="footer-brand-tag">EST. 2004 — CANADA<br>BLDG. ENVELOPE SPECIALISTS</div>
+      <p class="footer-brand-body">Building envelope specialists. Premium exterior cladding systems for architects, specification writers, and contractors across Canada.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">// Site</div>
+      <ul class="footer-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">// Products</div>
+      <ul class="footer-list">
+        <li><a href="products/alpolic-materials.html">Alpolic</a></li>
+        <li><a href="products/kalzip.html">Kalzip</a></li>
+        <li><a href="products/elzinc.html">elZinc</a></li>
+        <li><a href="products/epic-metals.html">EPIC Metals</a></li>
+        <li><a href="products/radius-track.html">Radius Track</a></li>
+        <li><a href="products/tac-thermal-spacer.html">TAC Spacer</a></li>
+        <li><a href="products/forme-design.html">ForMe Design</a></li>
+        <li><a href="products/terracotta-favemanc.html">Favemanc</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">// Contact</div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-label">Phone</div>
+        <div class="footer-contact-value">1 (844) 240-0452</div>
+      </div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-label">Email</div>
+        <div class="footer-contact-value">info@etgcc.com</div>
+      </div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-label">Service Area</div>
+        <div class="footer-contact-value">Canada-wide</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 EXTERIOR TECHNOLOGIES GROUP. ALL RIGHTS RESERVED.</div>
+    <ul class="footer-policy">
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Terms</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

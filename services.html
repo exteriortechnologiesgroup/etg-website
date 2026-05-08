@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Design Consultation, Spec, Detailing | ETG</title>
+<meta name="description" content="Design consultation, design assist, material specification, AutoCAD roof and wall details, and high level budget pricing services for architects across Canada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300&family=Barlow:wght@300;400;500&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+<style>
+.svc-large {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.svc-row {
+  display: grid;
+  grid-template-columns: 100px 1.2fr 1fr;
+  border-bottom: 1px solid var(--rule);
+  background: var(--white);
+  transition: background .25s;
+  align-items: stretch;
+  min-height: 280px;
+}
+.svc-row:hover { background: var(--bg); }
+.svc-row-num {
+  background: var(--ink);
+  color: rgba(240,237,232,.6);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 28px 0 0;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  letter-spacing: .12em;
+  transition: background .25s;
+}
+.svc-row:hover .svc-row-num { background: var(--red); color: var(--white); }
+.svc-row-content {
+  padding: 36px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid var(--rule);
+}
+.svc-row-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 200;
+  font-size: 44px;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 18px;
+}
+.svc-row-name em { font-style: italic; color: var(--red); font-weight: 200; }
+.svc-row-desc {
+  font-size: 14px;
+  color: var(--ink2);
+  line-height: 1.78;
+  max-width: 520px;
+}
+.svc-row-img {
+  overflow: hidden;
+  background: var(--bg2);
+}
+.svc-row-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: saturate(.75) contrast(1.06);
+  transition: transform .9s cubic-bezier(.25,.46,.45,.94);
+}
+.svc-row:hover .svc-row-img img { transform: scale(1.04); }
+@media (max-width: 1024px) {
+  .svc-row { grid-template-columns: 1fr; min-height: 0; }
+  .svc-row-num { padding: 16px; }
+  .svc-row-content { padding: 32px 24px; border-right: none; }
+  .svc-row-name { font-size: 32px; }
+  .svc-row-img { aspect-ratio: 16/10; }
+}
+
+/* Process */
+.process {
+  background: var(--bg);
+  padding: 80px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.process-head {
+  max-width: 1100px;
+  margin: 0 auto 48px;
+  padding: 0 48px;
+}
+.process-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.proc-step {
+  border-right: 1px solid var(--rule);
+  padding: 28px 24px;
+  position: relative;
+}
+.proc-step:last-child { border-right: none; }
+.proc-step::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 40px; height: 2px;
+  background: var(--red);
+}
+.proc-num {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: var(--red);
+  letter-spacing: .12em;
+  margin-bottom: 16px;
+}
+.proc-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--ink);
+  margin-bottom: 12px;
+  line-height: 1.15;
+}
+.proc-desc {
+  font-size: 12px;
+  color: var(--ink3);
+  line-height: 1.7;
+}
+@media (max-width: 1024px) {
+  .process-grid { grid-template-columns: repeat(2,1fr); padding: 0 24px; }
+  .proc-step { border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .proc-step:nth-child(2n) { border-right: none; }
+  .process-head { padding: 0 24px; }
+}
+@media (max-width: 600px) {
+  .process-grid { grid-template-columns: 1fr; }
+  .proc-step { border-right: none !important; }
+}
+</style>
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="cur-ring"></div><nav class="site-nav">
+  <div class="nav-left">
+    <a href="index.html" class="nav-logo">Exterior Technologies Group</a>
+    <div class="nav-logo-tag">EST. 2004 — CANADA<br>BLDG. ENVELOPE SPECIALISTS</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="news.html">News</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Contact Us</a>
+  <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<!-- BANNER -->
+<section class="page-banner">
+  <div>
+    <div class="page-banner-crumbs"><a href="index.html">Home</a> / <span>Services</span></div>
+    <p class="s-eyebrow">What We Do</p>
+    <h1 class="h-large">Innovative<br><em>Design</em><br><span class="outline">Solutions</span></h1>
+  </div>
+  <div class="page-banner-meta">
+    We provide bespoke design services that creatively address the specific needs of each project — high-quality, visually compelling exteriors that perform over time across the full range of Canadian conditions.
+  </div>
+</section>
+
+<!-- LARGE SERVICE ROWS -->
+<section class="svc-large">
+
+  <div class="svc-row reveal">
+    <div class="svc-row-num">SVC-01</div>
+    <div class="svc-row-content">
+      <h2 class="svc-row-name">Design <em>Consultation</em></h2>
+      <p class="svc-row-desc">Tailored proposals, in-depth material selection, integration with architectural style, visual and functional harmony, and compliance with local building codes. We work with architects from concept through detail design.</p>
+    </div>
+    <div class="svc-row-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272687_edit.webp" alt="Design Consultation"></div>
+  </div>
+
+  <div class="svc-row reveal">
+    <div class="svc-row-num">SVC-02</div>
+    <div class="svc-row-content">
+      <h2 class="svc-row-name">Design <em>Assist</em></h2>
+      <p class="svc-row-desc">Collaboration, customization, intelligent insights and recommendations, budget optimization, and architectural detailing at every stage. Our team participates throughout pre-construction to keep your design intent intact.</p>
+    </div>
+    <div class="svc-row-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272686_edit.webp" alt="Design Assist"></div>
+  </div>
+
+  <div class="svc-row reveal">
+    <div class="svc-row-num">SVC-03</div>
+    <div class="svc-row-content">
+      <h2 class="svc-row-name">Material <em>Specification</em></h2>
+      <p class="svc-row-desc">Detailed material analysis, durability considerations, cost-effective solutions, aesthetic compatibility, and environmental impact assessment. We help spec writers translate design intent into accurate, performance-driven product calls.</p>
+    </div>
+    <div class="svc-row-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272689_edit.webp" alt="Material Specification"></div>
+  </div>
+
+  <div class="svc-row reveal">
+    <div class="svc-row-num">SVC-04</div>
+    <div class="svc-row-content">
+      <h2 class="svc-row-name">AutoCAD <em>Details</em></h2>
+      <p class="svc-row-desc">Roof and wall details delivered in editable AutoCAD format. Standard, custom, and project-specific drawings — complete with code references, fastener callouts, and sequencing notes ready for your CD set.</p>
+    </div>
+    <div class="svc-row-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3310451_edit.webp" alt="AutoCAD Details"></div>
+  </div>
+
+  <div class="svc-row reveal">
+    <div class="svc-row-num">SVC-05</div>
+    <div class="svc-row-content">
+      <h2 class="svc-row-name">Budget <em>Pricing</em></h2>
+      <p class="svc-row-desc">High-level budget pricing for early-stage scoping. Our pricing accounts for product cost, sub-frame, accessories, and typical installation conditions — giving design teams accurate cost intelligence at concept stage.</p>
+    </div>
+    <div class="svc-row-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272458_edit.webp" alt="Budget Pricing"></div>
+  </div>
+
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="process-head reveal">
+    <p class="s-eyebrow">How We Work</p>
+    <h2 class="s-title">A Five-Phase<br><em>Engagement</em></h2>
+  </div>
+  <div class="process-grid">
+    <div class="proc-step reveal">
+      <div class="proc-num">// PHASE 01</div>
+      <h3 class="proc-name">Discovery</h3>
+      <p class="proc-desc">Initial consultation to understand project scope, design intent, performance requirements, and budget envelope.</p>
+    </div>
+    <div class="proc-step reveal rd1">
+      <div class="proc-num">// PHASE 02</div>
+      <h3 class="proc-name">Selection</h3>
+      <p class="proc-desc">Material recommendations, sample delivery, finish selection, and confirmation of compatibility with adjacent assemblies.</p>
+    </div>
+    <div class="proc-step reveal rd2">
+      <div class="proc-num">// PHASE 03</div>
+      <h3 class="proc-name">Specification</h3>
+      <p class="proc-desc">Spec writing assistance, AutoCAD details, BIM coordination support, and compliance documentation.</p>
+    </div>
+    <div class="proc-step reveal rd3">
+      <div class="proc-num">// PHASE 04</div>
+      <h3 class="proc-name">Pricing</h3>
+      <p class="proc-desc">High-level budget pricing during DD, refined to firm pricing at CDs. Value engineering options provided when required.</p>
+    </div>
+    <div class="proc-step reveal rd4">
+      <div class="proc-num">// PHASE 05</div>
+      <h3 class="proc-name">Field Review</h3>
+      <p class="proc-desc">On-site field review during installation, mock-up review, and post-installation verification of performance criteria.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background: var(--ink); padding: 72px 48px; text-align: center; border-bottom: 1px solid var(--rule);">
+  <div style="max-width: 720px; margin: 0 auto;">
+    <p class="s-eyebrow" style="color: rgba(240,237,232,.5); justify-content: center; margin-bottom: 16px;">Get Started</p>
+    <h2 class="s-title" style="color: var(--bg); margin-bottom: 20px;">Have a project<br>in <em>mind?</em></h2>
+    <p style="color: rgba(240,237,232,.6); margin-bottom: 32px; font-size: 14px; line-height: 1.78;">Get in touch with our team to discuss design assist, specification, or budget pricing for your next building envelope project.</p>
+    <a href="contact.html" class="btn-red">Contact ETG →</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">Exterior Technologies Group</div>
+      <div class="footer-brand-tag">EST. 2004 — CANADA<br>BLDG. ENVELOPE SPECIALISTS</div>
+      <p class="footer-brand-body">Building envelope specialists. Premium exterior cladding systems for architects, specification writers, and contractors across Canada.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">// Site</div>
+      <ul class="footer-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">// Products</div>
+      <ul class="footer-list">
+        <li><a href="products/alpolic-materials.html">Alpolic</a></li>
+        <li><a href="products/kalzip.html">Kalzip</a></li>
+        <li><a href="products/elzinc.html">elZinc</a></li>
+        <li><a href="products/epic-metals.html">EPIC Metals</a></li>
+        <li><a href="products/radius-track.html">Radius Track</a></li>
+        <li><a href="products/tac-thermal-spacer.html">TAC Spacer</a></li>
+        <li><a href="products/forme-design.html">ForMe Design</a></li>
+        <li><a href="products/terracotta-favemanc.html">Favemanc</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">// Contact</div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-label">Phone</div>
+        <div class="footer-contact-value">1 (844) 240-0452</div>
+      </div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-label">Email</div>
+        <div class="footer-contact-value">info@etgcc.com</div>
+      </div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-label">Service Area</div>
+        <div class="footer-contact-value">Canada-wide</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 EXTERIOR TECHNOLOGIES GROUP. ALL RIGHTS RESERVED.</div>
+    <ul class="footer-policy">
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Terms</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

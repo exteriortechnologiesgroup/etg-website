@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" preserveAspectRatio="xMinYMid meet">
+  <text x="0" y="29" font-family="Barlow Condensed, sans-serif" font-weight="600" font-size="28" letter-spacing="2" fill="currentColor">ALPOLIC</text>
+  <text x="143" y="20" font-family="Share Tech Mono, monospace" font-size="9" letter-spacing="1" fill="currentColor" opacity=".7">/fr</text>
+  <line x1="0" y1="35" x2="200" y2="35" stroke="currentColor" stroke-width="0.5" opacity=".3"/>
+</svg>

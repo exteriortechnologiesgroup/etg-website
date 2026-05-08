@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Get in Touch | ETG</title>
+<meta name="description" content="Contact Exterior Technologies Group. Five regional offices across Canada serving architects, specification writers, and contractors.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300&family=Barlow:wght@300;400;500&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+<style>
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--rule);
+}
+.contact-form-side {
+  padding: 72px 56px;
+  background: var(--white);
+  border-right: 1px solid var(--rule);
+}
+.contact-info-side {
+  padding: 72px 56px;
+  background: var(--bg2);
+  display: flex;
+  flex-direction: column;
+}
+.contact-info-side .info-body {
+  font-size: 14px;
+  color: var(--ink2);
+  line-height: 1.78;
+  margin-top: 22px;
+  max-width: 380px;
+  margin-bottom: 40px;
+}
+.contact-details { display: flex; flex-direction: column; }
+.cd-item {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  padding: 14px 0;
+  border-top: 1px solid var(--rule);
+  align-items: baseline;
+}
+.cd-item:last-child { border-bottom: 1px solid var(--rule); }
+.cd-label {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9px;
+  color: var(--ink3);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.cd-val {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: .04em;
+  color: var(--ink);
+}
+
+.c-form { display: flex; flex-direction: column; }
+.c-row { margin-bottom: 22px; }
+.c-row label {
+  display: block;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9px;
+  color: var(--ink3);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.c-row input, .c-row textarea, .c-row select {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  padding: 12px 14px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--ink);
+  outline: none;
+  transition: border-color .25s, background .25s;
+  resize: none;
+  appearance: none;
+}
+.c-row input:focus, .c-row textarea:focus, .c-row select:focus {
+  border-color: var(--ink);
+  background: var(--white);
+}
+.c-row input::placeholder, .c-row textarea::placeholder { color: var(--ink3); }
+.c-row textarea { min-height: 120px; }
+.c-submit {
+  align-self: flex-start;
+  background: var(--red);
+  border: none;
+  color: var(--white);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  padding: 15px 36px;
+  cursor: none;
+  transition: background .25s;
+  margin-top: 8px;
+}
+.c-submit:hover { background: var(--red-dk); }
+
+/* Offices */
+.offices {
+  background: var(--white);
+  padding: 72px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.offices-head {
+  max-width: 1300px;
+  margin: 0 auto 40px;
+  padding: 0 48px;
+}
+.offices-grid {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid var(--rule);
+  border-left: 1px solid var(--rule);
+}
+.office-cell {
+  padding: 28px 24px;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  position: relative;
+}
+.office-cell::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 0; height: 2px;
+  background: var(--red);
+  transition: width .35s ease;
+}
+.office-cell:hover::before { width: 100%; }
+.office-region {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: var(--red);
+  letter-spacing: .12em;
+  margin-bottom: 12px;
+}
+.office-city {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--ink);
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+.office-addr {
+  font-size: 12px;
+  color: var(--ink3);
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-form-side { border-right: none; border-bottom: 1px solid var(--rule); padding: 48px 24px; order: 2; }
+  .contact-info-side { padding: 48px 24px; order: 1; }
+  .offices-grid { grid-template-columns: repeat(2, 1fr); padding: 0 24px; }
+  .office-cell:nth-child(2n) { border-right: none; }
+  .offices-head { padding: 0 24px; }
+}
+@media (max-width: 600px) {
+  .offices-grid { grid-template-columns: 1fr; }
+  .office-cell { border-right: none !important; }
+}
+</style>
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="cur-ring"></div><nav class="site-nav">
+  <div class="nav-left">
+    <a href="index.html" class="nav-logo">Exterior Technologies Group</a>
+    <div class="nav-logo-tag">EST. 2004 — CANADA<br>BLDG. ENVELOPE SPECIALISTS</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="news.html">News</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Contact Us</a>
+  <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<!-- BANNER -->
+<section class="page-banner">
+  <div>
+    <div class="page-banner-crumbs"><a href="index.html">Home</a> / <span>Contact</span></div>
+    <p class="s-eyebrow">Get In Touch</p>
+    <h1 class="h-large">Let's Build<br><em>Together</em></h1>
+  </div>
+  <div class="page-banner-meta">
+    Whether you're at schematic design or mid-construction, our team is ready to bring technical rigour and genuine partnership to your exterior vision. Five offices across Canada.
+  </div>
+</section>
+
+<!-- CONTACT GRID -->
+<section class="contact-grid">
+
+  <div class="contact-info-side reveal">
+    <div>
+      <p class="s-eyebrow">Reach Us Directly</p>
+      <h2 class="s-title">Headquarters<br>&amp; <em>Channels</em></h2>
+      <p class="info-body">We respond within one business day to all inquiries. For project-specific consultation, schedule a Lunch &amp; Learn or product samples through the form.</p>
+    </div>
+    <div class="contact-details">
+      <div class="cd-item"><span class="cd-label">Phone</span><span class="cd-val">1 (844) 240-0452</span></div>
+      <div class="cd-item"><span class="cd-label">Email</span><span class="cd-val">info@etgcc.com</span></div>
+      <div class="cd-item"><span class="cd-label">Hours</span><span class="cd-val">Mon — Fri · 8 AM — 5 PM ET</span></div>
+      <div class="cd-item"><span class="cd-label">Service Area</span><span class="cd-val">Canada-wide</span></div>
+    </div>
+  </div>
+
+  <div class="contact-form-side reveal rd1">
+    <p class="s-eyebrow" style="margin-bottom:32px;">Send an Enquiry</p>
+    <form class="c-form" onsubmit="return false;">
+      <div class="c-row"><label>Full Name</label><input type="text" placeholder="Jane Smith"></div>
+      <div class="c-row"><label>Email Address</label><input type="email" placeholder="jane@firm.com"></div>
+      <div class="c-row"><label>Company / Firm</label><input type="text" placeholder="Architecture firm"></div>
+      <div class="c-row"><label>Contact Number</label><input type="tel" placeholder="+1 (416) 000-0000"></div>
+      <div class="c-row"><label>Project Type</label>
+        <select>
+          <option value="" disabled selected>Select a service</option>
+          <option>Design Consultation</option>
+          <option>Design Assist</option>
+          <option>Material Specification</option>
+          <option>AutoCAD Details</option>
+          <option>Budget Pricing</option>
+          <option>Lunch &amp; Learn Request</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="c-row"><label>Project Details</label><textarea placeholder="Tell us about your project — location, size, schedule, design intent..."></textarea></div>
+      <button class="c-submit">Submit Enquiry</button>
+    </form>
+  </div>
+
+</section>
+
+<!-- OFFICES -->
+<section class="offices">
+  <div class="offices-head reveal">
+    <p class="s-eyebrow">Regional Offices</p>
+    <h2 class="s-title">Five Offices,<br><em>Canada-Wide</em></h2>
+  </div>
+  <div class="offices-grid">
+    <div class="office-cell reveal">
+      <div class="office-region">// HEADQUARTERS</div>
+      <div class="office-city">Toronto</div>
+      <p class="office-addr">Greater Toronto Area, ON<br>Canada</p>
+    </div>
+    <div class="office-cell reveal rd1">
+      <div class="office-region">// QC / E. ONT</div>
+      <div class="office-city">Blainville</div>
+      <p class="office-addr">550 Boul de Fontainebleau<br>Blainville, QC J7B 1M3</p>
+    </div>
+    <div class="office-cell reveal rd2">
+      <div class="office-region">// PRAIRIES</div>
+      <div class="office-city">Calgary</div>
+      <p class="office-addr">42 Chapalina Way SE<br>Calgary, AB T2X 3P1</p>
+    </div>
+    <div class="office-cell reveal rd3">
+      <div class="office-region">// ATLANTIC</div>
+      <div class="office-city">Upper Tantallon</div>
+      <p class="office-addr">160-3650 Hammonds Plains Rd<br>Upper Tantallon, NS B3Z 4R3</p>
+    </div>
+    <div class="office-cell reveal rd4">
+      <div class="office-region">// PACIFIC</div>
+      <div class="office-city">Surrey</div>
+      <p class="office-addr">23-1708 King George Blvd<br>Surrey, BC V4A 4Z8</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">Exterior Technologies Group</div>
+      <div class="footer-brand-tag">EST. 2004 — CANADA<br>BLDG. ENVELOPE SPECIALISTS</div>
+      <p class="footer-brand-body">Building envelope specialists. Premium exterior cladding systems for architects, specification writers, and contractors across Canada.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">// Site</div>
+      <ul class="footer-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">// Products</div>
+      <ul class="footer-list">
+        <li><a href="products/alpolic-materials.html">Alpolic</a></li>
+        <li><a href="products/kalzip.html">Kalzip</a></li>
+        <li><a href="products/elzinc.html">elZinc</a></li>
+        <li><a href="products/epic-metals.html">EPIC Metals</a></li>
+        <li><a href="products/radius-track.html">Radius Track</a></li>
+        <li><a href="products/tac-thermal-spacer.html">TAC Spacer</a></li>
+        <li><a href="products/forme-design.html">ForMe Design</a></li>
+        <li><a href="products/terracotta-favemanc.html">Favemanc</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">// Contact</div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-label">Phone</div>
+        <div class="footer-contact-value">1 (844) 240-0452</div>
+      </div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-label">Email</div>
+        <div class="footer-contact-value">info@etgcc.com</div>
+      </div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-label">Service Area</div>
+        <div class="footer-contact-value">Canada-wide</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 EXTERIOR TECHNOLOGIES GROUP. ALL RIGHTS RESERVED.</div>
+    <ul class="footer-policy">
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Terms</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
