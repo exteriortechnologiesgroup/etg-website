@@ -43,7 +43,7 @@
   display: flex;
   align-items: center;
 }
-.prd-hero-logo svg { height: 100%; width: auto; max-width: 280px; }
+.prd-hero-logo svg, .prd-hero-logo object { height: 100%; width: 280px; max-width: 100%; display: block; pointer-events: none; }
 .prd-hero-name {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 200;

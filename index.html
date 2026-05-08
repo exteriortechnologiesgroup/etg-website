@@ -363,14 +363,14 @@
   gap: 10px;
   flex: 1;
 }
-.product-logo {
+.product-logo { overflow:hidden;
   height: 24px;
   margin-bottom: 6px;
   color: var(--ink);
   display: flex;
   align-items: center;
 }
-.product-logo svg { height: 100%; width: auto; max-width: 100%; }
+.product-logo svg, .product-logo object { height: 100%; width: auto; max-width: 100%; display: block; pointer-events: none; }
 .product-idx {
   font-family: 'Share Tech Mono', monospace;
   font-size: 9px;
@@ -557,7 +557,7 @@
 }
 .brand-logo-cell:last-child { border-right: none; }
 .brand-logo-cell:hover { color: var(--red); }
-.brand-logo-cell svg { width: 100%; max-width: 130px; height: auto; }
+.brand-logo-cell svg, .brand-logo-cell object { width: 130px; max-width: 100%; height: 40px; display: block; pointer-events: none; }
 @media (max-width: 1024px) {
   .brands-grid { grid-template-columns: repeat(4, 1fr); }
   .brand-logo-cell:nth-child(4n) { border-right: none; }
@@ -584,12 +584,12 @@
     <div class="nav-logo-tag">EST. 2004 — CANADA<br>BLDG. ENVELOPE SPECIALISTS</div>
   </div>
   <ul class="nav-links">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="products.html">Products</a></li>
-    <li><a href="news.html">News</a></li>
-  </ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
   <a href="contact.html" class="nav-cta">Contact Us</a>
   <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
@@ -736,7 +736,7 @@
       <div class="product-img-wrap"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272783_edit.webp" alt="Alpolic — Moody Center"></div>
       <div class="product-info">
         <div class="product-idx">PRD-01 / ACM-MCM</div>
-        <div class="product-logo"><object type="image/svg+xml" data="assets/svg/logo-alpolic.svg" aria-label="Alpolic"></object></div>
+        <div class="product-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" preserveAspectRatio="xMinYMid meet"> <text x="0" y="29" font-family="Barlow Condensed, sans-serif" font-weight="600" font-size="28" letter-spacing="2" fill="currentColor">ALPOLIC</text> <text x="143" y="20" font-family="Share Tech Mono, monospace" font-size="9" letter-spacing="1" fill="currentColor" opacity=".7">/fr</text> <line x1="0" y1="35" x2="200" y2="35" stroke="currentColor" stroke-width="0.5" opacity=".3"/> </svg></div>
         <p class="product-desc">Aluminum and metal composite materials taken to a visionary level &mdash; versatile, durable, architecturally expressive.</p>
         <span class="product-link">Learn More →</span>
       </div>
@@ -745,43 +745,43 @@
       <div class="product-img-wrap"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272458_edit.webp" alt="Kalzip — TTC York"></div>
       <div class="product-info">
         <div class="product-idx">PRD-02 / STANDING SEAM</div>
-        <div class="product-logo"><object type="image/svg+xml" data="assets/svg/logo-kalzip.svg" aria-label="Kalzip"></object></div>
+        <div class="product-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" preserveAspectRatio="xMinYMid meet"> <text x="0" y="29" font-family="Barlow Condensed, sans-serif" font-weight="600" font-size="28" letter-spacing="2" fill="currentColor">KALZIP</text> <text x="120" y="20" font-family="Share Tech Mono, monospace" font-size="9" letter-spacing="1" fill="currentColor" opacity=".7">®</text> <line x1="0" y1="35" x2="200" y2="35" stroke="currentColor" stroke-width="0.5" opacity=".3"/> </svg></div>
         <p class="product-desc">World-leading standing seam roofing and wall cladding. Over 1.3 billion sq ft installed worldwide.</p>
         <span class="product-link">Learn More →</span>
       </div>
     </a>
     <a class="product-card reveal rd2" href="products/elzinc.html">
-      <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=700&q=80" alt="elZinc cladding"></div>
+      <div class="product-img-wrap"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3286773_edit.jpg" alt="elZinc cladding"></div>
       <div class="product-info">
         <div class="product-idx">PRD-03 / ZINC</div>
-        <div class="product-logo"><object type="image/svg+xml" data="assets/svg/logo-elzinc.svg" aria-label="elZinc"></object></div>
+        <div class="product-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" preserveAspectRatio="xMinYMid meet"> <text x="0" y="29" font-family="Barlow Condensed, sans-serif" font-weight="300" font-size="28" letter-spacing="1" fill="currentColor">el</text> <text x="22" y="29" font-family="Barlow Condensed, sans-serif" font-weight="600" font-size="28" letter-spacing="2" fill="currentColor">Zinc</text> <text x="91" y="20" font-family="Share Tech Mono, monospace" font-size="9" letter-spacing="1" fill="currentColor" opacity=".7">®</text> <line x1="0" y1="35" x2="200" y2="35" stroke="currentColor" stroke-width="0.5" opacity=".3"/> </svg></div>
         <p class="product-desc">Natural zinc roofing and cladding &mdash; impervious to freeze-thaw cycles with refined character.</p>
         <span class="product-link">Learn More →</span>
       </div>
     </a>
     <a class="product-card reveal rd3" href="products/tac-thermal-spacer.html">
-      <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?w=700&q=80" alt="TAC Thermal Spacer"></div>
+      <div class="product-img-wrap"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3273147_edit.png" alt="TAC Thermal Spacer"></div>
       <div class="product-info">
         <div class="product-idx">PRD-04 / THERMAL</div>
-        <div class="product-logo"><object type="image/svg+xml" data="assets/svg/logo-tac.svg" aria-label="TAC Thermal Spacer"></object></div>
+        <div class="product-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" preserveAspectRatio="xMinYMid meet"> <text x="0" y="29" font-family="Barlow Condensed, sans-serif" font-weight="600" font-size="28" letter-spacing="3" fill="currentColor">TAC</text> <text x="62" y="29" font-family="Barlow Condensed, sans-serif" font-weight="300" font-size="14" letter-spacing="2" fill="currentColor" opacity=".7">THERMAL SPACER</text> <line x1="0" y1="35" x2="200" y2="35" stroke="currentColor" stroke-width="0.5" opacity=".3"/> </svg></div>
         <p class="product-desc">Reduces thermal bridging by at least 97% for rainscreen exterior wall systems at an accessible price point.</p>
         <span class="product-link">Learn More →</span>
       </div>
     </a>
     <a class="product-card reveal" href="products/epic-metals.html">
-      <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1503328427499-d92d1ac3d174?w=700&q=80" alt="EPIC Metals deck"></div>
+      <div class="product-img-wrap"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272686_edit.webp" alt="EPIC Metals deck"></div>
       <div class="product-info">
         <div class="product-idx">PRD-05 / DECK SYSTEMS</div>
-        <div class="product-logo"><object type="image/svg+xml" data="assets/svg/logo-epic.svg" aria-label="EPIC Metals"></object></div>
+        <div class="product-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" preserveAspectRatio="xMinYMid meet"> <text x="0" y="29" font-family="Barlow Condensed, sans-serif" font-weight="600" font-size="28" letter-spacing="2" fill="currentColor">EPIC</text> <text x="74" y="29" font-family="Barlow Condensed, sans-serif" font-weight="300" font-size="14" letter-spacing="2" fill="currentColor" opacity=".7">METALS</text> <line x1="0" y1="35" x2="200" y2="35" stroke="currentColor" stroke-width="0.5" opacity=".3"/> </svg></div>
         <p class="product-desc">Innovative metal deck and roof systems engineered for performance across commercial &amp; institutional projects.</p>
         <span class="product-link">Learn More →</span>
       </div>
     </a>
     <a class="product-card reveal rd1" href="products/radius-track.html">
-      <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1567521464027-f127ff144326?w=700&q=80" alt="Radius Track curved framing"></div>
+      <div class="product-img-wrap"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3286785_edit.jpg" alt="Radius Track curved framing"></div>
       <div class="product-info">
         <div class="product-idx">PRD-06 / FRAMING</div>
-        <div class="product-logo"><object type="image/svg+xml" data="assets/svg/logo-radius.svg" aria-label="Radius Track"></object></div>
+        <div class="product-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" preserveAspectRatio="xMinYMid meet"> <path d="M 5 30 Q 5 8, 28 8" stroke="currentColor" stroke-width="2" fill="none"/> <text x="38" y="29" font-family="Barlow Condensed, sans-serif" font-weight="600" font-size="20" letter-spacing="1.5" fill="currentColor">RADIUS</text> <text x="38" y="13" font-family="Barlow Condensed, sans-serif" font-weight="300" font-size="11" letter-spacing="2" fill="currentColor" opacity=".75">— TRACK</text> <line x1="0" y1="35" x2="200" y2="35" stroke="currentColor" stroke-width="0.5" opacity=".3"/> </svg></div>
         <p class="product-desc">Curved and radius framing solutions that bring complex architectural geometry to life with precision.</p>
         <span class="product-link">Learn More →</span>
       </div>
@@ -790,16 +790,16 @@
       <div class="product-img-wrap"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272785_edit.webp" alt="ForMe Design soffits"></div>
       <div class="product-info">
         <div class="product-idx">PRD-07 / SOFFITS</div>
-        <div class="product-logo"><object type="image/svg+xml" data="assets/svg/logo-forme.svg" aria-label="ForMe Design"></object></div>
+        <div class="product-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" preserveAspectRatio="xMinYMid meet"> <text x="0" y="29" font-family="Barlow Condensed, sans-serif" font-weight="600" font-size="28" letter-spacing="2" font-style="italic" fill="currentColor">ForMe</text> <text x="80" y="29" font-family="Barlow Condensed, sans-serif" font-weight="300" font-size="14" letter-spacing="2" fill="currentColor" opacity=".7">DESIGN</text> <line x1="0" y1="35" x2="200" y2="35" stroke="currentColor" stroke-width="0.5" opacity=".3"/> </svg></div>
         <p class="product-desc">Italian aluminum cladding with woodgrain &amp; powder-coat finishes &mdash; beauty of wood, durability of metal.</p>
         <span class="product-link">Learn More →</span>
       </div>
     </a>
     <a class="product-card reveal rd3" href="products/terracotta-favemanc.html">
-      <div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1518562180175-34a163b1a9a6?w=700&q=80" alt="Terracotta Favemanc façade"></div>
+      <div class="product-img-wrap"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272784_edit.webp" alt="Terracotta Favemanc façade"></div>
       <div class="product-info">
         <div class="product-idx">PRD-08 / CERAMIC</div>
-        <div class="product-logo"><object type="image/svg+xml" data="assets/svg/logo-favemanc.svg" aria-label="Favemanc Terracotta"></object></div>
+        <div class="product-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" preserveAspectRatio="xMinYMid meet"> <text x="0" y="29" font-family="Barlow Condensed, sans-serif" font-weight="600" font-size="22" letter-spacing="1.5" fill="currentColor">FAVEMANC</text> <text x="0" y="13" font-family="Barlow Condensed, sans-serif" font-weight="300" font-size="11" letter-spacing="2" fill="currentColor" opacity=".75">TERRACOTTA —</text> <line x1="0" y1="35" x2="200" y2="35" stroke="currentColor" stroke-width="0.5" opacity=".3"/> </svg></div>
         <p class="product-desc">Handcrafted terracotta cladding &mdash; warmth, texture, and timeless materiality for contemporary architecture.</p>
         <span class="product-link">Learn More →</span>
       </div>
@@ -861,14 +861,14 @@
 <div id="brands">
   <div class="brands-label">// Product Partners</div>
   <div class="brands-grid">
-    <a href="products/alpolic-materials.html" class="brand-logo-cell" aria-label="Alpolic"><object type="image/svg+xml" data="assets/svg/logo-alpolic.svg"></object></a>
-    <a href="products/kalzip.html" class="brand-logo-cell" aria-label="Kalzip"><object type="image/svg+xml" data="assets/svg/logo-kalzip.svg"></object></a>
-    <a href="products/elzinc.html" class="brand-logo-cell" aria-label="elZinc"><object type="image/svg+xml" data="assets/svg/logo-elzinc.svg"></object></a>
-    <a href="products/tac-thermal-spacer.html" class="brand-logo-cell" aria-label="TAC"><object type="image/svg+xml" data="assets/svg/logo-tac.svg"></object></a>
-    <a href="products/epic-metals.html" class="brand-logo-cell" aria-label="EPIC"><object type="image/svg+xml" data="assets/svg/logo-epic.svg"></object></a>
-    <a href="products/radius-track.html" class="brand-logo-cell" aria-label="Radius Track"><object type="image/svg+xml" data="assets/svg/logo-radius.svg"></object></a>
-    <a href="products/forme-design.html" class="brand-logo-cell" aria-label="ForMe"><object type="image/svg+xml" data="assets/svg/logo-forme.svg"></object></a>
-    <a href="products/terracotta-favemanc.html" class="brand-logo-cell" aria-label="Favemanc"><object type="image/svg+xml" data="assets/svg/logo-favemanc.svg"></object></a>
+    <a href="products/alpolic-materials.html" class="brand-logo-cell" aria-label="Alpolic"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" preserveAspectRatio="xMinYMid meet"> <text x="0" y="29" font-family="Barlow Condensed, sans-serif" font-weight="600" font-size="28" letter-spacing="2" fill="currentColor">ALPOLIC</text> <text x="143" y="20" font-family="Share Tech Mono, monospace" font-size="9" letter-spacing="1" fill="currentColor" opacity=".7">/fr</text> <line x1="0" y1="35" x2="200" y2="35" stroke="currentColor" stroke-width="0.5" opacity=".3"/> </svg></a>
+    <a href="products/kalzip.html" class="brand-logo-cell" aria-label="Kalzip"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" preserveAspectRatio="xMinYMid meet"> <text x="0" y="29" font-family="Barlow Condensed, sans-serif" font-weight="600" font-size="28" letter-spacing="2" fill="currentColor">KALZIP</text> <text x="120" y="20" font-family="Share Tech Mono, monospace" font-size="9" letter-spacing="1" fill="currentColor" opacity=".7">®</text> <line x1="0" y1="35" x2="200" y2="35" stroke="currentColor" stroke-width="0.5" opacity=".3"/> </svg></a>
+    <a href="products/elzinc.html" class="brand-logo-cell" aria-label="elZinc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" preserveAspectRatio="xMinYMid meet"> <text x="0" y="29" font-family="Barlow Condensed, sans-serif" font-weight="300" font-size="28" letter-spacing="1" fill="currentColor">el</text> <text x="22" y="29" font-family="Barlow Condensed, sans-serif" font-weight="600" font-size="28" letter-spacing="2" fill="currentColor">Zinc</text> <text x="91" y="20" font-family="Share Tech Mono, monospace" font-size="9" letter-spacing="1" fill="currentColor" opacity=".7">®</text> <line x1="0" y1="35" x2="200" y2="35" stroke="currentColor" stroke-width="0.5" opacity=".3"/> </svg></a>
+    <a href="products/tac-thermal-spacer.html" class="brand-logo-cell" aria-label="TAC"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" preserveAspectRatio="xMinYMid meet"> <text x="0" y="29" font-family="Barlow Condensed, sans-serif" font-weight="600" font-size="28" letter-spacing="3" fill="currentColor">TAC</text> <text x="62" y="29" font-family="Barlow Condensed, sans-serif" font-weight="300" font-size="14" letter-spacing="2" fill="currentColor" opacity=".7">THERMAL SPACER</text> <line x1="0" y1="35" x2="200" y2="35" stroke="currentColor" stroke-width="0.5" opacity=".3"/> </svg></a>
+    <a href="products/epic-metals.html" class="brand-logo-cell" aria-label="EPIC"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" preserveAspectRatio="xMinYMid meet"> <text x="0" y="29" font-family="Barlow Condensed, sans-serif" font-weight="600" font-size="28" letter-spacing="2" fill="currentColor">EPIC</text> <text x="74" y="29" font-family="Barlow Condensed, sans-serif" font-weight="300" font-size="14" letter-spacing="2" fill="currentColor" opacity=".7">METALS</text> <line x1="0" y1="35" x2="200" y2="35" stroke="currentColor" stroke-width="0.5" opacity=".3"/> </svg></a>
+    <a href="products/radius-track.html" class="brand-logo-cell" aria-label="Radius Track"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" preserveAspectRatio="xMinYMid meet"> <path d="M 5 30 Q 5 8, 28 8" stroke="currentColor" stroke-width="2" fill="none"/> <text x="38" y="29" font-family="Barlow Condensed, sans-serif" font-weight="600" font-size="20" letter-spacing="1.5" fill="currentColor">RADIUS</text> <text x="38" y="13" font-family="Barlow Condensed, sans-serif" font-weight="300" font-size="11" letter-spacing="2" fill="currentColor" opacity=".75">— TRACK</text> <line x1="0" y1="35" x2="200" y2="35" stroke="currentColor" stroke-width="0.5" opacity=".3"/> </svg></a>
+    <a href="products/forme-design.html" class="brand-logo-cell" aria-label="ForMe"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" preserveAspectRatio="xMinYMid meet"> <text x="0" y="29" font-family="Barlow Condensed, sans-serif" font-weight="600" font-size="28" letter-spacing="2" font-style="italic" fill="currentColor">ForMe</text> <text x="80" y="29" font-family="Barlow Condensed, sans-serif" font-weight="300" font-size="14" letter-spacing="2" fill="currentColor" opacity=".7">DESIGN</text> <line x1="0" y1="35" x2="200" y2="35" stroke="currentColor" stroke-width="0.5" opacity=".3"/> </svg></a>
+    <a href="products/terracotta-favemanc.html" class="brand-logo-cell" aria-label="Favemanc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" preserveAspectRatio="xMinYMid meet"> <text x="0" y="29" font-family="Barlow Condensed, sans-serif" font-weight="600" font-size="22" letter-spacing="1.5" fill="currentColor">FAVEMANC</text> <text x="0" y="13" font-family="Barlow Condensed, sans-serif" font-weight="300" font-size="11" letter-spacing="2" fill="currentColor" opacity=".75">TERRACOTTA —</text> <line x1="0" y1="35" x2="200" y2="35" stroke="currentColor" stroke-width="0.5" opacity=".3"/> </svg></a>
   </div>
 </div>
 
