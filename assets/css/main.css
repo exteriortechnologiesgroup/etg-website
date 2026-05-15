@@ -15,8 +15,8 @@
   --ink3:      #7a7570;
   --rule:      #c4bfb8;
   --rule-lt:   #d8d4cd;
-  --red:       #b5341c;
-  --red-dk:    #8c2614;
+  --red:       #c5492a;
+  --red-dk:    #9a3318;
   --nav-h:     68px;
 }
 
@@ -453,3 +453,70 @@ footer.site-footer {
 .rd2 { transition-delay: .16s; }
 .rd3 { transition-delay: .24s; }
 .rd4 { transition-delay: .32s; }
+
+/* ═══════════════ NAV LOGO MARK (IMAGE) ═══════════════ */
+.nav-logo-mark {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.nav-logo-mark img {
+  height: 100%;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+@media (max-width: 768px) {
+  .nav-logo-mark { height: 36px; }
+}
+
+/* ═══════════════ NEW FOOTER MARKUP ═══════════════ */
+.footer-brand { display: flex; flex-direction: column; gap: 18px; }
+.footer-logo { display: inline-flex; align-items: center; max-width: 200px; }
+.footer-logo img { width: 100%; height: auto; display: block; filter: brightness(1.05); }
+.footer-tag {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: rgba(240,237,232,.4);
+  letter-spacing: .08em;
+  line-height: 1.6;
+  text-transform: uppercase;
+  max-width: 280px;
+}
+.footer-col h4 {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: var(--red);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(240,237,232,.1);
+  font-weight: normal;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { padding: 6px 0; }
+.footer-col a {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(240,237,232,.55);
+  text-decoration: none;
+  transition: color .2s, padding-left .2s;
+}
+.footer-col a:hover { color: var(--bg); padding-left: 4px; }
+.footer-loc {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9px;
+  color: rgba(240,237,232,.35);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  line-height: 1.7;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(240,237,232,.08);
+}

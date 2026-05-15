@@ -43,7 +43,7 @@
   display: flex;
   align-items: center;
 }
-.prd-hero-logo svg, .prd-hero-logo object { height: 100%; width: 280px; max-width: 100%; display: block; pointer-events: none; }
+.prd-hero-logo svg, .prd-hero-logo object, .prd-hero-logo img { height: 100%; width: auto; max-width: 280px; display: block; pointer-events: none; object-fit: contain; }
 .prd-hero-name {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 200;
@@ -443,7 +443,7 @@
   margin-bottom: 12px;
   color: var(--ink);
 }
-.related-logo svg { height: 100%; width: auto; }
+.related-logo svg, .related-logo img { height: 100%; width: auto; max-width: 160px; object-fit: contain; display: block; }
 .related-desc { font-size: 12.5px; color: var(--ink3); line-height: 1.65; margin-bottom: 14px; }
 .related-cta {
   font-family: 'Share Tech Mono', monospace;
