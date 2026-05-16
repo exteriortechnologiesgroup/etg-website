@@ -3,234 +3,569 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EPIC Metals — Cladding Products | ETG</title>
-<meta name="description" content="For more than 45 years, EPIC Metals has been practising the Art and Science of structural deck engineering. Wideck, Super Wideck, Epicore, and Archdeck systems ">
+<title>EPIC Metals — Structural Deck Ceiling Systems Canada | Exterior Technologies Group</title>
+<meta name="description" content="EPIC Metals exposed structural roof and floor deck ceiling systems — Wideck, Super Wideck, Toris, Envista, Archdeck, and Epicore. Long-spans up to 58 feet with superior acoustical performance. Distributed across Canada by Exterior Technologies Group.">
+<meta name="keywords" content="EPIC Metals Canada, structural deck ceiling, Wideck, Super Wideck, Archdeck, Toris, Envista, Epicore, exposed structural ceiling, long span steel deck, architectural ceiling Canada, acoustical ceiling systems, ETG Canada">
+<meta property="og:title" content="EPIC Metals — Structural Deck Ceiling Systems | ETG Canada">
+<meta property="og:description" content="Exposed structural roof and floor deck ceiling systems with long-spans up to 58 feet — distributed across Canada by Exterior Technologies Group.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300&family=Barlow:wght@300;400;500&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300&family=Barlow:wght@300;400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/main.css">
-<link rel="stylesheet" href="../assets/css/product-page.css">
+<style>
+/* ═══════════════ PRODUCT PAGE TEMPLATE ═══════════════ */
+
+/* ── HERO ── */
+#prd-hero {
+  margin-top: var(--nav-h);
+  position: relative;
+  height: calc(100vh - var(--nav-h));
+  min-height: 640px;
+  overflow: hidden;
+  background: #1a1916;
+}
+.ph-bg { position: absolute; inset: 0; z-index: 0; }
+.ph-bg img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(.62) contrast(1.05); }
+.ph-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.15) 45%, rgba(0,0,0,.75) 100%); }
+.ph-content { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 56px 6vw 64px; color: #fff; }
+.ph-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; }
+.ph-crumbs { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .18em; color: rgba(255,255,255,.6); text-transform: uppercase; }
+.ph-crumbs a { color: rgba(255,255,255,.78); text-decoration: none; transition: color .2s; }
+.ph-crumbs a:hover { color: var(--red); }
+.ph-crumbs .sep { margin: 0 8px; color: rgba(255,255,255,.3); }
+.ph-prd-id { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .14em; color: rgba(255,255,255,.5); text-align: right; }
+.ph-center { display: flex; flex-direction: column; gap: 26px; max-width: 1100px; }
+.ph-logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  height: 76px;
+  padding: 14px 22px;
+  background: rgba(255,255,255,.92);
+  border-radius: 2px;
+  align-self: flex-start;
+}
+.ph-logo-wrap img { height: 100%; width: auto; max-width: 220px; object-fit: contain; display: block; }
+.ph-h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(60px, 9vw, 156px); font-weight: 200; line-height: .88; letter-spacing: -.015em; text-transform: uppercase; margin: 0; }
+.ph-h1 em { font-style: italic; font-weight: 200; color: var(--red); }
+.ph-tagline { font-family: 'Barlow', sans-serif; font-size: clamp(17px, 1.6vw, 22px); font-weight: 300; max-width: 660px; color: rgba(255,255,255,.88); line-height: 1.5; }
+.ph-bottom { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; flex-wrap: wrap; }
+.ph-meta { display: grid; grid-template-columns: repeat(3, auto); gap: 40px; }
+.ph-meta-item { display: flex; flex-direction: column; gap: 6px; }
+.ph-meta-label { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .14em; color: rgba(255,255,255,.5); text-transform: uppercase; }
+.ph-meta-val { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 300; color: #fff; line-height: 1; letter-spacing: -.005em; }
+.ph-meta-val .red { color: var(--red); font-weight: 400; }
+.ph-cta-row { display: flex; gap: 12px; }
+.ph-btn { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; padding: 17px 26px; text-decoration: none; border: 1px solid; display: inline-flex; align-items: center; gap: 12px; transition: all .2s ease; }
+.ph-btn-primary { background: var(--red); border-color: var(--red); color: #fff; }
+.ph-btn-primary:hover { background: #fff; color: var(--ink); border-color: #fff; }
+.ph-btn-ghost { background: transparent; border-color: rgba(255,255,255,.5); color: #fff; }
+.ph-btn-ghost:hover { background: rgba(255,255,255,.1); border-color: #fff; }
+.ph-btn .ar { font-family: 'Barlow Condensed', sans-serif; font-size: 17px; }
+
+/* ── OVERVIEW ── */
+#prd-overview { background: var(--bg); padding: 110px 6vw 120px; }
+.ov-head { display: grid; grid-template-columns: 1fr 2fr; gap: 56px; align-items: end; padding-bottom: 56px; border-bottom: 1px solid var(--rule); margin-bottom: 56px; }
+.ov-eyebrow { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .18em; color: var(--ink3); text-transform: uppercase; display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+.ov-eyebrow::before { content: ""; width: 24px; height: 1px; background: var(--red); }
+.ov-head h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: clamp(40px, 4.6vw, 68px); line-height: .94; letter-spacing: -.01em; text-transform: uppercase; color: var(--ink); margin: 0; }
+.ov-head h2 em { font-style: italic; font-weight: 300; color: var(--red); }
+.ov-lead { font-family: 'Barlow', sans-serif; font-size: 19px; font-weight: 300; line-height: 1.55; color: var(--ink2); max-width: 640px; padding-bottom: 6px; }
+
+.ov-body { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+.ov-col { font-family: 'Barlow', sans-serif; font-size: 16px; font-weight: 300; line-height: 1.7; color: var(--ink2); }
+.ov-col p { margin: 0 0 20px; }
+.ov-col p strong { color: var(--ink); font-weight: 500; }
+.ov-features { margin-top: 56px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+.ov-feat { background: var(--white); padding: 30px 26px; }
+.ov-feat-icon { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .14em; color: var(--red); margin-bottom: 14px; }
+.ov-feat-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 22px; text-transform: uppercase; color: var(--ink); line-height: 1.1; margin-bottom: 10px; }
+.ov-feat-desc { font-family: 'Barlow', sans-serif; font-size: 13.5px; font-weight: 300; line-height: 1.55; color: var(--ink3); }
+
+/* ── PROJECT SHOWCASE (between overview and systems) ── */
+#prd-showcase { background: var(--ink); padding: 0; position: relative; }
+.sh-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; grid-template-rows: 50vh 50vh; gap: 1px; background: rgba(255,255,255,.08); }
+.sh-img { position: relative; overflow: hidden; }
+.sh-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .9s cubic-bezier(.2,.7,.2,1); }
+.sh-img:hover img { transform: scale(1.04); }
+.sh-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,.6) 100%); pointer-events: none; }
+.sh-img-cap { position: absolute; left: 22px; bottom: 22px; right: 22px; z-index: 2; color: #fff; }
+.sh-img-cap-label { font-family: 'Share Tech Mono', monospace; font-size: 9px; letter-spacing: .14em; color: var(--red); margin-bottom: 8px; text-transform: uppercase; }
+.sh-img-cap-title { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 400; line-height: 1.1; text-transform: uppercase; }
+.sh-feature { grid-row: span 2; }
+
+/* ── SYSTEMS (instead of news for EPIC, since EPIC has a distinctive product line) ── */
+#prd-systems { background: var(--white); padding: 110px 6vw 120px; border-top: 1px solid var(--rule); }
+.sy-head { display: grid; grid-template-columns: 1fr 2fr; gap: 56px; align-items: end; padding-bottom: 56px; border-bottom: 1px solid var(--rule); margin-bottom: 56px; }
+.sy-head h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: clamp(40px, 4.6vw, 68px); line-height: .94; letter-spacing: -.01em; text-transform: uppercase; color: var(--ink); margin: 0; }
+.sy-head h2 em { font-style: italic; font-weight: 300; color: var(--red); }
+.sy-lead { font-family: 'Barlow', sans-serif; font-size: 17px; font-weight: 300; line-height: 1.6; color: var(--ink2); max-width: 640px; padding-bottom: 6px; }
+
+.sy-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+.sy-card { background: var(--bg); padding: 36px 30px 38px; display: flex; flex-direction: column; gap: 18px; min-height: 320px; position: relative; transition: background .25s; }
+.sy-card:hover { background: var(--white); }
+.sy-card-num { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .14em; color: var(--red); }
+.sy-card-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 28px; line-height: 1; text-transform: uppercase; color: var(--ink); letter-spacing: -.005em; }
+.sy-card-name sup { font-size: 13px; font-weight: 400; color: var(--ink3); margin-left: 2px; }
+.sy-card-span { display: flex; align-items: baseline; gap: 6px; padding: 10px 0 8px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.sy-card-span-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: 26px; color: var(--ink); line-height: 1; }
+.sy-card-span-unit { font-family: 'Share Tech Mono', monospace; font-size: 9px; letter-spacing: .12em; color: var(--ink3); text-transform: uppercase; }
+.sy-card-desc { font-family: 'Barlow', sans-serif; font-size: 13.5px; font-weight: 300; line-height: 1.6; color: var(--ink2); flex: 1; }
+.sy-card-tag { font-family: 'Share Tech Mono', monospace; font-size: 9px; letter-spacing: .14em; color: var(--ink3); text-transform: uppercase; padding-top: 14px; border-top: 1px solid var(--rule); }
+
+/* ── DOWNLOADS ── */
+#prd-downloads { background: var(--bg); padding: 100px 6vw 110px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.dl-head { margin-bottom: 56px; }
+.dl-head h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: clamp(36px, 4vw, 56px); line-height: .96; letter-spacing: -.01em; text-transform: uppercase; color: var(--ink); margin: 0; max-width: 700px; }
+.dl-head h2 em { font-style: italic; font-weight: 300; color: var(--red); }
+.dl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--rule); background: var(--white); }
+.dl-item { padding: 32px 28px; border-right: 1px solid var(--rule); display: flex; flex-direction: column; gap: 18px; transition: background .2s; text-decoration: none; color: inherit; min-height: 220px; }
+.dl-item:hover { background: var(--bg); }
+.dl-item:last-child { border-right: none; }
+.dl-item-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.dl-item-type { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .14em; color: var(--red); text-transform: uppercase; }
+.dl-item-size { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--ink3); }
+.dl-item-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 22px; line-height: 1.15; text-transform: uppercase; color: var(--ink); flex: 1; }
+.dl-item-desc { font-family: 'Barlow', sans-serif; font-size: 13px; font-weight: 300; color: var(--ink3); line-height: 1.55; }
+.dl-item-action { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .14em; color: var(--ink); text-transform: uppercase; display: flex; align-items: center; justify-content: space-between; padding-top: 16px; border-top: 1px solid var(--rule); }
+.dl-item.coming-soon { opacity: .58; pointer-events: none; }
+.dl-item.coming-soon .dl-item-action { color: var(--ink3); }
+
+/* ── GALLERY ── */
+#prd-gallery { background: var(--white); padding: 110px 6vw 120px; }
+.gl-head { margin-bottom: 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: end; }
+.gl-head h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: clamp(40px, 4.6vw, 68px); line-height: .94; letter-spacing: -.01em; text-transform: uppercase; color: var(--ink); margin: 0; }
+.gl-head h2 em { font-style: italic; font-weight: 300; color: var(--red); }
+.gl-intro { font-family: 'Barlow', sans-serif; font-size: 16px; font-weight: 300; line-height: 1.6; color: var(--ink2); max-width: 540px; padding-bottom: 4px; }
+
+.gl-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 14px; }
+.gl-item { overflow: hidden; position: relative; background: var(--bg3); }
+.gl-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1s cubic-bezier(.2,.7,.2,1); }
+.gl-item:hover img { transform: scale(1.05); }
+.gl-item::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,.55) 100%); pointer-events: none; opacity: 0; transition: opacity .3s; }
+.gl-item:hover::after { opacity: 1; }
+.gl-item-cap { position: absolute; left: 18px; bottom: 18px; right: 18px; z-index: 2; color: #fff; opacity: 0; transform: translateY(8px); transition: opacity .3s, transform .3s; }
+.gl-item:hover .gl-item-cap { opacity: 1; transform: none; }
+.gl-item-cap-label { font-family: 'Share Tech Mono', monospace; font-size: 9px; letter-spacing: .14em; color: var(--red); text-transform: uppercase; margin-bottom: 4px; }
+.gl-item-cap-title { font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 400; line-height: 1.15; text-transform: uppercase; }
+.gl-w6 { grid-column: span 6; }
+.gl-w4 { grid-column: span 4; }
+.gl-w3 { grid-column: span 3; }
+.gl-w8 { grid-column: span 8; }
+.gl-h-tall { aspect-ratio: 4/5; }
+.gl-h-med { aspect-ratio: 3/2; }
+.gl-h-wide { aspect-ratio: 16/9; }
+.gl-h-sq { aspect-ratio: 1/1; }
+
+/* ── CTA ── */
+#prd-cta { background: var(--ink); color: #fff; padding: 110px 6vw 120px; position: relative; overflow: hidden; }
+.cta-bg { position: absolute; inset: 0; opacity: .14; }
+.cta-bg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cta-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1.4fr 1fr; gap: 60px; align-items: center; max-width: 1400px; margin: 0 auto; }
+.cta-eyebrow { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .18em; color: rgba(255,255,255,.65); text-transform: uppercase; display: flex; align-items: center; gap: 14px; margin-bottom: 26px; }
+.cta-eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--red); }
+.cta-inner h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: clamp(48px, 5.5vw, 84px); line-height: .94; letter-spacing: -.01em; text-transform: uppercase; color: #fff; margin: 0 0 28px; }
+.cta-inner h2 em { font-style: italic; font-weight: 300; color: var(--red); }
+.cta-sub { font-family: 'Barlow', sans-serif; font-size: 17px; font-weight: 300; line-height: 1.6; color: rgba(255,255,255,.78); max-width: 620px; margin-bottom: 36px; }
+.cta-actions { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+.cta-btn { font-family: 'Share Tech Mono', monospace; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; padding: 22px 32px; text-decoration: none; border: 1px solid; display: flex; align-items: center; justify-content: space-between; gap: 24px; transition: all .2s ease; width: 100%; min-width: 320px; }
+.cta-btn-primary { background: var(--red); border-color: var(--red); color: #fff; }
+.cta-btn-primary:hover { background: #fff; color: var(--ink); border-color: #fff; }
+.cta-btn-ghost { background: transparent; border-color: rgba(255,255,255,.4); color: #fff; }
+.cta-btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+.cta-btn .ar { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; }
+.cta-contact { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .12em; color: rgba(255,255,255,.5); padding-top: 18px; border-top: 1px solid rgba(255,255,255,.12); margin-top: 8px; line-height: 1.8; }
+.cta-contact strong { color: #fff; font-weight: 400; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .ph-meta { grid-template-columns: repeat(3, auto); gap: 24px; }
+  .ph-meta-val { font-size: 22px; }
+  .ov-head { grid-template-columns: 1fr; gap: 28px; }
+  .ov-body { grid-template-columns: 1fr; gap: 28px; }
+  .ov-features { grid-template-columns: repeat(2, 1fr); }
+  .sh-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 40vh 40vh 40vh; }
+  .sh-feature { grid-column: span 2; grid-row: span 1; }
+  .sy-head { grid-template-columns: 1fr; gap: 28px; }
+  .sy-grid { grid-template-columns: repeat(2, 1fr); }
+  .dl-grid { grid-template-columns: 1fr; }
+  .dl-item { border-right: none; border-bottom: 1px solid var(--rule); }
+  .dl-item:last-child { border-bottom: none; }
+  .gl-head { grid-template-columns: 1fr; gap: 24px; }
+  .gl-w6, .gl-w4, .gl-w3, .gl-w8 { grid-column: span 12; }
+  .cta-inner { grid-template-columns: 1fr; gap: 36px; }
+}
+@media (max-width: 640px) {
+  .ph-content { padding: 32px 22px 36px; }
+  .ph-top { flex-direction: column; gap: 12px; }
+  .ph-prd-id { text-align: left; }
+  .ph-meta { grid-template-columns: 1fr 1fr; gap: 18px; }
+  .ph-bottom { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .ph-cta-row { flex-direction: column; width: 100%; }
+  .ph-btn { width: 100%; justify-content: space-between; }
+  #prd-overview, #prd-systems, #prd-downloads, #prd-gallery, #prd-cta { padding-left: 22px; padding-right: 22px; }
+  .ov-features { grid-template-columns: 1fr; }
+  .sy-grid { grid-template-columns: 1fr; }
+  .sh-grid { grid-template-columns: 1fr; grid-template-rows: 36vh 36vh 36vh 36vh; }
+  .sh-feature { grid-column: span 1; }
+  .cta-btn { min-width: 0; }
+}
+</style>
 </head>
 <body>
 
-<div id="cur"></div>
-<div id="cur-ring"></div><nav class="site-nav">
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<nav class="site-nav">
   <div class="nav-left">
     <a href="../index.html" class="nav-logo-mark" aria-label="Exterior Technologies Group">
       <img src="../assets/logos/etg.png" alt="Exterior Technologies Group">
     </a>
   </div>
   <ul class="nav-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../products.html" class="active">Products</a></li>
-      <li><a href="../services.html">Services</a></li>
-      <li><a href="../news.html">News</a></li>
-      <li><a href="../about.html">About Us</a></li>
-    </ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../products.html" class="active">Products</a></li>
+    <li><a href="../services.html">Services</a></li>
+    <li><a href="../news.html">News</a></li>
+    <li><a href="../about.html">About Us</a></li>
+  </ul>
   <a href="../contact.html" class="nav-cta">Contact Us</a>
   <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
-<!-- HERO -->
+
+<!-- ═════════════════ HERO ═════════════════ -->
 <section id="prd-hero">
-  <div class="prd-hero-text">
+  <div class="ph-bg">
+    <img src="../assets/products/epic/epic-metals-structural-deck-ceiling-canada-exterior-technologies-group-wideck-airport-terminal-curved-ceiling-hero-01.jpg" alt="EPIC Metals Wideck structural deck ceiling system — curved airport terminal application by Exterior Technologies Group Canada">
+  </div>
+  <div class="ph-content">
+    <div class="ph-top">
+      <div class="ph-crumbs"><a href="../index.html">Home</a><span class="sep">/</span><a href="../products.html">Products</a><span class="sep">/</span>EPIC Metals</div>
+      <div class="ph-prd-id">// PRD-05 / STRUCTURAL DECK CEILING</div>
+    </div>
+
+    <div class="ph-center">
+      <div class="ph-logo-wrap">
+        <img src="../assets/logos/epic.png" alt="EPIC Metals">
+      </div>
+      <h1 class="ph-h1">The <em>art</em> &amp; science<br>of structural deck.</h1>
+      <p class="ph-tagline">Exposed structural roof and floor deck ceiling systems — long-span, acoustically tuned, and architecturally expressive. The ceiling <em>is</em> the structure.</p>
+    </div>
+
+    <div class="ph-bottom">
+      <div class="ph-meta">
+        <div class="ph-meta-item">
+          <div class="ph-meta-label">// CLEAR SPAN</div>
+          <div class="ph-meta-val">up to <span class="red">58 ft</span></div>
+        </div>
+        <div class="ph-meta-item">
+          <div class="ph-meta-label">// EST.</div>
+          <div class="ph-meta-val">Since <span class="red">1968</span></div>
+        </div>
+        <div class="ph-meta-item">
+          <div class="ph-meta-label">// LEED PROJECTS</div>
+          <div class="ph-meta-val"><span class="red">378+</span> certified</div>
+        </div>
+      </div>
+      <div class="ph-cta-row">
+        <a href="#prd-overview" class="ph-btn ph-btn-primary">Explore <span class="ar">↓</span></a>
+        <a href="../contact.html" class="ph-btn ph-btn-ghost">Request Specs <span class="ar">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════ OVERVIEW ═════════════════ -->
+<section id="prd-overview">
+  <div class="ov-head reveal">
+    <div class="ov-head-left">
+      <div class="ov-eyebrow">// PRODUCT OVERVIEW</div>
+      <h2>One ceiling.<br>One <em>structure</em>.</h2>
+    </div>
+    <p class="ov-lead">EPIC Metals manufactures exposed structural roof and floor deck ceiling systems — long-span steel panels that simultaneously serve as the building's structural diaphragm, finished ceiling, and acoustical surface. One system, three jobs.</p>
+  </div>
+
+  <div class="ov-body reveal">
+    <div class="ov-col">
+      <p>For more than 56 years, EPIC Metals has been practicing what the company calls <strong>the Art and Science of structural deck engineering</strong>. The product line spans flat, vaulted, and free-form geometries — from the linear-plank elegance of Toris to the dramatic barrel vaults of Archdeck — all engineered to clear-span up to 58 feet without intermediate supports.</p>
+      <p>Because the structural deck is exposed below, the system <strong>eliminates the need for a separate dropped ceiling</strong>. Acoustical performance is built into the panel itself: perforated facings with mineral wool infills deliver high NRC ratings without adding a second layer of construction. The result is a leaner build, lower floor-to-floor heights, and a ceiling plane that becomes a deliberate architectural feature.</p>
+    </div>
+    <div class="ov-col">
+      <p>EPIC's panels contribute to <strong>LEED certification</strong> across multiple credit categories — recycled steel content, regional materials, daylighting (when paired with translucent inserts), and reduced material consumption. EPIC has supplied product to more than 378 LEED-certified projects since joining USGBC in 2004.</p>
+      <p>ETG distributes the full EPIC product family across Canada — Toris, Envista, Wideck, Super Wideck, Archdeck, Epicore, Epicore MSR, and the Timberlok woodgrain finish range. We support the design team from concept through shop drawings, with structural engineering review, acoustical modeling, and installer coordination tailored to Canadian climate and code requirements.</p>
+    </div>
+  </div>
+
+  <div class="ov-features reveal">
+    <div class="ov-feat">
+      <div class="ov-feat-icon">// 01</div>
+      <div class="ov-feat-title">Long-Span Engineering</div>
+      <p class="ov-feat-desc">Clear spans from 6 to 58 feet — eliminates intermediate columns and opens the floor plate.</p>
+    </div>
+    <div class="ov-feat">
+      <div class="ov-feat-icon">// 02</div>
+      <div class="ov-feat-title">Integrated Acoustics</div>
+      <p class="ov-feat-desc">Perforated facings with mineral infill — high NRC without a second ceiling.</p>
+    </div>
+    <div class="ov-feat">
+      <div class="ov-feat-icon">// 03</div>
+      <div class="ov-feat-title">Curved Geometries</div>
+      <p class="ov-feat-desc">Archdeck and Wideck panels curve in the strong direction — no rolled structural steel required.</p>
+    </div>
+    <div class="ov-feat">
+      <div class="ov-feat-icon">// 04</div>
+      <div class="ov-feat-title">LEED Contribution</div>
+      <p class="ov-feat-desc">High-recycled-content steel, regional sourcing, and dropped-ceiling elimination credits.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════ PROJECT SHOWCASE ═════════════════ -->
+<section id="prd-showcase">
+  <div class="sh-grid">
+    <div class="sh-img sh-feature">
+      <img src="../assets/products/epic/epic-metals-structural-deck-ceiling-canada-exterior-technologies-group-wideck-airport-terminal-curved-ceiling-hero-01.jpg" alt="Airport terminal interior featuring EPIC Metals Wideck curved structural ceiling">
+      <div class="sh-img-cap">
+        <div class="sh-img-cap-label">FEATURED · TRANSIT</div>
+        <div class="sh-img-cap-title">Airport Terminal — Wideck® Curved Ceiling</div>
+      </div>
+    </div>
+    <div class="sh-img">
+      <img src="../assets/products/epic/epic-metals-structural-deck-ceiling-canada-exterior-technologies-group-mercedes-dealership-structural-truss-02.jpg" alt="Mercedes dealership showroom with EPIC Metals structural deck ceiling and steel truss">
+      <div class="sh-img-cap">
+        <div class="sh-img-cap-label">COMMERCIAL · RETAIL</div>
+        <div class="sh-img-cap-title">Mercedes-Benz Showroom</div>
+      </div>
+    </div>
+    <div class="sh-img">
+      <img src="../assets/products/epic/epic-metals-structural-deck-ceiling-canada-exterior-technologies-group-archdeck-barrel-vault-entrance-dusk-01.jpg" alt="Barrel vault entrance canopy at dusk — EPIC Archdeck system">
+      <div class="sh-img-cap">
+        <div class="sh-img-cap-label">CIVIC · ENTRANCE</div>
+        <div class="sh-img-cap-title">Archdeck® Barrel Vault Canopy</div>
+      </div>
+    </div>
+    <div class="sh-img">
+      <img src="../assets/products/epic/epic-metals-structural-deck-ceiling-canada-exterior-technologies-group-exterior-canopy-sunset-diagonal-supports-01.jpg" alt="EPIC Metals exterior canopy soffit with diagonal supports at sunset">
+      <div class="sh-img-cap">
+        <div class="sh-img-cap-label">EXTERIOR · CANOPY</div>
+        <div class="sh-img-cap-title">Linear Soffit Canopy System</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════ SYSTEMS ═════════════════ -->
+<section id="prd-systems">
+  <div class="sy-head reveal">
     <div>
-      <div class="prd-hero-crumbs"><a href="../index.html">Home</a> / <a href="../products.html">Products</a> / <span>EPIC Metals</span></div>
-      <div class="prd-hero-id">// PRD-05 / EXTERIOR CLADDING</div>
-      <div class="prd-hero-logo"><img src="../assets/logos/epic.png" alt="EPIC Metals" class="brand-logo-img"></div>
-      <h1 class="prd-hero-name">EPIC <em>Metals</em></h1>
-      <div class="prd-hero-tagline">Architectural Deck &amp; Roof Systems Since 1968</div>
-      <p class="prd-hero-lead">For more than 45 years, EPIC Metals has been practising the Art and Science of structural deck engineering. Wideck, Super Wideck, Epicore, and Archdeck systems enable designers to create unique, visually open public spaces with exposed structural deck ceiling appearances.</p>
+      <div class="ov-eyebrow">// THE PRODUCT FAMILY</div>
+      <h2>Eight <em>systems</em>, one engineering language.</h2>
     </div>
-    <div class="prd-hero-actions">
-      <a href="../contact.html" class="btn-solid">Request Sample</a>
-      <a href="#specs" class="btn-line">View Specs</a>
-    </div>
+    <p class="sy-lead">From the linear plank of Toris to the deep barrel vaults of Archdeck, every EPIC system shares the same structural-plus-finish logic — exposed below, structural above, acoustically tuned, and clear-spanning what conventional construction cannot.</p>
   </div>
-  <div class="prd-hero-img">
-    <img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272686_edit.webp" alt="EPIC Metals deck">
-    <div class="prd-hero-img-tag"><span>// EST. 1968</span><span class="red">ARCHITECTURAL DECK</span></div>
+
+  <div class="sy-grid reveal">
+    <div class="sy-card">
+      <div class="sy-card-num">// 01 — FLAT</div>
+      <div class="sy-card-name">Toris<sup>®</sup></div>
+      <div class="sy-card-span">
+        <span class="sy-card-span-num">6—30</span>
+        <span class="sy-card-span-unit">ft span</span>
+      </div>
+      <p class="sy-card-desc">Linear-plank ceiling with softened, recessed-corner edges. A dovetail recess conceals roofing fasteners for an uninterrupted plane.</p>
+      <div class="sy-card-tag">// LINEAR PLANK</div>
+    </div>
+
+    <div class="sy-card">
+      <div class="sy-card-num">// 02 — FLAT</div>
+      <div class="sy-card-name">Envista<sup>®</sup></div>
+      <div class="sy-card-span">
+        <span class="sy-card-span-num">12—36</span>
+        <span class="sy-card-span-unit">ft span</span>
+      </div>
+      <p class="sy-card-desc">Three interchangeable panels — U-up, D-down, F-flat — combined to create custom rhythmic ceiling patterns. The most expressive in the line.</p>
+      <div class="sy-card-tag">// MODULAR PATTERN</div>
+    </div>
+
+    <div class="sy-card">
+      <div class="sy-card-num">// 03 — FLAT</div>
+      <div class="sy-card-name">Wideck<sup>®</sup></div>
+      <div class="sy-card-span">
+        <span class="sy-card-span-num">10—58</span>
+        <span class="sy-card-span-unit">ft span</span>
+      </div>
+      <p class="sy-card-desc">Bold ribbed appearance with concealed fasteners. Spans further than any system in the EPIC family — built for civic and transit halls.</p>
+      <div class="sy-card-tag">// LONG-SPAN RIBBED</div>
+    </div>
+
+    <div class="sy-card">
+      <div class="sy-card-num">// 04 — FLAT</div>
+      <div class="sy-card-name">Super Wideck<sup>®</sup></div>
+      <div class="sy-card-span">
+        <span class="sy-card-span-num">24—55</span>
+        <span class="sy-card-span-unit">ft span</span>
+      </div>
+      <p class="sy-card-desc">Up to 80% lighter than precast at comparable spans. Beamed ceiling profile delivers strong structural presence without the load.</p>
+      <div class="sy-card-tag">// HEAVY-DUTY</div>
+    </div>
+
+    <div class="sy-card">
+      <div class="sy-card-num">// 05 — CURVED</div>
+      <div class="sy-card-name">Archdeck<sup>®</sup></div>
+      <div class="sy-card-span">
+        <span class="sy-card-span-num">14—40</span>
+        <span class="sy-card-span-unit">ft span</span>
+      </div>
+      <p class="sy-card-desc">Deep-corrugated panel curves in its strong direction — barrel vaults and arches without rolled structural steel. Ribbed or flush profile.</p>
+      <div class="sy-card-tag">// BARREL VAULT</div>
+    </div>
+
+    <div class="sy-card">
+      <div class="sy-card-num">// 06 — FLAT</div>
+      <div class="sy-card-name">Epicore<sup>®</sup></div>
+      <div class="sy-card-span">
+        <span class="sy-card-span-num">6—32</span>
+        <span class="sy-card-span-unit">ft span</span>
+      </div>
+      <p class="sy-card-desc">The original linear-plank system. Dovetail ribs accept inserted hangers anywhere along the deck for flexible utility integration.</p>
+      <div class="sy-card-tag">// ORIGINAL LINEAR</div>
+    </div>
+
+    <div class="sy-card">
+      <div class="sy-card-num">// 07 — COMPOSITE</div>
+      <div class="sy-card-name">Epicore MSR<sup>®</sup></div>
+      <div class="sy-card-span">
+        <span class="sy-card-span-num">13—27</span>
+        <span class="sy-card-span-unit">ft span</span>
+      </div>
+      <p class="sy-card-desc">Composite floor system for multi-story residential — hotels, condos, student housing. Acts as both reinforcing form and finished ceiling.</p>
+      <div class="sy-card-tag">// MULTI-STORY FLOOR</div>
+    </div>
+
+    <div class="sy-card">
+      <div class="sy-card-num">// 08 — FINISH</div>
+      <div class="sy-card-name">Timberlok<sup>®</sup></div>
+      <div class="sy-card-span">
+        <span class="sy-card-span-num">Per system</span>
+        <span class="sy-card-span-unit">finish overlay</span>
+      </div>
+      <p class="sy-card-desc">Realistic woodgrain finish applied to structural steel deck — the warmth of wood with the span, acoustics, and durability of steel.</p>
+      <div class="sy-card-tag">// WOODGRAIN FINISH</div>
+    </div>
   </div>
 </section>
 
-<!-- FACTS -->
-<div class="prd-facts">
-  <div class="prd-fact">
-    <div class="prd-fact-label">// Founded</div>
-    <div class="prd-fact-value"><span class="red">1968</span></div>
+<!-- ═════════════════ DOWNLOADS ═════════════════ -->
+<section id="prd-downloads">
+  <div class="dl-head reveal">
+    <div class="ov-eyebrow">// RESOURCES</div>
+    <h2>Specifications &amp; <em>technical</em> documents</h2>
   </div>
-  <div class="prd-fact">
-    <div class="prd-fact-label">// Wideck Span</div>
-    <div class="prd-fact-value">Up to <span class="red">58</span> ft</div>
-  </div>
-  <div class="prd-fact">
-    <div class="prd-fact-label">// Systems</div>
-    <div class="prd-fact-value"><span class="red">7</span> Product Lines</div>
-  </div>
-  <div class="prd-fact">
-    <div class="prd-fact-label">// Acoustic</div>
-    <div class="prd-fact-value">NRC <span class="red">0.85+</span></div>
-  </div>
-</div>
 
-<!-- FEATURES -->
-<section class="prd-section alt">
-  <div class="prd-section-head reveal">
+  <div class="dl-grid reveal">
+    <a href="#" class="dl-item coming-soon">
+      <div class="dl-item-top">
+        <span class="dl-item-type">PDF · BROCHURE</span>
+        <span class="dl-item-size">Coming soon</span>
+      </div>
+      <h3 class="dl-item-name">EPIC Metals Product Family Brochure</h3>
+      <p class="dl-item-desc">Complete overview of all eight system families with profile sections, span tables, and finish options.</p>
+      <div class="dl-item-action"><span>Coming Soon</span><span>—</span></div>
+    </a>
+    <a href="#" class="dl-item coming-soon">
+      <div class="dl-item-top">
+        <span class="dl-item-type">PDF · SPEC</span>
+        <span class="dl-item-size">Coming soon</span>
+      </div>
+      <h3 class="dl-item-name">CSC Master Specification</h3>
+      <p class="dl-item-desc">Three-part specification format aligned with Canadian CSC NMS workflows — Toris, Wideck, and Archdeck systems.</p>
+      <div class="dl-item-action"><span>Coming Soon</span><span>—</span></div>
+    </a>
+    <a href="#" class="dl-item coming-soon">
+      <div class="dl-item-top">
+        <span class="dl-item-type">PDF · GUIDE</span>
+        <span class="dl-item-size">Coming soon</span>
+      </div>
+      <h3 class="dl-item-name">Acoustical Performance Guide</h3>
+      <p class="dl-item-desc">NRC ratings, absorption coefficients, and design guidance for perforated facings across the EPIC line.</p>
+      <div class="dl-item-action"><span>Coming Soon</span><span>—</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- ═════════════════ GALLERY ═════════════════ -->
+<section id="prd-gallery">
+  <div class="gl-head reveal">
     <div>
-      <p class="s-eyebrow">Capabilities</p>
-      <h2 class="s-title">System &amp;<br><em>Performance</em></h2>
+      <div class="ov-eyebrow">// PROJECT GALLERY</div>
+      <h2>EPIC <em>across</em> applications</h2>
     </div>
-    <p class="prd-section-lead">EPIC's deck systems eliminate the conventional ceiling tile — the structural deck itself becomes the finished architectural surface. Long spans, integrated acoustic performance, and concealed mechanical capability define every product line.</p>
+    <p class="gl-intro">Selected EPIC Metals installations — transit terminals, civic buildings, dealerships, and educational facilities where the structural ceiling is also the design statement.</p>
   </div>
-  <div class="feature-grid">
-<div class="feature-cell reveal">
-  <div class="feature-num">// FEAT 01</div>
-  <h3 class="feature-title">Wideck</h3>
-  <p class="feature-desc">Deep cellular long-span deck — 10 to 58 ft clear spans, 12&quot; depth maximum, exposed soffit finish.</p>
-</div>
-<div class="feature-cell reveal">
-  <div class="feature-num">// FEAT 02</div>
-  <h3 class="feature-title">Super Wideck</h3>
-  <p class="feature-desc">Wider modules and longer spans for transit, aviation, and large-volume institutional applications.</p>
-</div>
-<div class="feature-cell reveal">
-  <div class="feature-num">// FEAT 03</div>
-  <h3 class="feature-title">Epicore</h3>
-  <p class="feature-desc">Composite deck system serving floor and ceiling applications — concrete-filled with finished underside.</p>
-</div>
-<div class="feature-cell reveal">
-  <div class="feature-num">// FEAT 04</div>
-  <h3 class="feature-title">Archdeck</h3>
-  <p class="feature-desc">Curved &amp; ribbed deck system for distinctive visual interest in lobbies, atria, and signature spaces.</p>
-</div>
-<div class="feature-cell reveal">
-  <div class="feature-num">// FEAT 05</div>
-  <h3 class="feature-title">Envista</h3>
-  <p class="feature-desc">Smooth-faced deck with concealed fasteners — premium architectural finish.</p>
-</div>
-<div class="feature-cell reveal">
-  <div class="feature-num">// FEAT 06</div>
-  <h3 class="feature-title">Toris &amp; Timberlok</h3>
-  <p class="feature-desc">Specialty acoustic and wood-grain finishes integrated into the structural deck.</p>
-</div>
+
+  <div class="gl-grid reveal">
+    <div class="gl-item gl-w8 gl-h-wide">
+      <img src="../assets/products/epic/epic-metals-structural-deck-ceiling-canada-exterior-technologies-group-wideck-airport-terminal-curved-ceiling-hero-01.jpg" alt="Airport terminal with EPIC Wideck curved structural ceiling overhead">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">TRANSIT · TERMINAL</div><div class="gl-item-cap-title">Wideck® Airport Terminal</div></div>
+    </div>
+    <div class="gl-item gl-w4 gl-h-wide">
+      <img src="../assets/products/epic/epic-metals-structural-deck-ceiling-canada-exterior-technologies-group-mercedes-dealership-structural-truss-02.jpg" alt="Mercedes dealership interior with EPIC Metals ceiling deck and steel trusses">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">RETAIL · DEALERSHIP</div><div class="gl-item-cap-title">Mercedes-Benz Showroom</div></div>
+    </div>
+
+    <div class="gl-item gl-w4 gl-h-tall">
+      <img src="../assets/products/epic/epic-metals-structural-deck-ceiling-canada-exterior-technologies-group-archdeck-barrel-vault-entrance-dusk-01.jpg" alt="Archdeck barrel vault canopy at dusk">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">CIVIC · ENTRY</div><div class="gl-item-cap-title">Archdeck® Vault Entrance</div></div>
+    </div>
+    <div class="gl-item gl-w4 gl-h-tall">
+      <img src="../assets/products/epic/epic-metals-structural-deck-ceiling-canada-exterior-technologies-group-archdeck-barrel-vault-corridor-interior-02.jpg" alt="Interior barrel-vaulted corridor with EPIC Archdeck ribbed ceiling">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">INTERIOR · CORRIDOR</div><div class="gl-item-cap-title">Archdeck® Concourse</div></div>
+    </div>
+    <div class="gl-item gl-w4 gl-h-tall">
+      <img src="../assets/products/epic/epic-metals-structural-deck-ceiling-canada-exterior-technologies-group-toris-linear-soffit-angled-ceiling-01.jpg" alt="Angled EPIC Toris linear soffit ceiling in a public lobby">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">PUBLIC · LOBBY</div><div class="gl-item-cap-title">Toris® Angled Soffit</div></div>
+    </div>
+
+    <div class="gl-item gl-w6 gl-h-med">
+      <img src="../assets/products/epic/epic-metals-structural-deck-ceiling-canada-exterior-technologies-group-exterior-canopy-sunset-diagonal-supports-01.jpg" alt="Exterior EPIC Metals canopy soffit at sunset with diagonal steel supports">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">COMMERCIAL · CANOPY</div><div class="gl-item-cap-title">Exterior Linear Soffit</div></div>
+    </div>
+    <div class="gl-item gl-w6 gl-h-med">
+      <img src="../assets/products/epic/epic-metals-structural-deck-ceiling-canada-exterior-technologies-group-illuminated-canopy-curved-feature-wall-01.jpg" alt="Illuminated EPIC canopy with adjacent curved feature wall">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">CIVIC · NIGHT</div><div class="gl-item-cap-title">Illuminated Canopy</div></div>
+    </div>
+
+    <div class="gl-item gl-w12 gl-h-wide" style="grid-column: span 12;">
+      <img src="../assets/products/epic/epic-metals-structural-deck-ceiling-canada-exterior-technologies-group-linear-ribbed-soffit-hvac-detail-01.webp" alt="Detail of EPIC Metals linear ribbed soffit with integrated HVAC ductwork">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">DETAIL · UTILITY INTEGRATION</div><div class="gl-item-cap-title">Ribbed Soffit + HVAC Integration</div></div>
+    </div>
   </div>
 </section>
 
-<!-- FINISHES GALLERY -->
-<section class="prd-section">
-  <div class="prd-section-head reveal">
+<!-- ═════════════════ CTA ═════════════════ -->
+<section id="prd-cta">
+  <div class="cta-bg">
+    <img src="../assets/products/epic/epic-metals-structural-deck-ceiling-canada-exterior-technologies-group-wideck-airport-terminal-curved-ceiling-hero-01.jpg" alt="">
+  </div>
+  <div class="cta-inner reveal">
     <div>
-      <p class="s-eyebrow">Finishes</p>
-      <h2 class="s-title">Range of<br><em>Finishes</em></h2>
+      <div class="cta-eyebrow">START AN EPIC METALS PROJECT</div>
+      <h2>Let the ceiling<br>do the <em>structural</em> work.</h2>
+      <p class="cta-sub">Whether you're sizing a column-free transit hall or a barrel-vaulted lobby, our team supports the design from concept through construction — structural review, acoustical modeling, shop drawings, and installer coordination for EPIC systems across Canada.</p>
     </div>
-    <p class="prd-section-lead">A representative sampling of available finishes. Full samples and complete colour libraries available on request — contact our team to schedule sample delivery to your office.</p>
-  </div>
-  <div class="finish-gallery">
-<div class="finish-cell reveal">
-  <img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272687_edit.webp" alt="12&quot; Cellular">
-  <div class="finish-overlay">
-    <div class="finish-meta">// WIDECK / WD-12</div>
-    <div class="finish-name">12&quot; Cellular</div>
-  </div>
-</div>
-<div class="finish-cell reveal">
-  <img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272689_edit.webp" alt="24&quot; Module">
-  <div class="finish-overlay">
-    <div class="finish-meta">// SUPER WIDECK</div>
-    <div class="finish-name">24&quot; Module</div>
-  </div>
-</div>
-<div class="finish-cell reveal">
-  <img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3273147_edit.png" alt="Curved Rib">
-  <div class="finish-overlay">
-    <div class="finish-meta">// ARCHDECK / AD-RC</div>
-    <div class="finish-name">Curved Rib</div>
-  </div>
-</div>
-<div class="finish-cell reveal">
-  <img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272783_edit.webp" alt="Wood-Grain">
-  <div class="finish-overlay">
-    <div class="finish-meta">// TIMBERLOK</div>
-    <div class="finish-name">Wood-Grain</div>
-  </div>
-</div>
-  </div>
-</section>
-
-<!-- CASE STUDY -->
-<section class="prd-section alt" style="padding: 0;">
-  <div class="case-study">
-    <div class="case-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272686_edit.webp" alt="Case Study"></div>
-    <div class="case-copy">
-      <div class="case-tag">// CASE STUDY — PAN AM AQUATICS</div>
-      <h2 class="case-title"><em>Exposed Deck</em> Ceiling System</h2>
-      <p class="case-body">The Pan Am Aquatic Centre showcases EPIC Metals' approach to architectural deck — using the structural roof system itself as the visible ceiling. The continuous Wideck profile delivers acoustic performance, long spans across the pool deck, and a clean modern finish without conventional ceiling assemblies.<br><br>The same project pairs EPIC Metals deck above with ALPOLIC/fr panels at the central stairway — demonstrating cross-product coordination.</p>
-      <div class="case-meta"><div class="case-meta-item"><div class="case-meta-label">Project</div><div class="case-meta-value">Pan Am Aquatic Centre</div></div><div class="case-meta-item"><div class="case-meta-label">Location</div><div class="case-meta-value">Toronto, ON</div></div><div class="case-meta-item"><div class="case-meta-label">System</div><div class="case-meta-value">Wideck</div></div><div class="case-meta-item"><div class="case-meta-label">Function</div><div class="case-meta-value">Roof + Ceiling</div></div></div>
+    <div class="cta-actions">
+      <a href="../contact.html" class="cta-btn cta-btn-primary"><span>Request a Consultation</span><span class="ar">→</span></a>
+      <a href="../products.html" class="cta-btn cta-btn-ghost"><span>Explore Other Products</span><span class="ar">→</span></a>
+      <div class="cta-contact">
+        <strong>Speak directly with our team</strong><br>
+        1 (844) 240-0452 &nbsp;·&nbsp; info@etgcc.com
+      </div>
     </div>
   </div>
 </section>
 
-<!-- SPECS -->
-<section class="prd-section" id="specs">
-  <div class="prd-section-head reveal">
-    <div>
-      <p class="s-eyebrow">Technical Data</p>
-      <h2 class="s-title"><em>Specifications</em></h2>
-    </div>
-    <p class="prd-section-lead">Project-specific submittal packages, structural calculations, and stamped engineering documentation available through our specification consultation service.</p>
-  </div>
-  <div class="spec-block">
-    <div class="spec-table">
-      <div class="spec-row"><div class="spec-label">Wideck Depth</div><div class="spec-value">4&quot; / 6&quot; / 7.5&quot; / 12&quot;</div></div>
-      <div class="spec-row"><div class="spec-label">Wideck Span</div><div class="spec-value">10 — 58 ft</div></div>
-      <div class="spec-row"><div class="spec-label">Material</div><div class="spec-value">Galvanized / Galvalume / Stainless</div></div>
-      <div class="spec-row"><div class="spec-label">Finish</div><div class="spec-value">Mill / Powder Coat / PVDF</div></div>
-      <div class="spec-row"><div class="spec-label">Acoustic</div><div class="spec-value">Perforated soffits, NRC 0.85+</div></div>
-      <div class="spec-row"><div class="spec-label">Composite</div><div class="spec-value">Epicore — concrete fill compatible</div></div>
-      <div class="spec-row"><div class="spec-label">Code</div><div class="spec-value">CSA / SDI / IBC compliant</div></div>
-      <div class="spec-row"><div class="spec-label">Warranty</div><div class="spec-value">20-Year Finish</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<div class="prd-cta-block">
-  <p class="s-eyebrow">Ready to Specify?</p>
-  <h2 class="s-title">Talk to a<br><em>Specialist</em></h2>
-  <p>Request samples, schedule a Lunch &amp; Learn, or get specification consultation for your next project. Our team responds within one business day.</p>
-  <div class="prd-cta-actions">
-    <a href="../contact.html" class="btn-red">Request Sample</a>
-    <a href="../contact.html" class="btn-line" style="color:var(--bg); border-color: rgba(240,237,232,.3);">Schedule Lunch &amp; Learn</a>
-  </div>
-</div>
-
-<!-- RELATED -->
-<section class="related-prd">
-  <div class="related-head">
-    <p class="s-eyebrow">Related Products</p>
-    <h2 class="s-title">More from <em>ETG</em></h2>
-  </div>
-  <div class="related-grid">
-<a href="kalzip.html" class="related-card">
-  <div class="related-tag">// PRD-02</div>
-  <div class="related-logo"><img src="../assets/logos/kalzip.png" alt="Kalzip" class="brand-logo-img"></div>
-  <p class="related-desc">Kalzip is the world-leading standing seam roofing and wall cladding system. Over 1.3 billion square feet have been insta...</p>
-  <span class="related-cta">View Product →</span>
-</a>
-<a href="alpolic-materials.html" class="related-card">
-  <div class="related-tag">// PRD-01</div>
-  <div class="related-logo"><img src="../assets/logos/alpolic.png" alt="Alpolic" class="brand-logo-img"></div>
-  <p class="related-desc">Alpolic Materials are taken to a level that is nothing short of visionary. Versatile, durable, and architecturally expre...</p>
-  <span class="related-cta">View Product →</span>
-</a>
-<a href="radius-track.html" class="related-card">
-  <div class="related-tag">// PRD-06</div>
-  <div class="related-logo"><img src="../assets/logos/radius-track.png" alt="Radius Track" class="brand-logo-img"></div>
-  <p class="related-desc">The premier provider of cold-formed steel framing solutions for curved and complex surfaces. Domes, curved ceilings, wal...</p>
-  <span class="related-cta">View Product →</span>
-</a>
-  </div>
-</section>
-
+<!-- ═════════════════ FOOTER ═════════════════ -->
 <footer class="site-footer">
   <div class="footer-top">
     <div class="footer-brand">
@@ -242,14 +577,14 @@
     <div class="footer-col">
       <h4>Products</h4>
       <ul>
-        <li><a href="../products/alpolic-materials.html">Alpolic Materials</a></li>
-        <li><a href="../products/kalzip.html">Kalzip</a></li>
-        <li><a href="../products/elzinc.html">elZinc</a></li>
-        <li><a href="../products/tac-thermal-spacer.html">TAC Thermal Spacer</a></li>
-        <li><a href="../products/epic-metals.html">EPIC Metals</a></li>
-        <li><a href="../products/radius-track.html">Radius Track</a></li>
-        <li><a href="../products/forme-design.html">ForMe Design</a></li>
-        <li><a href="../products/terracotta-favemanc.html">Terracotta Favemanc</a></li>
+        <li><a href="alpolic-materials.html">Alpolic Materials</a></li>
+        <li><a href="kalzip.html">Kalzip</a></li>
+        <li><a href="elzinc.html">elZinc</a></li>
+        <li><a href="tac-thermal-spacer.html">TAC Thermal Spacer</a></li>
+        <li><a href="epic-metals.html">EPIC Metals</a></li>
+        <li><a href="radius-track.html">Radius Track</a></li>
+        <li><a href="forme-design.html">ForMe Design</a></li>
+        <li><a href="terracotta-favemanc.html">Terracotta Favemanc</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -278,6 +613,7 @@
     </ul>
   </div>
 </footer>
+
 <script src="../assets/js/main.js"></script>
 </body>
 </html>
