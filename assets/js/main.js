@@ -2,8 +2,8 @@
 
 // Cursor
 (function() {
-  const cur = document.getElementById('cur');
-  const ring = document.getElementById('cur-ring');
+  const cur = document.getElementById('cur') || document.querySelector('.cursor-dot');
+  const ring = document.getElementById('cur-ring') || document.querySelector('.cursor-ring');
   if (!cur || !ring) return;
   let mx=0,my=0,rx=0,ry=0;
   document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; });

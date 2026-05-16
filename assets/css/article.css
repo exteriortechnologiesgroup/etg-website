@@ -272,3 +272,97 @@
   .article-hero { padding: 56px 24px 40px; }
   .article-feature-img-cap { padding: 12px 24px; }
 }
+
+/* ─── ARTICLE LIST + QUOTES ─── */
+.article-body .article-list {
+  margin: 24px 0 28px;
+  padding: 0 0 0 22px;
+}
+.article-body .article-list li {
+  font-family: 'Barlow', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink2);
+  margin-bottom: 12px;
+  padding-left: 6px;
+}
+.article-body .article-list li strong { color: var(--ink); font-weight: 500; }
+
+.article-body .article-quote {
+  margin: 36px 0;
+  padding: 28px 32px;
+  border-left: 3px solid var(--red);
+  background: var(--bg2);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+/* article body title uses Barlow Condensed for sub-headings */
+.article-body h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 400;
+  font-size: clamp(28px, 3vw, 36px);
+  line-height: 1.1;
+  letter-spacing: -.005em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 44px 0 18px;
+}
+.article-body h2 em { font-style: italic; color: var(--red); font-weight: 400; }
+
+/* link styling within body */
+.article-body a { color: var(--red); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.article-body a:hover { color: var(--ink); }
+
+/* related card read-more link */
+.related-article-card .read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .14em;
+  color: var(--red);
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+.related-article-card .read-more .ar {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  transition: transform .2s;
+}
+.related-article-card:hover .read-more .ar { transform: translateX(4px); }
+
+/* ov-eyebrow for use inside article-related */
+.article-related .ov-eyebrow {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  letter-spacing: .18em;
+  color: var(--ink3);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.article-related .ov-eyebrow::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: var(--red);
+}
+.article-related-head h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 300;
+  font-size: clamp(32px, 3.6vw, 50px);
+  line-height: 1;
+  letter-spacing: -.01em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0;
+}
+.article-related-head h2 em { font-style: italic; color: var(--red); font-weight: 300; }

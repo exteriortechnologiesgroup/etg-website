@@ -48,29 +48,31 @@ body::before {
 }
 
 /* ── CURSOR ── */
-#cur, #cur-ring {
+#cur, #cur-ring, .cursor-dot, .cursor-ring {
   position: fixed;
   pointer-events: none;
   border-radius: 50%;
   z-index: 9999;
   transform: translate(-50%,-50%);
+  top: 0;
+  left: 0;
 }
-#cur {
+#cur, .cursor-dot {
   width: 7px; height: 7px;
   background: var(--red);
   transition: width .2s, height .2s;
 }
-#cur-ring {
+#cur-ring, .cursor-ring {
   width: 32px; height: 32px;
   border: 1px solid rgba(26,25,22,.25);
   transition: width .28s, height .28s;
 }
-body.ch #cur { width: 14px; height: 14px; }
-body.ch #cur-ring { width: 46px; height: 46px; border-color: var(--red); }
+body.ch #cur, body.ch .cursor-dot { width: 14px; height: 14px; }
+body.ch #cur-ring, body.ch .cursor-ring { width: 46px; height: 46px; border-color: var(--red); }
 
 @media (max-width: 768px) {
   body { cursor: auto; }
-  #cur, #cur-ring { display: none; }
+  #cur, #cur-ring, .cursor-dot, .cursor-ring { display: none; }
 }
 
 /* ── NAV ── */
