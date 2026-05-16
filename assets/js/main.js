@@ -1,70 +1,78 @@
 // ETG site — v2 interactions
 
-// Cursor
-(function() {
-  const cur = document.getElementById('cur') || document.querySelector('.cursor-dot');
-  const ring = document.getElementById('cur-ring') || document.querySelector('.cursor-ring');
-  if (!cur || !ring) return;
+// ═══════════════════════════════════════════════════════════
+// CURSOR — bulletproof
+// ═══════════════════════════════════════════════════════════
+try {
+  (function() {
+    const cur = document.getElementById('cur') || document.querySelector('.cursor-dot');
+    const ring = document.getElementById('cur-ring') || document.querySelector('.cursor-ring');
+    if (!cur || !ring) return;
 
-  // Hide cursor system-wide on touch devices
-  if (matchMedia && matchMedia('(hover: none), (pointer: coarse)').matches) {
-    cur.style.display = 'none';
-    ring.style.display = 'none';
-    document.body.style.cursor = 'auto';
-    return;
-  }
+    // Bail on touch devices
+    if (window.matchMedia && window.matchMedia('(hover: none), (pointer: coarse)').matches) {
+      cur.style.display = 'none';
+      ring.style.display = 'none';
+      document.documentElement.style.cursor = 'auto';
+      document.body.style.cursor = 'auto';
+      return;
+    }
 
-  let mx = window.innerWidth / 2, my = window.innerHeight / 2;
-  let rx = mx, ry = my;
-  let visible = false;
+    let mx = window.innerWidth / 2;
+    let my = window.innerHeight / 2;
+    let rx = mx, ry = my;
 
-  function show() {
-    if (!visible) { visible = true; cur.style.opacity = '1'; ring.style.opacity = '1'; }
-  }
-  function hide() {
-    if (visible) { visible = false; cur.style.opacity = '0'; ring.style.opacity = '0'; }
-  }
+    // Force critical styles inline — defeat any CSS shenanigans
+    function applyStyles(el) {
+      el.style.position = 'fixed';
+      el.style.top = '0';
+      el.style.left = '0';
+      el.style.pointerEvents = 'none';
+      el.style.zIndex = '2147483647';
+      el.style.opacity = '1';
+      el.style.display = 'block';
+    }
+    applyStyles(cur);
+    applyStyles(ring);
 
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    show();
-  }, { passive: true });
-  document.addEventListener('mouseleave', hide);
-  document.addEventListener('mouseenter', show);
-  window.addEventListener('blur', hide);
-  window.addEventListener('focus', show);
+    function track(e) {
+      if (typeof e.clientX === 'number') {
+        mx = e.clientX;
+        my = e.clientY;
+      }
+    }
+    document.addEventListener('mousemove', track, { passive: true, capture: true });
+    document.addEventListener('mousedown', track, { passive: true, capture: true });
+    document.addEventListener('mouseover', track, { passive: true, capture: true });
+    document.addEventListener('pointermove', track, { passive: true, capture: true });
 
-  // Initialize hidden until first mousemove
-  cur.style.opacity = '0';
-  ring.style.opacity = '0';
-  cur.style.transition = 'opacity .2s, width .2s, height .2s';
-  ring.style.transition = 'opacity .25s, width .28s, height .28s, border-color .25s';
-
-  (function loop(){
-    rx += (mx - rx) * 0.18;
-    ry += (my - ry) * 0.18;
-    // Use transform only — never overwrite full cssText
-    cur.style.transform = `translate(${mx}px, ${my}px) translate(-50%, -50%)`;
-    ring.style.transform = `translate(${rx}px, ${ry}px) translate(-50%, -50%)`;
+    function loop() {
+      try {
+        rx += (mx - rx) * 0.18;
+        ry += (my - ry) * 0.18;
+        cur.style.transform = 'translate(' + mx + 'px,' + my + 'px) translate(-50%,-50%)';
+        ring.style.transform = 'translate(' + rx + 'px,' + ry + 'px) translate(-50%,-50%)';
+      } catch (e) {}
+      requestAnimationFrame(loop);
+    }
     requestAnimationFrame(loop);
-  })();
 
-  // Hover state
-  function bindHover(scope) {
-    scope.querySelectorAll('a, button, [data-hover], input, textarea, select, label').forEach(el => {
-      if (el.dataset.curBound) return;
-      el.dataset.curBound = '1';
-      el.addEventListener('mouseenter', () => document.body.classList.add('ch'));
-      el.addEventListener('mouseleave', () => document.body.classList.remove('ch'));
+    // Hover grow effect on interactive elements
+    document.querySelectorAll('a, button, [data-hover], input, textarea, select, label').forEach(function(el) {
+      el.addEventListener('mouseenter', function() { document.body.classList.add('ch'); });
+      el.addEventListener('mouseleave', function() { document.body.classList.remove('ch'); });
     });
-  }
-  bindHover(document);
-  // Re-bind on DOM changes (in case content loads later)
-  const mo = new MutationObserver(() => bindHover(document));
-  mo.observe(document.body, { childList: true, subtree: true });
-})();
+  })();
+} catch (e) {
+  // If cursor JS fails entirely, restore native cursor so user isn't left without one
+  document.documentElement.style.cursor = 'auto';
+  if (document.body) document.body.style.cursor = 'auto';
+  console.warn('Custom cursor failed:', e);
+}
 
+// ═══════════════════════════════════════════════════════════
 // Hero slideshow
+// ═══════════════════════════════════════════════════════════
 (function() {
   const slides = document.querySelectorAll('.hero-slide');
   const dots = document.querySelectorAll('.hero-dot');
@@ -77,29 +85,33 @@
     cur = n;
     slides[cur].classList.add('active');
     if (dots[cur]) dots[cur].classList.add('active');
-    if (counter) counter.textContent = `${String(cur+1).padStart(2,'0')} / ${String(slides.length).padStart(2,'0')}`;
+    if (counter) counter.textContent = String(cur+1).padStart(2,'0') + ' / ' + String(slides.length).padStart(2,'0');
   }
-  dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.idx)));
-  setInterval(() => goTo((cur+1) % slides.length), 5500);
+  dots.forEach(function(d) { d.addEventListener('click', function() { goTo(+d.dataset.idx); }); });
+  setInterval(function() { goTo((cur+1) % slides.length); }, 5500);
 })();
 
+// ═══════════════════════════════════════════════════════════
 // Reveal on scroll
+// ═══════════════════════════════════════════════════════════
 (function() {
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => {
+  const io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
       if (e.isIntersecting) {
         e.target.classList.add('in');
         io.unobserve(e.target);
       }
     });
   }, { threshold: .08 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
 })();
 
+// ═══════════════════════════════════════════════════════════
 // Mobile nav toggle
+// ═══════════════════════════════════════════════════════════
 (function() {
   const toggle = document.querySelector('.nav-toggle');
   const links = document.querySelector('.nav-links');
   if (!toggle || !links) return;
-  toggle.addEventListener('click', () => links.classList.toggle('open'));
+  toggle.addEventListener('click', function() { links.classList.toggle('open'); });
 })();

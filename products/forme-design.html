@@ -3,234 +3,569 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ForMe Design — Cladding Products | ETG</title>
-<meta name="description" content="Italian-crafted SKIN cladding and BATTENS made from 100% extruded aluminium. World-class powder coating and woodgrain solutions — Powder on Powder, Sublimation,">
+<title>ForMe Design Canada — Aluminum Wood-Look Cladding, Battens &amp; Soffit Systems | Exterior Technologies Group</title>
+<meta name="description" content="ForMe Design Canada — premium Italian aluminum cladding with wood-grain finishes. Battens Light, Battens 50, and Cladding systems for sustainable, beautiful architecture. Distributed across Canada by Exterior Technologies Group.">
+<meta name="keywords" content="ForMe Design, ForMe Design Canada, aluminum cladding Canada, wood-look aluminum, Battens 50, Battens Light, aluminum boiserie, ventilated façade, sustainable cladding, Exterior Technologies Group">
+<link rel="canonical" href="https://exteriortechnologiesgroup.com/products/forme-design">
+<meta property="og:title" content="ForMe Design Canada — Aluminum Cladding &amp; Battens | ETG">
+<meta property="og:description" content="Italian-made aluminum cladding with wood-grain finishes — Battens Light, Battens 50, and Cladding systems for sustainable architecture across Canada.">
+<meta property="og:image" content="https://exteriortechnologiesgroup.com/assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-battens-50-black-pavilion-exterior-01.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300&family=Barlow:wght@300;400;500&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300&family=Barlow:wght@300;400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/main.css">
-<link rel="stylesheet" href="../assets/css/product-page.css">
+<style>
+/* ═══════════════ PRODUCT PAGE TEMPLATE ═══════════════ */
+#prd-hero { margin-top: var(--nav-h); position: relative; height: calc(100vh - var(--nav-h)); min-height: 640px; overflow: hidden; background: #1a1916; }
+.ph-bg { position: absolute; inset: 0; z-index: 0; }
+.ph-bg img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(.62) contrast(1.05); }
+.ph-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.15) 45%, rgba(0,0,0,.75) 100%); }
+.ph-content { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 56px 6vw 64px; color: #fff; }
+.ph-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; }
+.ph-crumbs { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .18em; color: rgba(255,255,255,.6); text-transform: uppercase; }
+.ph-crumbs a { color: rgba(255,255,255,.78); text-decoration: none; transition: color .2s; }
+.ph-crumbs a:hover { color: var(--red); }
+.ph-crumbs .sep { margin: 0 8px; color: rgba(255,255,255,.3); }
+.ph-prd-id { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .14em; color: rgba(255,255,255,.5); text-align: right; }
+.ph-center { display: flex; flex-direction: column; gap: 26px; max-width: 1100px; }
+.ph-logo-wrap { display: inline-flex; align-items: center; height: 76px; padding: 14px 22px; background: rgba(255,255,255,.92); border-radius: 2px; align-self: flex-start; }
+.ph-logo-wrap img { height: 100%; width: auto; max-width: 240px; object-fit: contain; display: block; }
+.ph-h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(60px, 9vw, 156px); font-weight: 200; line-height: .88; letter-spacing: -.015em; text-transform: uppercase; margin: 0; }
+.ph-h1 em { font-style: italic; font-weight: 200; color: var(--red); }
+.ph-tagline { font-family: 'Barlow', sans-serif; font-size: clamp(17px, 1.6vw, 22px); font-weight: 300; max-width: 660px; color: rgba(255,255,255,.88); line-height: 1.5; }
+.ph-bottom { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; flex-wrap: wrap; }
+.ph-meta { display: grid; grid-template-columns: repeat(3, auto); gap: 40px; }
+.ph-meta-item { display: flex; flex-direction: column; gap: 6px; }
+.ph-meta-label { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .14em; color: rgba(255,255,255,.5); text-transform: uppercase; }
+.ph-meta-val { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 300; color: #fff; line-height: 1; letter-spacing: -.005em; }
+.ph-meta-val .red { color: var(--red); font-weight: 400; }
+.ph-cta-row { display: flex; gap: 12px; }
+.ph-btn { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; padding: 17px 26px; text-decoration: none; border: 1px solid; display: inline-flex; align-items: center; gap: 12px; transition: all .2s ease; }
+.ph-btn-primary { background: var(--red); border-color: var(--red); color: #fff; }
+.ph-btn-primary:hover { background: #fff; color: var(--ink); border-color: #fff; }
+.ph-btn-ghost { background: transparent; border-color: rgba(255,255,255,.5); color: #fff; }
+.ph-btn-ghost:hover { background: rgba(255,255,255,.1); border-color: #fff; }
+.ph-btn .ar { font-family: 'Barlow Condensed', sans-serif; font-size: 17px; }
+
+#prd-overview { background: var(--bg); padding: 110px 6vw 120px; }
+.ov-head { display: grid; grid-template-columns: 1fr 2fr; gap: 56px; align-items: end; padding-bottom: 56px; border-bottom: 1px solid var(--rule); margin-bottom: 56px; }
+.ov-eyebrow { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .18em; color: var(--ink3); text-transform: uppercase; display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+.ov-eyebrow::before { content: ""; width: 24px; height: 1px; background: var(--red); }
+.ov-head h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: clamp(40px, 4.6vw, 68px); line-height: .94; letter-spacing: -.01em; text-transform: uppercase; color: var(--ink); margin: 0; }
+.ov-head h2 em { font-style: italic; font-weight: 300; color: var(--red); }
+.ov-lead { font-family: 'Barlow', sans-serif; font-size: 19px; font-weight: 300; line-height: 1.55; color: var(--ink2); max-width: 640px; padding-bottom: 6px; }
+.ov-body { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+.ov-col { font-family: 'Barlow', sans-serif; font-size: 16px; font-weight: 300; line-height: 1.7; color: var(--ink2); }
+.ov-col p { margin: 0 0 20px; }
+.ov-col p strong { color: var(--ink); font-weight: 500; }
+.ov-features { margin-top: 56px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+.ov-feat { background: var(--white); padding: 30px 26px; }
+.ov-feat-icon { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .14em; color: var(--red); margin-bottom: 14px; }
+.ov-feat-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 22px; text-transform: uppercase; color: var(--ink); line-height: 1.1; margin-bottom: 10px; }
+.ov-feat-desc { font-family: 'Barlow', sans-serif; font-size: 13.5px; font-weight: 300; line-height: 1.55; color: var(--ink3); }
+
+#prd-showcase { background: var(--ink); padding: 0; position: relative; }
+.sh-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; grid-template-rows: 50vh 50vh; gap: 1px; background: rgba(255,255,255,.08); }
+.sh-img { position: relative; overflow: hidden; }
+.sh-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .9s cubic-bezier(.2,.7,.2,1); }
+.sh-img:hover img { transform: scale(1.04); }
+.sh-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,.6) 100%); pointer-events: none; }
+.sh-img-cap { position: absolute; left: 22px; bottom: 22px; right: 22px; z-index: 2; color: #fff; }
+.sh-img-cap-label { font-family: 'Share Tech Mono', monospace; font-size: 9px; letter-spacing: .14em; color: var(--red); margin-bottom: 8px; text-transform: uppercase; }
+.sh-img-cap-title { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 400; line-height: 1.1; text-transform: uppercase; }
+.sh-feature { grid-row: span 2; }
+
+/* SYSTEMS section */
+#prd-systems { background: var(--bg); padding: 110px 6vw 120px; }
+.sys-head { padding-bottom: 48px; border-bottom: 1px solid var(--rule); margin-bottom: 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: end; }
+.sys-head h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: clamp(40px, 4.6vw, 68px); line-height: .94; letter-spacing: -.01em; text-transform: uppercase; color: var(--ink); margin: 0; }
+.sys-head h2 em { font-style: italic; font-weight: 300; color: var(--red); }
+.sys-intro { font-family: 'Barlow', sans-serif; font-size: 16px; font-weight: 300; line-height: 1.6; color: var(--ink2); max-width: 540px; padding-bottom: 4px; }
+.sys-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+.sys-card { background: var(--white); display: flex; flex-direction: column; }
+.sys-card-img { aspect-ratio: 4/3; overflow: hidden; background: var(--bg3); position: relative; }
+.sys-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s ease; }
+.sys-card:hover .sys-card-img img { transform: scale(1.04); }
+.sys-card-body { padding: 28px 26px 30px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+.sys-num { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--red); letter-spacing: .14em; text-transform: uppercase; }
+.sys-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 28px; line-height: 1.05; letter-spacing: -.005em; text-transform: uppercase; color: var(--ink); }
+.sys-desc { font-family: 'Barlow', sans-serif; font-size: 14px; font-weight: 300; line-height: 1.6; color: var(--ink2); flex: 1; }
+.sys-tag { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--ink3); letter-spacing: .14em; text-transform: uppercase; padding-top: 14px; border-top: 1px solid var(--rule); }
+.sys-tag strong { color: var(--ink); font-weight: normal; }
+
+/* NEWS section */
+#prd-news { background: var(--white); padding: 100px 6vw 110px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.nw-head { display: flex; justify-content: space-between; align-items: end; padding-bottom: 36px; border-bottom: 1px solid var(--rule); margin-bottom: 48px; gap: 40px; flex-wrap: wrap; }
+.nw-head-left .ov-eyebrow { margin-bottom: 18px; }
+.nw-head h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: clamp(36px, 4vw, 56px); line-height: .96; letter-spacing: -.01em; text-transform: uppercase; color: var(--ink); margin: 0; }
+.nw-head h2 em { font-style: italic; font-weight: 300; color: var(--red); }
+.nw-all { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .14em; color: var(--ink2); text-decoration: none; text-transform: uppercase; padding: 14px 22px; border: 1px solid var(--ink); transition: all .2s; }
+.nw-all:hover { background: var(--ink); color: #fff; }
+.nw-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.nw-card { background: var(--bg); border: 1px solid var(--rule); display: flex; flex-direction: column; text-decoration: none; transition: transform .25s ease, border-color .2s; }
+.nw-card:hover { transform: translateY(-3px); border-color: var(--ink2); }
+.nw-card-img { aspect-ratio: 16/9; overflow: hidden; background: var(--bg3); position: relative; }
+.nw-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s ease; }
+.nw-card:hover .nw-card-img img { transform: scale(1.05); }
+.nw-card-img-tag { position: absolute; top: 14px; left: 14px; background: var(--ink); color: var(--bg); font-family: 'Share Tech Mono', monospace; font-size: 9px; letter-spacing: .12em; padding: 5px 9px; text-transform: uppercase; }
+.nw-card-body { padding: 28px 28px 32px; flex: 1; display: flex; flex-direction: column; }
+.nw-card-date { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .14em; color: var(--ink3); text-transform: uppercase; margin-bottom: 14px; }
+.nw-card-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 26px; line-height: 1.15; letter-spacing: -.005em; text-transform: uppercase; color: var(--ink); margin-bottom: 14px; }
+.nw-card-excerpt { font-family: 'Barlow', sans-serif; font-size: 14px; font-weight: 300; line-height: 1.55; color: var(--ink2); flex: 1; margin-bottom: 18px; }
+.nw-card-arrow { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .14em; color: var(--red); text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
+.nw-card-arrow .ar { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; transition: transform .2s; }
+.nw-card:hover .nw-card-arrow .ar { transform: translateX(4px); }
+
+#prd-downloads { background: var(--bg); padding: 100px 6vw 110px; border-bottom: 1px solid var(--rule); }
+.dl-head { margin-bottom: 56px; }
+.dl-head h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: clamp(36px, 4vw, 56px); line-height: .96; letter-spacing: -.01em; text-transform: uppercase; color: var(--ink); margin: 0; max-width: 700px; }
+.dl-head h2 em { font-style: italic; font-weight: 300; color: var(--red); }
+.dl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--rule); }
+.dl-item { padding: 32px 28px; border-right: 1px solid var(--rule); display: flex; flex-direction: column; gap: 18px; transition: background .2s; text-decoration: none; color: inherit; min-height: 220px; background: var(--white); }
+.dl-item:hover { background: #fff; }
+.dl-item:last-child { border-right: none; }
+.dl-item-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.dl-item-type { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .14em; color: var(--red); text-transform: uppercase; }
+.dl-item-size { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--ink3); }
+.dl-item-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 22px; line-height: 1.15; text-transform: uppercase; color: var(--ink); flex: 1; }
+.dl-item-desc { font-family: 'Barlow', sans-serif; font-size: 13px; font-weight: 300; color: var(--ink3); line-height: 1.55; }
+.dl-item-action { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .14em; color: var(--ink); text-transform: uppercase; display: flex; align-items: center; justify-content: space-between; padding-top: 16px; border-top: 1px solid var(--rule); }
+.dl-item.live .dl-item-action { color: var(--red); }
+.dl-item.live .dl-item-action .ar { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; }
+
+#prd-gallery { background: var(--bg); padding: 110px 6vw 120px; }
+.gl-head { margin-bottom: 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: end; }
+.gl-head h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: clamp(40px, 4.6vw, 68px); line-height: .94; letter-spacing: -.01em; text-transform: uppercase; color: var(--ink); margin: 0; }
+.gl-head h2 em { font-style: italic; font-weight: 300; color: var(--red); }
+.gl-intro { font-family: 'Barlow', sans-serif; font-size: 16px; font-weight: 300; line-height: 1.6; color: var(--ink2); max-width: 540px; padding-bottom: 4px; }
+.gl-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 14px; }
+.gl-item { overflow: hidden; position: relative; background: var(--bg3); }
+.gl-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1s cubic-bezier(.2,.7,.2,1); }
+.gl-item:hover img { transform: scale(1.05); }
+.gl-item::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,.55) 100%); pointer-events: none; opacity: 0; transition: opacity .3s; }
+.gl-item:hover::after { opacity: 1; }
+.gl-item-cap { position: absolute; left: 18px; bottom: 18px; right: 18px; z-index: 2; color: #fff; opacity: 0; transform: translateY(8px); transition: opacity .3s, transform .3s; }
+.gl-item:hover .gl-item-cap { opacity: 1; transform: none; }
+.gl-item-cap-label { font-family: 'Share Tech Mono', monospace; font-size: 9px; letter-spacing: .14em; color: var(--red); text-transform: uppercase; margin-bottom: 4px; }
+.gl-item-cap-title { font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 400; line-height: 1.15; text-transform: uppercase; }
+.gl-w6 { grid-column: span 6; }
+.gl-w4 { grid-column: span 4; }
+.gl-w8 { grid-column: span 8; }
+.gl-w12 { grid-column: span 12; }
+.gl-h-tall { aspect-ratio: 4/5; }
+.gl-h-med { aspect-ratio: 3/2; }
+.gl-h-wide { aspect-ratio: 16/9; }
+.gl-h-sq { aspect-ratio: 1/1; }
+
+#prd-cta { background: var(--ink); color: #fff; padding: 110px 6vw 120px; position: relative; overflow: hidden; }
+.cta-bg { position: absolute; inset: 0; opacity: .14; }
+.cta-bg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cta-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1.4fr 1fr; gap: 60px; align-items: center; max-width: 1400px; margin: 0 auto; }
+.cta-eyebrow { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .18em; color: rgba(255,255,255,.65); text-transform: uppercase; display: flex; align-items: center; gap: 14px; margin-bottom: 26px; }
+.cta-eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--red); }
+.cta-inner h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: clamp(48px, 5.5vw, 84px); line-height: .94; letter-spacing: -.01em; text-transform: uppercase; color: #fff; margin: 0 0 28px; }
+.cta-inner h2 em { font-style: italic; font-weight: 300; color: var(--red); }
+.cta-sub { font-family: 'Barlow', sans-serif; font-size: 17px; font-weight: 300; line-height: 1.6; color: rgba(255,255,255,.78); max-width: 620px; margin-bottom: 36px; }
+.cta-actions { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+.cta-btn { font-family: 'Share Tech Mono', monospace; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; padding: 22px 32px; text-decoration: none; border: 1px solid; display: flex; align-items: center; justify-content: space-between; gap: 24px; transition: all .2s ease; width: 100%; min-width: 320px; }
+.cta-btn-primary { background: var(--red); border-color: var(--red); color: #fff; }
+.cta-btn-primary:hover { background: #fff; color: var(--ink); border-color: #fff; }
+.cta-btn-ghost { background: transparent; border-color: rgba(255,255,255,.4); color: #fff; }
+.cta-btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+.cta-btn .ar { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; }
+.cta-contact { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .12em; color: rgba(255,255,255,.5); padding-top: 18px; border-top: 1px solid rgba(255,255,255,.12); margin-top: 8px; line-height: 1.8; }
+.cta-contact strong { color: #fff; font-weight: 400; }
+
+@media (max-width: 1024px) {
+  .ph-meta { grid-template-columns: repeat(3, auto); gap: 24px; }
+  .ph-meta-val { font-size: 22px; }
+  .ov-head, .sys-head { grid-template-columns: 1fr; gap: 28px; }
+  .ov-body { grid-template-columns: 1fr; gap: 28px; }
+  .ov-features, .sys-grid { grid-template-columns: 1fr; }
+  .sh-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 40vh 40vh 40vh; }
+  .sh-feature { grid-column: span 2; grid-row: span 1; }
+  .nw-grid { grid-template-columns: 1fr; }
+  .dl-grid { grid-template-columns: 1fr; }
+  .dl-item { border-right: none; border-bottom: 1px solid var(--rule); }
+  .dl-item:last-child { border-bottom: none; }
+  .gl-head { grid-template-columns: 1fr; gap: 24px; }
+  .gl-w6, .gl-w4, .gl-w8, .gl-w12 { grid-column: span 12; }
+  .cta-inner { grid-template-columns: 1fr; gap: 36px; }
+}
+@media (max-width: 640px) {
+  .ph-content { padding: 32px 22px 36px; }
+  .ph-top { flex-direction: column; gap: 12px; }
+  .ph-prd-id { text-align: left; }
+  .ph-h1 { font-size: clamp(44px, 12vw, 72px); }
+  .ph-logo-wrap { height: 60px; padding: 10px 16px; }
+  .ph-meta { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .ph-bottom { flex-direction: column; align-items: flex-start; }
+  #prd-overview, #prd-systems, #prd-news, #prd-downloads, #prd-gallery, #prd-cta { padding-left: 22px; padding-right: 22px; padding-top: 70px; padding-bottom: 70px; }
+  .ov-features { grid-template-columns: 1fr; }
+  .nw-head { flex-direction: column; align-items: flex-start; }
+}
+</style>
 </head>
 <body>
-
+<div class="grain"></div>
 <div id="cur"></div>
-<div id="cur-ring"></div><nav class="site-nav">
+<div id="cur-ring"></div>
+
+<nav class="site-nav">
   <div class="nav-left">
     <a href="../index.html" class="nav-logo-mark" aria-label="Exterior Technologies Group">
       <img src="../assets/logos/etg.png" alt="Exterior Technologies Group">
     </a>
   </div>
   <ul class="nav-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../products.html" class="active">Products</a></li>
-      <li><a href="../services.html">Services</a></li>
-      <li><a href="../news.html">News</a></li>
-      <li><a href="../about.html">About Us</a></li>
-    </ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../products.html" class="active">Products</a></li>
+    <li><a href="../services.html">Services</a></li>
+    <li><a href="../news.html">News</a></li>
+    <li><a href="../about.html">About Us</a></li>
+  </ul>
   <a href="../contact.html" class="nav-cta">Contact Us</a>
   <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
+
 <!-- HERO -->
 <section id="prd-hero">
-  <div class="prd-hero-text">
-    <div>
-      <div class="prd-hero-crumbs"><a href="../index.html">Home</a> / <a href="../products.html">Products</a> / <span>ForMe Design</span></div>
-      <div class="prd-hero-id">// PRD-07 / EXTERIOR CLADDING</div>
-      <div class="prd-hero-logo"><img src="../assets/logos/forme.png" alt="ForMe Design" class="brand-logo-img"></div>
-      <h1 class="prd-hero-name">ForMe <em>Design</em></h1>
-      <div class="prd-hero-tagline">Italian Aluminium Cladding &amp; Soffits</div>
-      <p class="prd-hero-lead">Italian-crafted SKIN cladding and BATTENS made from 100% extruded aluminium. World-class powder coating and woodgrain solutions — Powder on Powder, Sublimation, HD printing — with 15-year warranty and 50+ years of industry expertise from the DVF Group.</p>
+  <div class="ph-bg">
+    <img src="../assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-battens-50-black-pavilion-exterior-01.jpg" alt="ForMe Design Canada — Battens 50 aluminum cladding on black pavilion, Exterior Technologies Group">
+  </div>
+  <div class="ph-content">
+    <div class="ph-top">
+      <div class="ph-crumbs"><a href="../index.html">Home</a><span class="sep">/</span><a href="../products.html">Products</a><span class="sep">/</span>ForMe Design</div>
+      <div class="ph-prd-id">// PRD-07 / ALUMINUM CLADDING &amp; BATTENS</div>
     </div>
-    <div class="prd-hero-actions">
-      <a href="../contact.html" class="btn-solid">Request Sample</a>
-      <a href="#specs" class="btn-line">View Specs</a>
+
+    <div class="ph-center">
+      <div class="ph-logo-wrap">
+        <img src="../assets/logos/forme.png" alt="ForMe Design — Aluminum Cladding Systems">
+      </div>
+      <h1 class="ph-h1">Aluminum, drawn<br><em>like</em> a second skin.</h1>
+      <p class="ph-tagline">Italian-made aluminum cladding with photo-realistic wood-grain and architectural finishes — sustainable, beautiful, and engineered for both interior and exterior expression.</p>
     </div>
-  </div>
-  <div class="prd-hero-img">
-    <img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272785_edit.webp" alt="ForMe Design soffits">
-    <div class="prd-hero-img-tag"><span>// DVF GROUP / ITALY</span><span class="red">50+ YEARS</span></div>
-  </div>
-</section>
 
-<!-- FACTS -->
-<div class="prd-facts">
-  <div class="prd-fact">
-    <div class="prd-fact-label">// Origin</div>
-    <div class="prd-fact-value"><span class="red">Italy</span> — DVF Group</div>
-  </div>
-  <div class="prd-fact">
-    <div class="prd-fact-label">// Material</div>
-    <div class="prd-fact-value"><span class="red">100%</span> Extruded</div>
-  </div>
-  <div class="prd-fact">
-    <div class="prd-fact-label">// Warranty</div>
-    <div class="prd-fact-value"><span class="red">15</span>-Year</div>
-  </div>
-  <div class="prd-fact">
-    <div class="prd-fact-label">// Heritage</div>
-    <div class="prd-fact-value"><span class="red">50+</span> Years</div>
-  </div>
-</div>
-
-<!-- FEATURES -->
-<section class="prd-section alt">
-  <div class="prd-section-head reveal">
-    <div>
-      <p class="s-eyebrow">Capabilities</p>
-      <h2 class="s-title">System &amp;<br><em>Performance</em></h2>
-    </div>
-    <p class="prd-section-lead">ForMe Design products are 100% extruded aluminium — fully recyclable, dimensionally stable, and immune to the warping that affects roll-formed competitors. Combined with Powder on Powder woodgrain technology, the result is a premium material indistinguishable from real wood at distance.</p>
-  </div>
-  <div class="feature-grid">
-<div class="feature-cell reveal">
-  <div class="feature-num">// FEAT 01</div>
-  <h3 class="feature-title">SKIN Line</h3>
-  <p class="feature-desc">Architectural cladding planks in widths from 30mm to 200mm. Concealed-fastener install with ventilation gaps.</p>
-</div>
-<div class="feature-cell reveal">
-  <div class="feature-num">// FEAT 02</div>
-  <h3 class="feature-title">DOOR Line</h3>
-  <p class="feature-desc">Garage door, entrance door, and gate cladding with matching aesthetic to the SKIN cladding line.</p>
-</div>
-<div class="feature-cell reveal">
-  <div class="feature-num">// FEAT 03</div>
-  <h3 class="feature-title">Powder on Powder</h3>
-  <p class="feature-desc">Patented woodgrain finish — two layers of powder coating create authentic woodgrain depth and texture.</p>
-</div>
-<div class="feature-cell reveal">
-  <div class="feature-num">// FEAT 04</div>
-  <h3 class="feature-title">Sublimation</h3>
-  <p class="feature-desc">Heat-transfer woodgrain technology for full-depth pattern that does not chip, peel, or fade.</p>
-</div>
-<div class="feature-cell reveal">
-  <div class="feature-num">// FEAT 05</div>
-  <h3 class="feature-title">HD Printing</h3>
-  <p class="feature-desc">Direct-print technology for custom patterns including stone, concrete, and abstract finishes.</p>
-</div>
-<div class="feature-cell reveal">
-  <div class="feature-num">// FEAT 06</div>
-  <h3 class="feature-title">Battens</h3>
-  <p class="feature-desc">BATTENS line — narrow-width vertical &amp; horizontal slats for façade rhythm and texture.</p>
-</div>
-  </div>
-</section>
-
-<!-- FINISHES GALLERY -->
-<section class="prd-section">
-  <div class="prd-section-head reveal">
-    <div>
-      <p class="s-eyebrow">Finishes</p>
-      <h2 class="s-title">Range of<br><em>Finishes</em></h2>
-    </div>
-    <p class="prd-section-lead">A representative sampling of available finishes. Full samples and complete colour libraries available on request — contact our team to schedule sample delivery to your office.</p>
-  </div>
-  <div class="finish-gallery">
-<div class="finish-cell reveal">
-  <img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3373732_edit.webp" alt="Walnut Woodgrain">
-  <div class="finish-overlay">
-    <div class="finish-meta">// POWDER / WALNUT</div>
-    <div class="finish-name">Walnut Woodgrain</div>
-  </div>
-</div>
-<div class="finish-cell reveal">
-  <img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3369754_edit.jpg" alt="Oak Woodgrain">
-  <div class="finish-overlay">
-    <div class="finish-meta">// POWDER / OAK</div>
-    <div class="finish-name">Oak Woodgrain</div>
-  </div>
-</div>
-<div class="finish-cell reveal">
-  <img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3390966_edit.png" alt="Teak Woodgrain">
-  <div class="finish-overlay">
-    <div class="finish-meta">// POWDER / TEAK</div>
-    <div class="finish-name">Teak Woodgrain</div>
-  </div>
-</div>
-<div class="finish-cell reveal">
-  <img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3364386_edit.png" alt="Graphite Solid">
-  <div class="finish-overlay">
-    <div class="finish-meta">// POWDER / GRAPHITE</div>
-    <div class="finish-name">Graphite Solid</div>
-  </div>
-</div>
-  </div>
-</section>
-
-<!-- CASE STUDY -->
-<section class="prd-section alt" style="padding: 0;">
-  <div class="case-study">
-    <div class="case-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272785_edit.webp" alt="Case Study"></div>
-    <div class="case-copy">
-      <div class="case-tag">// CASE STUDY — ARCHITECTURAL SOFFITS</div>
-      <h2 class="case-title"><em>Beyond the Façade</em></h2>
-      <p class="case-body">ForMe Design soffits offer a blend of style and functionality that elevates the exterior beyond the façade. The SKIN cladding line wraps from wall to soffit in a continuous aluminium plane — eliminating the conventional break between vertical and horizontal surfaces.<br><br>The Powder on Powder finish delivers the warm visual character of wood with the durability, fire performance, and decade-long colour stability of architectural aluminium. The 15-year warranty is industry-leading.</p>
-      <div class="case-meta"><div class="case-meta-item"><div class="case-meta-label">Material</div><div class="case-meta-value">SKIN Cladding</div></div><div class="case-meta-item"><div class="case-meta-label">Finish</div><div class="case-meta-value">Powder on Powder Walnut</div></div><div class="case-meta-item"><div class="case-meta-label">Origin</div><div class="case-meta-value">Italy — DVF Group</div></div><div class="case-meta-item"><div class="case-meta-label">Warranty</div><div class="case-meta-value">15-Year</div></div></div>
+    <div class="ph-bottom">
+      <div class="ph-meta">
+        <div class="ph-meta-item">
+          <div class="ph-meta-label">// SYSTEMS</div>
+          <div class="ph-meta-val">Battens · <span class="red">Cladding</span></div>
+        </div>
+        <div class="ph-meta-item">
+          <div class="ph-meta-label">// MATERIAL</div>
+          <div class="ph-meta-val"><span class="red">100%</span> aluminum</div>
+        </div>
+        <div class="ph-meta-item">
+          <div class="ph-meta-label">// ORIGIN</div>
+          <div class="ph-meta-val">Italian made</div>
+        </div>
+      </div>
+      <div class="ph-cta-row">
+        <a href="#prd-overview" class="ph-btn ph-btn-primary">Explore <span class="ar">↓</span></a>
+        <a href="../contact.html" class="ph-btn ph-btn-ghost">Request Samples <span class="ar">→</span></a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- SPECS -->
-<section class="prd-section" id="specs">
-  <div class="prd-section-head reveal">
-    <div>
-      <p class="s-eyebrow">Technical Data</p>
-      <h2 class="s-title"><em>Specifications</em></h2>
+<!-- OVERVIEW -->
+<section id="prd-overview">
+  <div class="ov-head reveal">
+    <div class="ov-head-left">
+      <div class="ov-eyebrow">// PRODUCT OVERVIEW</div>
+      <h2>Aluminum for <em>more sustainable</em><br>&amp; beautiful architecture.</h2>
     </div>
-    <p class="prd-section-lead">Project-specific submittal packages, structural calculations, and stamped engineering documentation available through our specification consultation service.</p>
+    <p class="ov-lead">ForMe Design develops a complete family of aluminum cladding, battens, and architectural skins — engineered in Italy to bring the warmth of natural materials together with the performance, longevity, and recyclability of metal.</p>
   </div>
-  <div class="spec-block">
-    <div class="spec-table">
-      <div class="spec-row"><div class="spec-label">Material</div><div class="spec-value">100% Extruded Aluminium</div></div>
-      <div class="spec-row"><div class="spec-label">SKIN Widths</div><div class="spec-value">30 — 200 mm</div></div>
-      <div class="spec-row"><div class="spec-label">Wall Thickness</div><div class="spec-value">1.5 — 2.5 mm</div></div>
-      <div class="spec-row"><div class="spec-label">Finishes</div><div class="spec-value">Powder, Sublimation, HD Print</div></div>
-      <div class="spec-row"><div class="spec-label">Warranty</div><div class="spec-value">15-Year (industry-leading)</div></div>
-      <div class="spec-row"><div class="spec-label">Fire Rating</div><div class="spec-value">A2-s1, d0 (EN 13501-1)</div></div>
-      <div class="spec-row"><div class="spec-label">Recyclability</div><div class="spec-value">100% closed-loop aluminium</div></div>
-      <div class="spec-row"><div class="spec-label">Origin</div><div class="spec-value">Italy — DVF Group</div></div>
+
+  <div class="ov-body reveal">
+    <div class="ov-col">
+      <p>Where traditional wood requires sealing, refinishing, and eventual replacement, ForMe Design's aluminum systems carry photo-realistic wood-grain and architectural finishes baked into the metal itself. The result is the visual depth of timber with the dimensional stability, fire performance, and lifespan of extruded aluminum.</p>
+      <p>The product family covers three primary system languages: <strong>Battens Light</strong> for interior and exterior second-skin treatments, <strong>Battens 50</strong> for substantial residential and commercial battens, and <strong>Cladding</strong> — an aluminum boiserie for prestigious, timeless façade design.</p>
+    </div>
+    <div class="ov-col">
+      <p>Every ForMe Design profile is fully extruded aluminum — <strong>100% recyclable, fire-rated, and dimensionally stable</strong> across Canadian temperature swings from −40°C winter to +35°C summer. Finishes range from photo-realistic walnut, teak, and oak grains to bold powder-coat colours and metallic effects.</p>
+      <p>ETG distributes ForMe Design across Canada with full pre-construction support — substructure coordination, finish selection, panel-layout optimization, and installer guidance for both new construction and retrofit. From private residences to hospitality, multi-family, and commercial projects, ForMe Design lets architects achieve the warmth of wood without the maintenance burden.</p>
+    </div>
+  </div>
+
+  <div class="ov-features reveal">
+    <div class="ov-feat">
+      <div class="ov-feat-icon">// 01</div>
+      <div class="ov-feat-title">100% Aluminum</div>
+      <p class="ov-feat-desc">Fully extruded aluminum profiles — recyclable, lightweight, dimensionally stable in all climates.</p>
+    </div>
+    <div class="ov-feat">
+      <div class="ov-feat-icon">// 02</div>
+      <div class="ov-feat-title">Wood-Grain Realism</div>
+      <p class="ov-feat-desc">Photo-realistic wood finishes baked into the metal — no sealing, sanding, or refinishing.</p>
+    </div>
+    <div class="ov-feat">
+      <div class="ov-feat-icon">// 03</div>
+      <div class="ov-feat-title">Interior &amp; Exterior</div>
+      <p class="ov-feat-desc">Single material family for façades, soffits, screens, partitions, and feature walls.</p>
+    </div>
+    <div class="ov-feat">
+      <div class="ov-feat-icon">// 04</div>
+      <div class="ov-feat-title">Hidden Substructure</div>
+      <p class="ov-feat-desc">Concealed clip system delivers clean lines with no visible fasteners across all systems.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWCASE -->
+<section id="prd-showcase">
+  <div class="sh-grid">
+    <div class="sh-img sh-feature">
+      <img src="../assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-modern-villa-aluminum-cladding-hero-01.jpg" alt="ForMe Design — modern villa with aluminum wood-look cladding and soffit">
+      <div class="sh-img-cap">
+        <div class="sh-img-cap-label">FEATURED · RESIDENTIAL</div>
+        <div class="sh-img-cap-title">Modern Villa — Wood-Look Aluminum</div>
+      </div>
+    </div>
+    <div class="sh-img">
+      <img src="../assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-battens-50-multi-story-commercial-facade-03.jpg" alt="ForMe Design Battens 50 multi-story commercial façade">
+      <div class="sh-img-cap">
+        <div class="sh-img-cap-label">COMMERCIAL · BATTENS 50</div>
+        <div class="sh-img-cap-title">Multi-Story Commercial</div>
+      </div>
+    </div>
+    <div class="sh-img">
+      <img src="../assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-battens-light-restaurant-vertical-application-02.jpg" alt="ForMe Design Battens Light restaurant interior application">
+      <div class="sh-img-cap">
+        <div class="sh-img-cap-label">HOSPITALITY · BATTENS LIGHT</div>
+        <div class="sh-img-cap-title">Restaurant Interior</div>
+      </div>
+    </div>
+    <div class="sh-img">
+      <img src="../assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-battens-50-pool-pavilion-privacy-screen-01.jpg" alt="ForMe Design Battens 50 pool pavilion privacy screen">
+      <div class="sh-img-cap">
+        <div class="sh-img-cap-label">RESIDENTIAL · PRIVACY SCREEN</div>
+        <div class="sh-img-cap-title">Pool Pavilion Screen</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SYSTEMS - the 3 product systems from existing ETG site -->
+<section id="prd-systems">
+  <div class="sys-head reveal">
+    <div>
+      <div class="ov-eyebrow">// PRODUCT SYSTEMS</div>
+      <h2>Three <em>systems</em>, one architectural language.</h2>
+    </div>
+    <p class="sys-intro">Each ForMe Design system addresses a distinct architectural need — refined interior expression, exterior battens with presence, and a complete aluminum cladding boiserie for façades.</p>
+  </div>
+
+  <div class="sys-grid reveal">
+    <div class="sys-card">
+      <div class="sys-card-img">
+        <img src="../assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-battens-light-interior-second-skin-01.jpg" alt="ForMe Design Battens Light interior second skin application">
+      </div>
+      <div class="sys-card-body">
+        <div class="sys-num">// SYSTEM 01</div>
+        <h3 class="sys-title">Battens Light</h3>
+        <p class="sys-desc">Suitable for all interiors and exteriors with a wide range of finishes — designed to fit like a second skin. Slim profiles deliver fine ribbed texture and visual rhythm without overwhelming the architecture.</p>
+        <div class="sys-tag"><span>USE · </span><strong>Interior + Exterior</strong></div>
+      </div>
+    </div>
+    <div class="sys-card">
+      <div class="sys-card-img">
+        <img src="../assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-battens-50-weathered-corner-architectural-02.jpg" alt="ForMe Design Battens 50 weathered corner architectural detail">
+      </div>
+      <div class="sys-card-body">
+        <div class="sys-num">// SYSTEM 02</div>
+        <h3 class="sys-title">Battens 50</h3>
+        <p class="sys-desc">Great aesthetic and performance to enhance residential and commercial buildings. The 50mm profile gives weight and substance — ideal for façade accents, sunscreens, privacy screens, and feature walls.</p>
+        <div class="sys-tag"><span>USE · </span><strong>Residential + Commercial</strong></div>
+      </div>
+    </div>
+    <div class="sys-card">
+      <div class="sys-card-img">
+        <img src="../assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-modern-villa-aluminum-cladding-hero-01.jpg" alt="ForMe Design Cladding aluminum boiserie modern villa">
+      </div>
+      <div class="sys-card-body">
+        <div class="sys-num">// SYSTEM 03</div>
+        <h3 class="sys-title">Cladding</h3>
+        <p class="sys-desc">Aluminum boiserie that embodies prestigious and timeless design. Full-format cladding panels for primary façade applications, soffits, and continuous architectural surfaces.</p>
+        <div class="sys-tag"><span>USE · </span><strong>Façade + Soffit</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section id="prd-news">
+  <div class="nw-head reveal">
+    <div class="nw-head-left">
+      <div class="ov-eyebrow">// IN PRACTICE</div>
+      <h2>ForMe Design <em>insights</em></h2>
+    </div>
+    <a href="../news.html" class="nw-all">All News <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 16px; margin-left:6px;">→</span></a>
+  </div>
+
+  <div class="nw-grid reveal">
+    <a href="../news/forme-design-wood-look-soffits.html" class="nw-card">
+      <div class="nw-card-img">
+        <span class="nw-card-img-tag">FORME DESIGN</span>
+        <img src="../assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-modern-villa-aluminum-cladding-hero-01.jpg" alt="Enhance Your Building with ForMe Design Soffits">
+      </div>
+      <div class="nw-card-body">
+        <div class="nw-card-date">// DEC-28-2023</div>
+        <h3 class="nw-card-title">Enhance Your Building with ForMe Design Soffits</h3>
+        <p class="nw-card-excerpt">Wood-look aluminum soffits are more than a finishing touch — they offer a blend of style and functionality that elevates the exterior with the durability of aluminum and the warmth of natural wood.</p>
+        <div class="nw-card-arrow">Read Article <span class="ar">→</span></div>
+      </div>
+    </a>
+
+    <a href="../news.html" class="nw-card">
+      <div class="nw-card-img">
+        <span class="nw-card-img-tag">MORE COMING SOON</span>
+        <img src="../assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-battens-50-multi-story-commercial-facade-03.jpg" alt="More ForMe Design content coming soon">
+      </div>
+      <div class="nw-card-body">
+        <div class="nw-card-date">// MORE ARTICLES</div>
+        <h3 class="nw-card-title">Explore the full ETG news archive</h3>
+        <p class="nw-card-excerpt">Browse project features, product updates, and technical insights across our complete cladding portfolio — from Alpolic to Kalzip to Favemanc terracotta.</p>
+        <div class="nw-card-arrow">Visit News <span class="ar">→</span></div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- DOWNLOADS - includes the live Google Drive spec PDF -->
+<section id="prd-downloads">
+  <div class="dl-head reveal">
+    <div class="ov-eyebrow">// RESOURCES</div>
+    <h2>ForMe Design <em>specifications</em></h2>
+  </div>
+  <div class="dl-grid reveal">
+    <a href="https://drive.google.com/file/d/1IplgFECeYpf28Qp55o8uaCK_uHT4ybi0/view?usp=share_link" target="_blank" rel="noopener" class="dl-item live">
+      <div class="dl-item-top">
+        <span class="dl-item-type">PDF · SPECS</span>
+        <span class="dl-item-size">External link</span>
+      </div>
+      <h3 class="dl-item-name">ForMe Design Spec Sheet</h3>
+      <p class="dl-item-desc">Complete product specifications — Battens Light, Battens 50, and Cladding systems with profile dimensions and finish options.</p>
+      <div class="dl-item-action"><span>Download Now</span><span class="ar">↓</span></div>
+    </a>
+    <a href="../contact.html" class="dl-item">
+      <div class="dl-item-top">
+        <span class="dl-item-type">PHYSICAL</span>
+        <span class="dl-item-size">Free</span>
+      </div>
+      <h3 class="dl-item-name">Request Colour Samples</h3>
+      <p class="dl-item-desc">Order physical finish samples — wood grains, powder-coat colours, and metallic effects shipped directly to your office.</p>
+      <div class="dl-item-action"><span>Order Samples</span><span style="font-family: 'Barlow Condensed', sans-serif; font-size: 18px;">→</span></div>
+    </a>
+    <a href="../contact.html" class="dl-item">
+      <div class="dl-item-top">
+        <span class="dl-item-type">CSC SPEC</span>
+        <span class="dl-item-size">On request</span>
+      </div>
+      <h3 class="dl-item-name">CSC Master Specification</h3>
+      <p class="dl-item-desc">Three-part specification compatible with CSC NMS Canadian workflows — contact us to receive a pre-release copy.</p>
+      <div class="dl-item-action"><span>Contact Us</span><span style="font-family: 'Barlow Condensed', sans-serif; font-size: 18px;">→</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="prd-gallery">
+  <div class="gl-head reveal">
+    <div>
+      <div class="ov-eyebrow">// PROJECT GALLERY</div>
+      <h2>ForMe Design <em>in</em> application</h2>
+    </div>
+    <p class="gl-intro">Selected ForMe Design installations across residential villas, commercial pavilions, hospitality interiors, and outdoor screens — the full range of Battens and Cladding systems available across Canada.</p>
+  </div>
+
+  <div class="gl-grid reveal">
+    <div class="gl-item gl-w12 gl-h-wide">
+      <img src="../assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-modern-villa-aluminum-cladding-hero-01.jpg" alt="ForMe Design modern villa with aluminum wood-look cladding">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">RESIDENTIAL · CLADDING + SOFFIT</div><div class="gl-item-cap-title">Modern Villa</div></div>
+    </div>
+
+    <div class="gl-item gl-w4 gl-h-tall">
+      <img src="../assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-battens-50-weathered-corner-architectural-02.jpg" alt="ForMe Design Battens 50 weathered corner detail">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">BATTENS 50</div><div class="gl-item-cap-title">Weathered Corner</div></div>
+    </div>
+    <div class="gl-item gl-w4 gl-h-tall">
+      <img src="../assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-battens-50-beach-club-vertical-application-04.jpg" alt="ForMe Design Battens 50 beach club vertical application">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">HOSPITALITY · BATTENS 50</div><div class="gl-item-cap-title">Beach Club Application</div></div>
+    </div>
+    <div class="gl-item gl-w4 gl-h-tall">
+      <img src="../assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-battens-50-sunscreen-vertical-louvers-05.jpg" alt="ForMe Design Battens 50 vertical sunscreen louvers">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">BATTENS 50 · SUNSCREEN</div><div class="gl-item-cap-title">Vertical Louvers</div></div>
+    </div>
+
+    <div class="gl-item gl-w8 gl-h-wide">
+      <img src="../assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-battens-50-multi-story-commercial-facade-03.jpg" alt="ForMe Design Battens 50 multi-story commercial façade">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">COMMERCIAL · BATTENS 50</div><div class="gl-item-cap-title">Multi-Story Façade</div></div>
+    </div>
+    <div class="gl-item gl-w4 gl-h-wide">
+      <img src="../assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-battens-50-black-pavilion-exterior-01.jpg" alt="ForMe Design Battens 50 black pavilion exterior">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">PAVILION</div><div class="gl-item-cap-title">Black Pavilion</div></div>
+    </div>
+
+    <div class="gl-item gl-w6 gl-h-med">
+      <img src="../assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-battens-50-pool-pavilion-privacy-screen-01.jpg" alt="ForMe Design Battens 50 pool pavilion privacy screen">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">RESIDENTIAL · SCREEN</div><div class="gl-item-cap-title">Pool Pavilion Screen</div></div>
+    </div>
+    <div class="gl-item gl-w6 gl-h-med">
+      <img src="../assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-battens-50-interior-screen-partition-02.jpg" alt="ForMe Design Battens 50 interior screen partition">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">INTERIOR · PARTITION</div><div class="gl-item-cap-title">Interior Screen</div></div>
+    </div>
+
+    <div class="gl-item gl-w4 gl-h-sq">
+      <img src="../assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-battens-light-interior-second-skin-01.jpg" alt="ForMe Design Battens Light interior second skin">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">BATTENS LIGHT</div><div class="gl-item-cap-title">Interior Second-Skin</div></div>
+    </div>
+    <div class="gl-item gl-w4 gl-h-sq">
+      <img src="../assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-battens-light-restaurant-vertical-application-02.jpg" alt="ForMe Design Battens Light restaurant vertical">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">BATTENS LIGHT · HOSPITALITY</div><div class="gl-item-cap-title">Restaurant Wall</div></div>
+    </div>
+    <div class="gl-item gl-w4 gl-h-sq">
+      <img src="../assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-battens-50-interior-room-divider-03.jpg" alt="ForMe Design Battens 50 interior room divider">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">BATTENS 50 · INTERIOR</div><div class="gl-item-cap-title">Room Divider</div></div>
+    </div>
+
+    <div class="gl-item gl-w8 gl-h-wide">
+      <img src="../assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-battens-light-hidden-substructure-clip-detail-01.jpg" alt="ForMe Design Battens hidden substructure clip system detail">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">SYSTEM · HIDDEN CLIP</div><div class="gl-item-cap-title">Substructure Detail</div></div>
+    </div>
+    <div class="gl-item gl-w4 gl-h-wide">
+      <img src="../assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-battens-50-interior-detail-vertical-04.jpg" alt="ForMe Design Battens 50 interior detail vertical">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">DETAIL</div><div class="gl-item-cap-title">Vertical Profile</div></div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<div class="prd-cta-block">
-  <p class="s-eyebrow">Ready to Specify?</p>
-  <h2 class="s-title">Talk to a<br><em>Specialist</em></h2>
-  <p>Request samples, schedule a Lunch &amp; Learn, or get specification consultation for your next project. Our team responds within one business day.</p>
-  <div class="prd-cta-actions">
-    <a href="../contact.html" class="btn-red">Request Sample</a>
-    <a href="../contact.html" class="btn-line" style="color:var(--bg); border-color: rgba(240,237,232,.3);">Schedule Lunch &amp; Learn</a>
+<section id="prd-cta">
+  <div class="cta-bg">
+    <img src="../assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-battens-50-weathered-corner-architectural-02.jpg" alt="">
   </div>
-</div>
-
-<!-- RELATED -->
-<section class="related-prd">
-  <div class="related-head">
-    <p class="s-eyebrow">Related Products</p>
-    <h2 class="s-title">More from <em>ETG</em></h2>
-  </div>
-  <div class="related-grid">
-<a href="alpolic-materials.html" class="related-card">
-  <div class="related-tag">// PRD-01</div>
-  <div class="related-logo"><img src="../assets/logos/alpolic.png" alt="Alpolic" class="brand-logo-img"></div>
-  <p class="related-desc">Alpolic Materials are taken to a level that is nothing short of visionary. Versatile, durable, and architecturally expre...</p>
-  <span class="related-cta">View Product →</span>
-</a>
-<a href="elzinc.html" class="related-card">
-  <div class="related-tag">// PRD-03</div>
-  <div class="related-logo"><img src="../assets/logos/elzinc.png" alt="elZinc" class="brand-logo-img"></div>
-  <p class="related-desc">elZinc is a premium product offered in over 50 countries. Zinc's impermeability makes it impervious to freeze-thaw cycle...</p>
-  <span class="related-cta">View Product →</span>
-</a>
-<a href="terracotta-favemanc.html" class="related-card">
-  <div class="related-tag">// PRD-08</div>
-  <div class="related-logo"><img src="../assets/logos/favemanc.png" alt="Favemanc" class="brand-logo-img"></div>
-  <p class="related-desc">Ventilated ceramic façade systems — a leading solution in terms of energy efficiency, innovative design, and advanced fu...</p>
-  <span class="related-cta">View Product →</span>
-</a>
+  <div class="cta-inner reveal">
+    <div>
+      <div class="cta-eyebrow">START A FORME DESIGN PROJECT</div>
+      <h2>Bring <em>warmth</em> to aluminum.</h2>
+      <p class="cta-sub">From concept design through installation — our team provides ForMe Design system selection, substructure coordination, finish samples, and installer support for residential, commercial, and hospitality projects across Canada.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="../contact.html" class="cta-btn cta-btn-primary"><span>Request a Consultation</span><span class="ar">→</span></a>
+      <a href="../products.html" class="cta-btn cta-btn-ghost"><span>Explore Other Products</span><span class="ar">→</span></a>
+      <div class="cta-contact">
+        <strong>Speak directly with our team</strong><br>
+        1 (844) 240-0452 &nbsp;·&nbsp; info@etgcc.com
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-top">
     <div class="footer-brand">
@@ -242,14 +577,14 @@
     <div class="footer-col">
       <h4>Products</h4>
       <ul>
-        <li><a href="../products/alpolic-materials.html">Alpolic Materials</a></li>
-        <li><a href="../products/kalzip.html">Kalzip</a></li>
-        <li><a href="../products/elzinc.html">elZinc</a></li>
-        <li><a href="../products/tac-thermal-spacer.html">TAC Thermal Spacer</a></li>
-        <li><a href="../products/epic-metals.html">EPIC Metals</a></li>
-        <li><a href="../products/radius-track.html">Radius Track</a></li>
-        <li><a href="../products/forme-design.html">ForMe Design</a></li>
-        <li><a href="../products/terracotta-favemanc.html">Terracotta Favemanc</a></li>
+        <li><a href="alpolic-materials.html">Alpolic Materials</a></li>
+        <li><a href="kalzip.html">Kalzip</a></li>
+        <li><a href="elzinc.html">elZinc</a></li>
+        <li><a href="tac-thermal-spacer.html">TAC Thermal Spacer</a></li>
+        <li><a href="epic-metals.html">EPIC Metals</a></li>
+        <li><a href="radius-track.html">Radius Track</a></li>
+        <li><a href="forme-design.html">ForMe Design</a></li>
+        <li><a href="terracotta-favemanc.html">Terracotta Favemanc</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -278,6 +613,7 @@
     </ul>
   </div>
 </footer>
+
 <script src="../assets/js/main.js"></script>
 </body>
 </html>
