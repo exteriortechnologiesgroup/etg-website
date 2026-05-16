@@ -5,19 +5,63 @@
   const cur = document.getElementById('cur') || document.querySelector('.cursor-dot');
   const ring = document.getElementById('cur-ring') || document.querySelector('.cursor-ring');
   if (!cur || !ring) return;
-  let mx=0,my=0,rx=0,ry=0;
-  document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; });
+
+  // Hide cursor system-wide on touch devices
+  if (matchMedia && matchMedia('(hover: none), (pointer: coarse)').matches) {
+    cur.style.display = 'none';
+    ring.style.display = 'none';
+    document.body.style.cursor = 'auto';
+    return;
+  }
+
+  let mx = window.innerWidth / 2, my = window.innerHeight / 2;
+  let rx = mx, ry = my;
+  let visible = false;
+
+  function show() {
+    if (!visible) { visible = true; cur.style.opacity = '1'; ring.style.opacity = '1'; }
+  }
+  function hide() {
+    if (visible) { visible = false; cur.style.opacity = '0'; ring.style.opacity = '0'; }
+  }
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    show();
+  }, { passive: true });
+  document.addEventListener('mouseleave', hide);
+  document.addEventListener('mouseenter', show);
+  window.addEventListener('blur', hide);
+  window.addEventListener('focus', show);
+
+  // Initialize hidden until first mousemove
+  cur.style.opacity = '0';
+  ring.style.opacity = '0';
+  cur.style.transition = 'opacity .2s, width .2s, height .2s';
+  ring.style.transition = 'opacity .25s, width .28s, height .28s, border-color .25s';
+
   (function loop(){
-    rx += (mx-rx)*.13;
-    ry += (my-ry)*.13;
-    cur.style.cssText = `left:${mx}px;top:${my}px`;
-    ring.style.cssText = `left:${rx}px;top:${ry}px`;
+    rx += (mx - rx) * 0.18;
+    ry += (my - ry) * 0.18;
+    // Use transform only — never overwrite full cssText
+    cur.style.transform = `translate(${mx}px, ${my}px) translate(-50%, -50%)`;
+    ring.style.transform = `translate(${rx}px, ${ry}px) translate(-50%, -50%)`;
     requestAnimationFrame(loop);
   })();
-  document.querySelectorAll('a, button, .hero-dot, [data-hover]').forEach(el => {
-    el.addEventListener('mouseenter', () => document.body.classList.add('ch'));
-    el.addEventListener('mouseleave', () => document.body.classList.remove('ch'));
-  });
+
+  // Hover state
+  function bindHover(scope) {
+    scope.querySelectorAll('a, button, [data-hover], input, textarea, select, label').forEach(el => {
+      if (el.dataset.curBound) return;
+      el.dataset.curBound = '1';
+      el.addEventListener('mouseenter', () => document.body.classList.add('ch'));
+      el.addEventListener('mouseleave', () => document.body.classList.remove('ch'));
+    });
+  }
+  bindHover(document);
+  // Re-bind on DOM changes (in case content loads later)
+  const mo = new MutationObserver(() => bindHover(document));
+  mo.observe(document.body, { childList: true, subtree: true });
 })();
 
 // Hero slideshow
