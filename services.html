@@ -3,145 +3,121 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services — Design Consultation, Spec, Detailing | ETG</title>
-<meta name="description" content="Design consultation, design assist, material specification, AutoCAD roof and wall details, and high level budget pricing services for architects across Canada.">
+<title>Services Canada — Spec Assistance, AutoCAD Details &amp; Budget Pricing | Exterior Technologies Group</title>
+<meta name="description" content="Exterior Technologies Group services for architects and specifiers across Canada — master specification assistance and review (CSC &amp; CSI), AutoCAD roof and wall details, design assist, material specification, and high-level budget pricing.">
+<meta name="keywords" content="exterior cladding services Canada, master specification assistance, CSC CSI specification review, AutoCAD roof wall details, high level budget pricing cladding, design assist architects Canada, Exterior Technologies Group services, ETG specification support">
+<meta name="author" content="Exterior Technologies Group">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://exteriortechnologiesgroup.com/services.html">
+<meta property="og:title" content="Services Canada — Spec Assistance, AutoCAD Details &amp; Budget Pricing | Exterior Technologies Group">
+<meta property="og:description" content="Master specification assistance and review, AutoCAD roof and wall details, and high-level budget pricing for architects and specifiers across Canada.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_CA">
+<meta property="og:url" content="https://exteriortechnologiesgroup.com/services.html">
+<meta property="og:site_name" content="Exterior Technologies Group">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://exteriortechnologiesgroup.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://exteriortechnologiesgroup.com/services.html" }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300&family=Barlow:wght@300;400;500&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300&family=Barlow:wght@300;400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/main.css">
 <style>
-.svc-large {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-.svc-row {
-  display: grid;
-  grid-template-columns: 100px 1.2fr 1fr;
-  border-bottom: 1px solid var(--rule);
-  background: var(--white);
-  transition: background .25s;
-  align-items: stretch;
-  min-height: 280px;
-}
+/* ── FEATURE TRIO (the three core services) ── */
+.svc-trio { background: var(--white); border-bottom: 1px solid var(--rule); }
+.svc-trio-head { padding: 84px 6vw 0; }
+.svc-trio-eyebrow { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .18em; color: var(--ink3); text-transform: uppercase; display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+.svc-trio-eyebrow::before { content: ""; width: 24px; height: 1px; background: var(--red); }
+.svc-trio-head h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: clamp(36px,4.6vw,68px); line-height: .94; letter-spacing: -.01em; text-transform: uppercase; color: var(--ink); margin: 0; max-width: 900px; }
+.svc-trio-head h2 em { font-style: italic; color: var(--red); font-weight: 300; }
+.svc-trio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); margin-top: 64px; }
+.svc-feat { background: var(--white); display: flex; flex-direction: column; min-height: 520px; transition: background .25s; }
+.svc-feat:hover { background: var(--bg); }
+.svc-feat-img { aspect-ratio: 4/3; overflow: hidden; background: var(--bg3); position: relative; }
+.svc-feat-img img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.82) contrast(1.05); transition: transform .9s cubic-bezier(.2,.7,.2,1); }
+.svc-feat:hover .svc-feat-img img { transform: scale(1.05); }
+.svc-feat-tag { position: absolute; top: 16px; left: 16px; font-family: 'Share Tech Mono', monospace; font-size: 9px; letter-spacing: .14em; color: #fff; background: rgba(26,25,22,.78); padding: 6px 10px; text-transform: uppercase; }
+.svc-feat-body { padding: 32px 30px 34px; display: flex; flex-direction: column; flex: 1; }
+.svc-feat-num { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .14em; color: var(--red); margin-bottom: 14px; }
+.svc-feat-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 30px; line-height: .98; text-transform: uppercase; color: var(--ink); letter-spacing: -.005em; margin-bottom: 14px; }
+.svc-feat-desc { font-family: 'Barlow', sans-serif; font-size: 14px; font-weight: 300; line-height: 1.62; color: var(--ink2); margin-bottom: 20px; }
+.svc-feat-list { list-style: none; margin: 0 0 22px; padding: 0; }
+.svc-feat-list li { font-family: 'Barlow', sans-serif; font-size: 13px; font-weight: 300; color: var(--ink2); padding: 10px 0 10px 26px; border-top: 1px solid var(--rule); position: relative; line-height: 1.45; }
+.svc-feat-list li::before { content: ""; position: absolute; left: 0; top: 17px; width: 14px; height: 1px; background: var(--red); }
+.svc-feat-foot { margin-top: auto; }
+.svc-feat-link { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); display: inline-flex; align-items: center; gap: 10px; text-decoration: none; padding-top: 18px; border-top: 1px solid var(--rule); width: 100%; justify-content: space-between; }
+.svc-feat-link .ar { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; color: var(--red); transition: transform .2s; }
+.svc-feat:hover .svc-feat-link .ar { transform: translateX(5px); }
+
+/* ── SECONDARY SERVICE ROWS ── */
+.svc-large { display: grid; grid-template-columns: 1fr; }
+.svc-row { display: grid; grid-template-columns: 100px 1.2fr 1fr; border-bottom: 1px solid var(--rule); background: var(--white); transition: background .25s; align-items: stretch; min-height: 260px; }
 .svc-row:hover { background: var(--bg); }
-.svc-row-num {
-  background: var(--ink);
-  color: rgba(240,237,232,.6);
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 28px 0 0;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 11px;
-  letter-spacing: .12em;
-  transition: background .25s;
-}
+.svc-row-num { background: var(--ink); color: rgba(240,237,232,.6); display: flex; align-items: flex-start; justify-content: center; padding: 28px 0 0; font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .12em; transition: background .25s; }
 .svc-row:hover .svc-row-num { background: var(--red); color: var(--white); }
-.svc-row-content {
-  padding: 36px 48px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-right: 1px solid var(--rule);
-}
-.svc-row-name {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 200;
-  font-size: 44px;
-  text-transform: uppercase;
-  letter-spacing: .02em;
-  color: var(--ink);
-  line-height: 1;
-  margin-bottom: 18px;
-}
+.svc-row-content { padding: 40px 48px; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid var(--rule); }
+.svc-row-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 200; font-size: 44px; text-transform: uppercase; letter-spacing: .01em; color: var(--ink); line-height: 1; margin-bottom: 18px; }
 .svc-row-name em { font-style: italic; color: var(--red); font-weight: 200; }
-.svc-row-desc {
-  font-size: 14px;
-  color: var(--ink2);
-  line-height: 1.78;
-  max-width: 520px;
-}
-.svc-row-img {
-  overflow: hidden;
-  background: var(--bg2);
-}
-.svc-row-img img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  filter: saturate(.75) contrast(1.06);
-  transition: transform .9s cubic-bezier(.25,.46,.45,.94);
-}
+.svc-row-desc { font-size: 14px; color: var(--ink2); line-height: 1.78; max-width: 520px; }
+.svc-row-img { overflow: hidden; background: var(--bg2); }
+.svc-row-img img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.75) contrast(1.06); transition: transform .9s cubic-bezier(.25,.46,.45,.94); }
 .svc-row:hover .svc-row-img img { transform: scale(1.04); }
+
+/* ── PROCESS ── */
+.process { background: var(--bg); padding: 84px 0; border-bottom: 1px solid var(--rule); }
+.process-head { max-width: 1200px; margin: 0 auto 48px; padding: 0 6vw; }
+.process-head .svc-trio-eyebrow { margin-bottom: 20px; }
+.process-head h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: clamp(34px,4vw,56px); line-height: .96; text-transform: uppercase; letter-spacing: -.01em; color: var(--ink); margin: 0; }
+.process-head h2 em { font-style: italic; color: var(--red); font-weight: 300; }
+.process-grid { max-width: 1200px; margin: 0 auto; padding: 0 6vw; display: grid; grid-template-columns: repeat(5, 1fr); }
+.proc-step { border-right: 1px solid var(--rule); padding: 28px 24px; position: relative; }
+.proc-step:last-child { border-right: none; }
+.proc-step::before { content: ''; position: absolute; top: 0; left: 0; width: 40px; height: 2px; background: var(--red); }
+.proc-num { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--red); letter-spacing: .12em; margin-bottom: 16px; }
+.proc-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: 20px; text-transform: uppercase; letter-spacing: .03em; color: var(--ink); margin-bottom: 12px; line-height: 1.1; }
+.proc-desc { font-size: 12.5px; color: var(--ink3); line-height: 1.7; }
+
+/* ── WHY / TRUST STRIP ── */
+.svc-why { background: var(--white); padding: 84px 6vw; border-bottom: 1px solid var(--rule); }
+.svc-why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.svc-why-copy .svc-trio-eyebrow { margin-bottom: 20px; }
+.svc-why-copy h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: clamp(32px,3.8vw,52px); line-height: .98; text-transform: uppercase; letter-spacing: -.01em; color: var(--ink); margin: 0 0 24px; }
+.svc-why-copy h2 em { font-style: italic; color: var(--red); font-weight: 300; }
+.svc-why-copy p { font-family: 'Barlow', sans-serif; font-size: 15.5px; font-weight: 300; line-height: 1.7; color: var(--ink2); margin: 0 0 18px; }
+.svc-why-copy p strong { color: var(--ink); font-weight: 500; }
+.svc-why-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+.svc-why-stat { background: var(--bg); padding: 40px 32px; }
+.svc-why-stat-val { font-family: 'Barlow Condensed', sans-serif; font-weight: 200; font-size: 64px; line-height: .9; color: var(--ink); letter-spacing: -.01em; }
+.svc-why-stat-val em { font-style: italic; color: var(--red); font-weight: 300; }
+.svc-why-stat-label { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .12em; color: var(--ink3); text-transform: uppercase; margin-top: 12px; line-height: 1.6; }
+
 @media (max-width: 1024px) {
+  .svc-trio-grid { grid-template-columns: 1fr; }
+  .svc-feat { min-height: 0; flex-direction: column; }
   .svc-row { grid-template-columns: 1fr; min-height: 0; }
   .svc-row-num { padding: 16px; }
   .svc-row-content { padding: 32px 24px; border-right: none; }
   .svc-row-name { font-size: 32px; }
   .svc-row-img { aspect-ratio: 16/10; }
-}
-
-/* Process */
-.process {
-  background: var(--bg);
-  padding: 80px 0;
-  border-bottom: 1px solid var(--rule);
-}
-.process-head {
-  max-width: 1100px;
-  margin: 0 auto 48px;
-  padding: 0 48px;
-}
-.process-grid {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 48px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-}
-.proc-step {
-  border-right: 1px solid var(--rule);
-  padding: 28px 24px;
-  position: relative;
-}
-.proc-step:last-child { border-right: none; }
-.proc-step::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 40px; height: 2px;
-  background: var(--red);
-}
-.proc-num {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 10px;
-  color: var(--red);
-  letter-spacing: .12em;
-  margin-bottom: 16px;
-}
-.proc-name {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 300;
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  color: var(--ink);
-  margin-bottom: 12px;
-  line-height: 1.15;
-}
-.proc-desc {
-  font-size: 12px;
-  color: var(--ink3);
-  line-height: 1.7;
-}
-@media (max-width: 1024px) {
-  .process-grid { grid-template-columns: repeat(2,1fr); padding: 0 24px; }
+  .process-grid { grid-template-columns: repeat(2,1fr); }
   .proc-step { border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
   .proc-step:nth-child(2n) { border-right: none; }
-  .process-head { padding: 0 24px; }
+  .svc-why-grid { grid-template-columns: 1fr; gap: 36px; }
 }
 @media (max-width: 600px) {
   .process-grid { grid-template-columns: 1fr; }
   .proc-step { border-right: none !important; }
+  .svc-why-stats { grid-template-columns: 1fr; }
+  .svc-trio-head { padding: 56px 22px 0; }
+  .svc-why { padding: 56px 22px; }
 }
 </style>
 </head>
@@ -154,73 +130,131 @@
     </a>
   </div>
   <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="services.html" class="active">Services</a></li>
-      <li><a href="news.html">News</a></li>
-      <li><a href="about.html">About Us</a></li>
-    </ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="lunch-and-learn.html">Lunch &amp; Learn</a></li>
+    <li><a href="about.html">About Us</a></li>
+  </ul>
   <a href="contact.html" class="nav-cta">Contact Us</a>
   <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
+
 <!-- BANNER -->
 <section class="page-banner">
   <div>
     <div class="page-banner-crumbs"><a href="index.html">Home</a> / <span>Services</span></div>
     <p class="s-eyebrow">What We Do</p>
-    <h1 class="h-large">Innovative<br><em>Design</em><br><span class="outline">Solutions</span></h1>
+    <h1 class="h-large">A Critical<br>Partner in<br><span class="outline">Pre-Construction</span></h1>
   </div>
   <div class="page-banner-meta">
-    We provide bespoke design services that creatively address the specific needs of each project — high-quality, visually compelling exteriors that perform over time across the full range of Canadian conditions.
+    Beyond supplying product, we work alongside architects and specification writers from concept through field review — specification assistance, detailing, and budget intelligence that keep design intent intact and projects on track across the full range of Canadian conditions.
   </div>
 </section>
 
-<!-- LARGE SERVICE ROWS -->
+<!-- FEATURE TRIO -->
+<section class="svc-trio">
+  <div class="svc-trio-head reveal">
+    <div class="svc-trio-eyebrow">// CORE SERVICES</div>
+    <h2>Three services that <em>de-risk</em> the spec.</h2>
+  </div>
+  <div class="svc-trio-grid">
+
+    <div class="svc-feat reveal">
+      <div class="svc-feat-img">
+        <img src="assets/products/favemanc/favemanc-terracotta-canada-exterior-technologies-group-uw-gates-center-ribbed-extrusion-detail-02.jpg" alt="Master specification assistance and review — Exterior Technologies Group Canada">
+        <span class="svc-feat-tag">CSC &amp; CSI</span>
+      </div>
+      <div class="svc-feat-body">
+        <div class="svc-feat-num">// SVC-01</div>
+        <h3 class="svc-feat-name">Master Spec<br>Assistance &amp; Review</h3>
+        <p class="svc-feat-desc">Navigate construction specifications with confidence. We provide professional specification assistance and review against both CSC and CSI standards — compliant, performance-driven, and tailored to your project.</p>
+        <ul class="svc-feat-list">
+          <li>Detail-oriented analysis against standards &amp; best practice</li>
+          <li>Compliance-risk identification with practical solutions</li>
+          <li>Up-to-date CSC / CSI master specifications</li>
+          <li>Customisation support &amp; ongoing revisions</li>
+        </ul>
+        <div class="svc-feat-foot">
+          <a href="contact.html" class="svc-feat-link"><span>Request Spec Support</span><span class="ar">→</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-feat reveal rd1">
+      <div class="svc-feat-img">
+        <img src="assets/products/forme/forme-design-aluminum-cladding-canada-exterior-technologies-group-battens-light-hidden-substructure-clip-detail-01.jpg" alt="AutoCAD roof and wall details — Exterior Technologies Group Canada">
+        <span class="svc-feat-tag">DWG · EDITABLE</span>
+      </div>
+      <div class="svc-feat-body">
+        <div class="svc-feat-num">// SVC-02</div>
+        <h3 class="svc-feat-name">AutoCAD Roof<br>&amp; Wall Details</h3>
+        <p class="svc-feat-desc">Precise, editable roof and wall details that integrate cleanly into your drawing set. Designed by a team with over two decades in the cladding industry — built for compatibility and code compliance.</p>
+        <ul class="svc-feat-list">
+          <li>Roof detailing: sections, elevations &amp; connection points</li>
+          <li>Wall detailing across wall types &amp; intersections</li>
+          <li>Custom detailing for project-specific conditions</li>
+          <li>On-demand consultation &amp; implementation support</li>
+        </ul>
+        <div class="svc-feat-foot">
+          <a href="contact.html" class="svc-feat-link"><span>Request Details</span><span class="ar">→</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-feat reveal rd2">
+      <div class="svc-feat-img">
+        <img src="assets/products/kalzip/kalzip-exterior-wall-cladding-canada-exterior-technologies-group-conestoga-recreation-centre-corner-detail-04.jpg" alt="High-level budget pricing for cladding projects — Exterior Technologies Group Canada">
+        <span class="svc-feat-tag">PRE-PLANNING</span>
+      </div>
+      <div class="svc-feat-body">
+        <div class="svc-feat-num">// SVC-03</div>
+        <h3 class="svc-feat-name">High-Level<br>Budget Pricing</h3>
+        <p class="svc-feat-desc">Budgeting is a critical early step. We provide high-level budget pricing so architects, developers, and contractors can scope the financial envelope of a project accurately — and keep it viable from start to finish.</p>
+        <ul class="svc-feat-list">
+          <li>Data-driven estimates from deep industry experience</li>
+          <li>Transparent, detailed cost breakdowns</li>
+          <li>Fast turnaround for the pre-planning phase</li>
+          <li>Tailored budgeting for each project&rsquo;s parameters</li>
+        </ul>
+        <div class="svc-feat-foot">
+          <a href="contact.html" class="svc-feat-link"><span>Request an Estimate</span><span class="ar">→</span></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECONDARY SERVICE ROWS -->
 <section class="svc-large">
-
-  <div class="svc-row reveal">
-    <div class="svc-row-num">SVC-01</div>
-    <div class="svc-row-content">
-      <h2 class="svc-row-name">Design <em>Consultation</em></h2>
-      <p class="svc-row-desc">Tailored proposals, in-depth material selection, integration with architectural style, visual and functional harmony, and compliance with local building codes. We work with architects from concept through detail design.</p>
-    </div>
-    <div class="svc-row-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272687_edit.webp" alt="Design Consultation"></div>
-  </div>
-
-  <div class="svc-row reveal">
-    <div class="svc-row-num">SVC-02</div>
-    <div class="svc-row-content">
-      <h2 class="svc-row-name">Design <em>Assist</em></h2>
-      <p class="svc-row-desc">Collaboration, customization, intelligent insights and recommendations, budget optimization, and architectural detailing at every stage. Our team participates throughout pre-construction to keep your design intent intact.</p>
-    </div>
-    <div class="svc-row-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272686_edit.webp" alt="Design Assist"></div>
-  </div>
-
-  <div class="svc-row reveal">
-    <div class="svc-row-num">SVC-03</div>
-    <div class="svc-row-content">
-      <h2 class="svc-row-name">Material <em>Specification</em></h2>
-      <p class="svc-row-desc">Detailed material analysis, durability considerations, cost-effective solutions, aesthetic compatibility, and environmental impact assessment. We help spec writers translate design intent into accurate, performance-driven product calls.</p>
-    </div>
-    <div class="svc-row-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272689_edit.webp" alt="Material Specification"></div>
-  </div>
 
   <div class="svc-row reveal">
     <div class="svc-row-num">SVC-04</div>
     <div class="svc-row-content">
-      <h2 class="svc-row-name">AutoCAD <em>Details</em></h2>
-      <p class="svc-row-desc">Roof and wall details delivered in editable AutoCAD format. Standard, custom, and project-specific drawings — complete with code references, fastener callouts, and sequencing notes ready for your CD set.</p>
+      <h2 class="svc-row-name">Design <em>Consultation</em></h2>
+      <p class="svc-row-desc">Tailored proposals, in-depth material selection, integration with architectural style, visual and functional harmony, and compliance with local building codes. We work with architects from concept through detail design.</p>
     </div>
-    <div class="svc-row-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3310451_edit.webp" alt="AutoCAD Details"></div>
+    <div class="svc-row-img"><img src="assets/products/elzinc/elzinc-canada-exterior-technologies-group-graphite-vertical-cladding-fins-detail-01.webp" alt="Design consultation — Exterior Technologies Group Canada"></div>
   </div>
 
   <div class="svc-row reveal">
     <div class="svc-row-num">SVC-05</div>
     <div class="svc-row-content">
-      <h2 class="svc-row-name">Budget <em>Pricing</em></h2>
-      <p class="svc-row-desc">High-level budget pricing for early-stage scoping. Our pricing accounts for product cost, sub-frame, accessories, and typical installation conditions — giving design teams accurate cost intelligence at concept stage.</p>
+      <h2 class="svc-row-name">Design <em>Assist</em></h2>
+      <p class="svc-row-desc">Collaboration, customization, intelligent insights and recommendations, budget optimization, and architectural detailing at every stage. Our team participates throughout pre-construction to keep your design intent intact.</p>
     </div>
-    <div class="svc-row-img"><img src="https://dvm0q8ak413bh.cloudfront.net/data/org/28575/media/img/source/edit/3272458_edit.webp" alt="Budget Pricing"></div>
+    <div class="svc-row-img"><img src="assets/products/epic/epic-metals-canada-exterior-technologies-group-archdeck-barrel-vault-corridor-interior-02.jpg" alt="Design assist — Exterior Technologies Group Canada"></div>
+  </div>
+
+  <div class="svc-row reveal">
+    <div class="svc-row-num">SVC-06</div>
+    <div class="svc-row-content">
+      <h2 class="svc-row-name">Material <em>Specification</em></h2>
+      <p class="svc-row-desc">Detailed material analysis, durability considerations, cost-effective solutions, aesthetic compatibility, and environmental impact assessment. We help spec writers translate design intent into accurate, performance-driven product calls.</p>
+    </div>
+    <div class="svc-row-img"><img src="assets/products/favemanc/favemanc-terracotta-canada-exterior-technologies-group-leclerc-albi-france-ventilated-facade-substructure-01.jpg" alt="Material specification — Exterior Technologies Group Canada"></div>
   </div>
 
 </section>
@@ -228,8 +262,8 @@
 <!-- PROCESS -->
 <section class="process">
   <div class="process-head reveal">
-    <p class="s-eyebrow">How We Work</p>
-    <h2 class="s-title">A Five-Phase<br><em>Engagement</em></h2>
+    <div class="svc-trio-eyebrow">// HOW WE WORK</div>
+    <h2>A five-phase<br><em>engagement</em></h2>
   </div>
   <div class="process-grid">
     <div class="proc-step reveal">
@@ -260,12 +294,42 @@
   </div>
 </section>
 
+<!-- WHY -->
+<section class="svc-why">
+  <div class="svc-why-grid">
+    <div class="svc-why-copy reveal">
+      <div class="svc-trio-eyebrow">// WHY ETG</div>
+      <h2>Accuracy that<br>carries the <em>project</em>.</h2>
+      <p>Accuracy in construction specifications is crucial to the success of any project. With Exterior Technologies Group, you gain a partner who ensures your specifications are <strong>precise, compliant, and perfectly suited</strong> to your project&rsquo;s requirements.</p>
+      <p>Our commitment to quality and adherence to standards makes us a leader in the cladding industry — supporting design teams from Halifax to Vancouver with local technical support, value engineering, custom detailing, and field review.</p>
+    </div>
+    <div class="svc-why-stats reveal rd1">
+      <div class="svc-why-stat">
+        <div class="svc-why-stat-val"><em>40</em>+</div>
+        <div class="svc-why-stat-label">Years in the<br>building envelope</div>
+      </div>
+      <div class="svc-why-stat">
+        <div class="svc-why-stat-val"><em>5</em></div>
+        <div class="svc-why-stat-label">National support<br>regions</div>
+      </div>
+      <div class="svc-why-stat">
+        <div class="svc-why-stat-val">CSC</div>
+        <div class="svc-why-stat-label">&amp; CSI standard<br>specifications</div>
+      </div>
+      <div class="svc-why-stat">
+        <div class="svc-why-stat-val"><em>8</em></div>
+        <div class="svc-why-stat-label">Represented<br>product lines</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
-<section style="background: var(--ink); padding: 72px 48px; text-align: center; border-bottom: 1px solid var(--rule);">
-  <div style="max-width: 720px; margin: 0 auto;">
+<section style="background: var(--ink); padding: 84px 6vw; text-align: center; border-bottom: 1px solid var(--rule);">
+  <div style="max-width: 740px; margin: 0 auto;">
     <p class="s-eyebrow" style="color: rgba(240,237,232,.5); justify-content: center; margin-bottom: 16px;">Get Started</p>
-    <h2 class="s-title" style="color: var(--bg); margin-bottom: 20px;">Have a project<br>in <em>mind?</em></h2>
-    <p style="color: rgba(240,237,232,.6); margin-bottom: 32px; font-size: 14px; line-height: 1.78;">Get in touch with our team to discuss design assist, specification, or budget pricing for your next building envelope project.</p>
+    <h2 class="s-title" style="color: var(--bg); margin-bottom: 20px;">Start your project on the<br>right <em>footing</em>.</h2>
+    <p style="color: rgba(240,237,232,.62); margin-bottom: 32px; font-size: 15px; line-height: 1.7; font-family: 'Barlow', sans-serif; font-weight: 300;">Get in touch to discuss specification assistance, AutoCAD details, design assist, or a high-level budget estimate for your next building-envelope project.</p>
     <a href="contact.html" class="btn-red">Contact ETG →</a>
   </div>
 </section>
@@ -297,6 +361,7 @@
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="news.html">News &amp; Projects</a></li>
+        <li><a href="lunch-and-learn.html">Lunch &amp; Learn</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
