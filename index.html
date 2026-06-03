@@ -62,6 +62,8 @@
 .prod-body { padding: 24px 22px 26px; display: flex; flex-direction: column; gap: 14px; flex: 1; border-top: 1px solid var(--rule); }
 .prod-logo { height: 52px; display: flex; align-items: center; }
 .prod-logo img { height: 100%; width: auto; max-width: 240px; object-fit: contain; }
+.prod-logo-text { font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 28px; letter-spacing: .04em; text-transform: uppercase; color: var(--ink); line-height: 1; }
+.prod-logo-text span { color: var(--red); }
 .prod-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: 22px; letter-spacing: -.005em; color: var(--ink); line-height: 1.05; text-transform: uppercase; }
 .prod-desc { font-family: 'Barlow', sans-serif; font-size: 13px; font-weight: 400; line-height: 1.55; color: var(--ink3); flex: 1; }
 .prod-arrow { display: flex; align-items: center; justify-content: space-between; padding-top: 10px; border-top: 1px solid var(--rule); font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .14em; color: var(--ink2); text-transform: uppercase; }
@@ -94,8 +96,11 @@
 .bs-cell { aspect-ratio: 16 / 7; display: flex; align-items: center; justify-content: center; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 28px; text-decoration: none; transition: background .2s ease; filter: grayscale(.1); opacity: .92; }
 .bs-cell:hover { filter: grayscale(0); opacity: 1; background: #fff; }
 .bs-cell:nth-child(4n) { border-right: none; }
-.bs-cell:nth-child(n+5) { border-bottom: none; }
+.bs-cell:nth-child(n+9) { border-bottom: none; }
 .bs-cell img { max-width: 100%; max-height: 88px; width: auto; height: auto; object-fit: contain; }
+.bs-cell-text { opacity: 1; filter: none; }
+.bs-text { font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 26px; letter-spacing: .04em; text-transform: uppercase; color: var(--ink); line-height: 1; }
+.bs-text span { color: var(--red); }
 
 @media (max-width: 1024px) {
   .prod-grid { grid-template-columns: repeat(2, 1fr); }
@@ -104,8 +109,7 @@
   .bs-grid { grid-template-columns: repeat(2, 1fr); }
   .bs-cell:nth-child(4n) { border-right: 1px solid var(--rule); }
   .bs-cell:nth-child(2n) { border-right: none; }
-  .bs-cell:nth-child(n+5) { border-bottom: 1px solid var(--rule); }
-  .bs-cell:nth-child(n+7) { border-bottom: none; }
+  .bs-cell:nth-child(n+9) { border-bottom: none; }
 }
 @media (max-width: 640px) {
   .hero-content { padding: 40px 24px 44px; }
@@ -270,6 +274,19 @@
         <div class="prod-arrow"><span>Explore</span><span class="ar">→</span></div>
       </div>
     </a>
+
+    <a href="products/parklex-prodema.html" class="prod-card">
+      <div class="prod-image">
+        <span class="prod-tag">09 · PARKLEX PRODEMA</span>
+        <img src="https://parklexprodema.com/wp-content/uploads/2022/12/PRODUCT_CHARACTERISTICS_CLADDING_PORTADA.jpg" alt="Parklex Prodema Canada — NATURCLAD natural timber cladding on a ventilated façade, Exterior Technologies Group">
+      </div>
+      <div class="prod-body">
+        <div class="prod-logo"><img src="assets/logos/parklex.svg" alt="Parklex Prodema"></div>
+        <div class="prod-name">Natural Timber Panels</div>
+        <div class="prod-desc">Engineered natural-timber cladding, siding, soffit, and non-combustible fireproof panels — maintenance-free.</div>
+        <div class="prod-arrow"><span>Explore</span><span class="ar">→</span></div>
+      </div>
+    </a>
   </div>
 </section>
 
@@ -302,6 +319,7 @@
     <a href="products/radius-track.html" class="bs-cell" aria-label="Radius Track"><img src="assets/logos/radius-track.png" alt="Radius Track"></a>
     <a href="products/forme-design.html" class="bs-cell" aria-label="ForMe Design"><img src="assets/logos/forme.png" alt="ForMe Design"></a>
     <a href="products/terracotta-favemanc.html" class="bs-cell" aria-label="Favemanc"><img src="assets/logos/favemanc.png" alt="Favemanc"></a>
+    <a href="products/parklex-prodema.html" class="bs-cell" aria-label="Parklex Prodema"><img src="assets/logos/parklex.svg" alt="Parklex Prodema"></a>
   </div>
 </section>
 
@@ -324,6 +342,7 @@
         <li><a href="products/radius-track.html">Radius Track</a></li>
         <li><a href="products/forme-design.html">ForMe Design</a></li>
         <li><a href="products/terracotta-favemanc.html">Terracotta Favemanc</a></li>
+        <li><a href="products/parklex-prodema.html">Parklex Prodema</a></li>
       </ul>
     </div>
     <div class="footer-col">
