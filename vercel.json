@@ -1,11 +1,646 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/pages/about-external-cladding-suppliers-canada",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/pages/old-ai-pages/about",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/pages/exterior-cladding-system-services-canada",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/pages/exterior-cladding-system-services-canada/autocad-roof-wall-details",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/pages/exterior-cladding-system-services-canada/high-level-budget-pricing",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/pages/old-ai-pages/services",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/pages/exterior-cladding-products-canada",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/pages/exterior-cladding-products-canada/alpolic-materials",
+      "destination": "/products/alpolic-materials",
+      "permanent": true
+    },
+    {
+      "source": "/pages/exterior-cladding-products-canada/elzinc",
+      "destination": "/products/elzinc",
+      "permanent": true
+    },
+    {
+      "source": "/pages/exterior-cladding-products-canada/epic-metals",
+      "destination": "/products/epic-metals",
+      "permanent": true
+    },
+    {
+      "source": "/pages/exterior-cladding-products-canada/for-me-design",
+      "destination": "/products/forme-design",
+      "permanent": true
+    },
+    {
+      "source": "/pages/exterior-cladding-products-canada/kalzip",
+      "destination": "/products/kalzip",
+      "permanent": true
+    },
+    {
+      "source": "/pages/exterior-cladding-products-canada/radius-track",
+      "destination": "/products/radius-track",
+      "permanent": true
+    },
+    {
+      "source": "/pages/exterior-cladding-products-canada/tac-thermal-spacer",
+      "destination": "/products/tac-thermal-spacer",
+      "permanent": true
+    },
+    {
+      "source": "/pages/exterior-cladding-products-canada/terracotta-favemanc",
+      "destination": "/products/terracotta-favemanc",
+      "permanent": true
+    },
+    {
+      "source": "/pages/education-resources",
+      "destination": "/lunch-and-learn",
+      "permanent": true
+    },
+    {
+      "source": "/pages/education-resources/educatation-resource",
+      "destination": "/lunch-and-learn",
+      "permanent": true
+    },
+    {
+      "source": "/pages/education-resources/alpolic-lunch-and-learn",
+      "destination": "/lunch-and-learn/alpolic-lunch-and-learn",
+      "permanent": true
+    },
+    {
+      "source": "/pages/education-resources/elzinc-lunch-learn",
+      "destination": "/lunch-and-learn/elzinc-lunch-and-learn",
+      "permanent": true
+    },
+    {
+      "source": "/pages/education-resources/epic-metals-lunch-learn",
+      "destination": "/lunch-and-learn/epic-metals-lunch-and-learn",
+      "permanent": true
+    },
+    {
+      "source": "/pages/education-resources/forme-design-lunch-and-learn",
+      "destination": "/lunch-and-learn/forme-design-lunch-and-learn",
+      "permanent": true
+    },
+    {
+      "source": "/pages/education-resources/kalzip-lunch-learn",
+      "destination": "/lunch-and-learn/kalzip-lunch-and-learn",
+      "permanent": true
+    },
+    {
+      "source": "/pages/education-resources/tac-lunch-and-learn",
+      "destination": "/lunch-and-learn/tac-lunch-and-learn",
+      "permanent": true
+    },
+    {
+      "source": "/pages/education-resources/terracotta-favemanc-lunch-and-learn",
+      "destination": "/lunch-and-learn/terracotta-favemanc-lunch-and-learn",
+      "permanent": true
+    },
+    {
+      "source": "/pages/contact-exterior-cladding-company-canada",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/pages/old-ai-pages/contact",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/pages/old-ai-pages/faq",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/pages/rainscreen-roof-wall-systems-canada",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/pages/color-sample-requests",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/pages/footer/privacy-policy",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/nvelope",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/worlds-best-graffiti-removal-system",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/footer",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/mock",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/mock/product-details-mock",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/pdf",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/old-ai-pages",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1271504-empowering-design--top-10-benefits-of-cladding-solutions-for-architects-and-specification-writers",
+      "destination": "/news/top-10-benefits-of-cladding-solutions",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1283780-zinc-roofing-in-cold-climates--design-and-durability",
+      "destination": "/news/zinc-roofing-in-cold-climates",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1283792-alpolic-fr--shaping-architectural-marvels-at-the-moody-center-and-beyond",
+      "destination": "/news/alpolic-fr-moody-center",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1283793-crystals-at-citycenter-in-las-vegas",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1283794-which-installation-technique-do-you-prefer-for-your-zinc-facade",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1283795-pioneering-energy-efficiency-with-the-kalzip-e-clip",
+      "destination": "/news/kalzip-e-clip-energy-efficient",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1283796-curtin-university--innovate-with-elzinc-curtin-university--innovate-with-elzinc",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1283811-elzinc-produces-its-own-energy",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1283813-elzinc-and-mazzonetto-announce-new-distribution-partnership-in-italy",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1283818-elzinc-achieves-carbon-footprint-certification-for-its-products",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289275-etg-and-aluminum-roofing-by-kalzip-canada",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289277-kalzip--helps-deliver-first-carbon-positive-station-upgrade",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289285-centro-ocupacional-en-ferrol-and-kalzip",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289291-the-zero-emission-house-by-kalzip",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289292-ig-field-in-winnipeg-and-kalzip-cladding",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289299-alpolic-acp-in-toronto-s-canoe-landing-campus",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289302-winnipeg-s-james-armstrong-richardson-international-airport-and-alpolic-s-anodized-aluminum",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289305-kalzip-project-continues-during-pandemic---msg-sphere--las-vegas",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289306-details--details--details--free-form-roof",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289311-details--details--details--solid-to-perforated",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289322-alpolic-and-epic-metals-modernize-the-ymca",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289326-new-alpolic-finishes",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289327-madison-view-shines-in-alpolic-fr",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289328-alpolic-revamps-stanley-a--milner-library-in-edmonton",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289348-introducing-world-s-best-graffiti-removal-system",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289353-introducing-kalzip-natureroof",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289477-york-university-student-center",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289482-elzinc--lifetime-warranty",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289483-quebec-fire-station--5-using-kalzip-tf-800",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289484-enhance-your-building-with-knotwood-soffits",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289485-nvelope---making-cladding-happen",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289486-alpolic-and-river-city-condos-in-toronto",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289487-knotwood-a-part-of-tim-horton-s--700m-renovation-plans",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289488-knotwood-vs-longboard-cladding",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289497-seton-high-school---alpolic-fr",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289498-sait-trades-and-technology-complex---kalzip",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289504-clareview-community-recreation-center---kalzip",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289505-kalzip-roofing---emerald-hills-aquatic-centre",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1289513-elzinc--kicks-it-up-a-notch-at-montreal-soccer-field",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1290071-elzinc--rainbow---it-doesn-t-have-to-be-grey",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1290072-elzinc----richcraft-recreation-complex",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1290073-elzinc----adelaide-convention-centre",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1290074-best-roof-in-canada---ttc-york-university-station",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1290075-we-re-bringing-elzinc--to-canada",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1290076-why-alpolic-is-great-for-retail",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1290077-kalzip-fc---university-of-calgary-residence",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1290150-alpolic---ryerson-student-learning-centre",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1290313-alpolic-in-the-retail-space",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1290329-alpolic-brings-the-samsung-experience-to-life",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1290331-calgary-new-central-library",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1290340-nvelope-cladding-systems-and-the-national-music-centre",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1290350-sloping-roof-curves-on-able-pump-station",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1290605-kalzip-metal-roofing-and-aluminum-composite-panel-at-sochi-olympics",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1290609-pan-am-aquatics-centre-and-thermal-spacer",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1290610-alpolic---the-altara-shopping-center",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1290611-boulevard-club-west-wing",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1290656-emily-carr-great-university-northern-way-campus",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1290661-the-quad-at-york-university",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1290690-chernobyl-radiator-covered-by-kalzip",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1290711-alpolic-s-sustainable-rainscreen-systems",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1290716-alpolic-and-moncton-s-new--100m-arena",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1290722-two-projects-win-the-governor-general-medal",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1330455-innovative-italian-design---new-product-introduction--introducing-forme-powder-on-powder-technology-with-wood-grain-texture",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1336973-tac-2-1-revolutionizing-exterior-cladding-solutions",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1340547-forme-design-s-skin-battens-and-cladding-achieve-epd-certification",
+      "destination": "/news/forme-design-wood-look-soffits",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1341702-innovative-cladding-solutions-for-iconic-architectural-designs",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1342698-sustainability-innovation-in-exterior-cladding-elzinc-s-epds-and-our-commitment",
+      "destination": "/news/elzinc-epd-sustainability",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1389436-navigating-building-codes-practical-guidance-for-architects-and-spec-writers",
+      "destination": "/news/navigating-canadian-building-codes",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1391671-how-to-specify-exterior-cladding-that-meets-both-design-vision-and-building-codes",
+      "destination": "/news/specify-cladding-meeting-design-and-codes",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1399007-building-envelope-excellence-how-precision-cladding-enhances-project-outcomes",
+      "destination": "/news/building-envelope-excellence-precision-cladding",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1410417-achieving-architectural-precision-best-practices-for-exterior-cladding-specification",
+      "destination": "/news/best-practices-exterior-cladding-specification",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1424069-how-to-navigate-exterior-cladding-codes-without-delays",
+      "destination": "/news/navigate-cladding-codes-without-delays",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1437356-how-smart-specification-support-prevents-costly-envelope-mistakes",
+      "destination": "/news/smart-specification-prevents-envelope-mistakes",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1448363-how-to-spot-hidden-issues-in-cladding-performance-inspections",
+      "destination": "/news/spot-hidden-issues-cladding-inspections",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1453483-alpolic-americas-announces-new-textured-finishes",
+      "destination": "/news/alpolic-new-textured-finishes",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1460557-energy-efficient-thanks-to-the-e-clip",
+      "destination": "/news/kalzip-e-clip-energy-efficient",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1461508-how-technical-design-advisory-streamlines-complex-building-projects",
+      "destination": "/news/technical-design-advisory-complex-projects",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1470043-alpolic-adds-new-patterns-to-timber-series-finishes",
+      "destination": "/news/alpolic-timber-series-japanese-birch-wild-plum",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1470045-pedestrian-bridge-in-pickering-canada-a-landmark-in-modern-bridge-design",
+      "destination": "/news/pickering-pedestrian-bridge-kalzip",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1473201-surprising-ways-advanced-cladding-materials-improve-building-longevity",
+      "destination": "/news/advanced-cladding-materials-building-longevity",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1485836-industry-experts-compare-acm-versus-plate-in-architectural-design",
+      "destination": "/news/acm-versus-plate-architectural-comparison",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1486414-how-smart-specification-support-simplifies-complex-envelopes",
+      "destination": "/news/smart-specification-simplifies-complex-envelopes",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1486461-beautifully-flowing-building-envelope-minimises-environmental-impact",
+      "destination": "/news/boulevard-club-toronto-flowing-envelope",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/1499126-how-smart-specification-support-prevents-costly-envelope-errors",
+      "destination": "/news/smart-specification-prevents-envelope-mistakes",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tag/:slug*",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/:path*",
+      "destination": "/news",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     }
   ]

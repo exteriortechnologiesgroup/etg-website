@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://exteriortechnologiesgroup.com/sitemap.xml
+Sitemap: https://www.exteriortechnologiesgroup.com/sitemap.xml
