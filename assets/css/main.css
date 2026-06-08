@@ -431,7 +431,7 @@ footer.site-footer {
 .nav-logo-mark {
   display: flex;
   align-items: center;
-  height: 44px;
+  height: 54px;
   text-decoration: none;
   flex-shrink: 0;
 }
@@ -442,12 +442,12 @@ footer.site-footer {
   object-fit: contain;
 }
 @media (max-width: 768px) {
-  .nav-logo-mark { height: 36px; }
+  .nav-logo-mark { height: 42px; }
 }
 
 /* ═══════════════ NEW FOOTER MARKUP ═══════════════ */
 .footer-brand { display: flex; flex-direction: column; gap: 18px; }
-.footer-logo { display: inline-flex; align-items: center; max-width: 200px; }
+.footer-logo { display: inline-flex; align-items: center; max-width: 260px; }
 .footer-logo img { width: 100%; height: auto; display: block; filter: brightness(1.05); }
 .footer-tag {
   font-family: 'Share Tech Mono', monospace;
