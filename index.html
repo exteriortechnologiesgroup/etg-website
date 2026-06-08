@@ -51,6 +51,15 @@
 .pg-head-right { padding-bottom: 8px; }
 .pg-head-right p { font-family: 'Barlow', sans-serif; font-size: 17px; font-weight: 300; line-height: 1.6; color: var(--ink2); max-width: 540px; }
 
+/* ── BRAND LOGO SHOWCASE ── */
+.pg-brands { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin-bottom: 64px; }
+.pg-brand { background: var(--white); display: flex; align-items: center; justify-content: center; padding: 48px 36px; min-height: 168px; text-decoration: none; transition: background .25s ease; }
+.pg-brand:hover { background: var(--bg2); }
+.pg-brand img { max-width: 100%; max-height: 92px; width: auto; height: auto; object-fit: contain; transition: transform .3s ease; }
+.pg-brand:hover img { transform: scale(1.06); }
+@media (max-width: 1024px) { .pg-brands { grid-template-columns: repeat(2, 1fr); } .pg-brand { min-height: 130px; padding: 36px 28px; } }
+@media (max-width: 600px) { .pg-brands { grid-template-columns: 1fr; } }
+
 .prod-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
 .prod-card { background: var(--white); text-decoration: none; display: flex; flex-direction: column; position: relative; transition: background .25s ease; }
 .prod-card:hover { background: #fff; }
@@ -132,7 +141,20 @@
   </div>
   <ul class="nav-links">
     <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="products.html">Products</a></li>
+    <li class="nav-has-dropdown">
+      <a href="products.html" class="nav-dropdown-toggle">Products <span class="nav-caret"></span></a>
+      <ul class="nav-dropdown">
+        <li><a href="products/alpolic-materials.html"><span class="nav-dd-num">01</span>Alpolic Materials</a></li>
+        <li><a href="products/kalzip.html"><span class="nav-dd-num">02</span>Kalzip</a></li>
+        <li><a href="products/elzinc.html"><span class="nav-dd-num">03</span>elZinc</a></li>
+        <li><a href="products/tac-thermal-spacer.html"><span class="nav-dd-num">04</span>TAC Thermal Spacer</a></li>
+        <li><a href="products/epic-metals.html"><span class="nav-dd-num">05</span>EPIC Metals</a></li>
+        <li><a href="products/radius-track.html"><span class="nav-dd-num">06</span>Radius Track</a></li>
+        <li><a href="products/forme-design.html"><span class="nav-dd-num">07</span>ForMe Design</a></li>
+        <li><a href="products/terracotta-favemanc.html"><span class="nav-dd-num">08</span>Terracotta Favemanc</a></li>
+        <li><a href="products/parklex-prodema.html"><span class="nav-dd-num">09</span>Parklex Prodema</a></li>
+      </ul>
+    </li>
     <li><a href="services.html">Services</a></li>
     <li><a href="news.html">News</a></li>
     <li><a href="lunch-and-learn.html">Lunch &amp; Learn</a></li>
@@ -170,11 +192,23 @@
   <div class="pg-head reveal">
     <div class="pg-head-left">
       <div class="eyebrow">// OUR PRODUCT LINES</div>
-      <h2>Eight <em>specialist</em> brands.<br>One trusted source.</h2>
+      <h2>Nine <em>specialist</em> brands.<br>One trusted source.</h2>
     </div>
     <div class="pg-head-right">
       <p>From standing-seam aluminum and architectural zinc to thermally-broken substructure and curved cold-formed steel — every system is rigorously selected, fully supported, and proven on Canadian projects.</p>
     </div>
+  </div>
+
+  <div class="pg-brands reveal">
+    <a href="products/alpolic-materials.html" class="pg-brand" aria-label="Alpolic Materials"><img src="assets/logos/alpolic.png" alt="Alpolic Materials"></a>
+    <a href="products/kalzip.html" class="pg-brand" aria-label="Kalzip"><img src="assets/logos/kalzip.png" alt="Kalzip"></a>
+    <a href="products/elzinc.html" class="pg-brand" aria-label="elZinc"><img src="assets/logos/elzinc.png" alt="elZinc"></a>
+    <a href="products/tac-thermal-spacer.html" class="pg-brand" aria-label="TAC Thermal Spacer"><img src="assets/logos/tac.png" alt="TAC Thermal Spacer"></a>
+    <a href="products/epic-metals.html" class="pg-brand" aria-label="EPIC Metals"><img src="assets/logos/epic.png" alt="EPIC Metals"></a>
+    <a href="products/radius-track.html" class="pg-brand" aria-label="Radius Track"><img src="assets/logos/radius-track.png" alt="Radius Track"></a>
+    <a href="products/forme-design.html" class="pg-brand" aria-label="ForMe Design"><img src="assets/logos/forme.png" alt="ForMe Design"></a>
+    <a href="products/terracotta-favemanc.html" class="pg-brand" aria-label="Terracotta Favemanc"><img src="assets/logos/favemanc.png" alt="Terracotta Favemanc"></a>
+    <a href="products/parklex-prodema.html" class="pg-brand" aria-label="Parklex Prodema"><img src="assets/logos/parklex.svg" alt="Parklex Prodema"></a>
   </div>
 
   <div class="prod-grid reveal">
@@ -303,23 +337,6 @@
         <a href="contact.html" class="ab-btn ab-btn-ghost">Contact Us <span class="ar">→</span></a>
       </div>
     </div>
-  </div>
-</section>
-
-<section id="brands-strip">
-  <div class="bs-head reveal">
-    <span class="eyebrow">PARTNER BRANDS</span>
-  </div>
-  <div class="bs-grid reveal">
-    <a href="products/alpolic-materials.html" class="bs-cell" aria-label="Alpolic"><img src="assets/logos/alpolic.png" alt="Alpolic"></a>
-    <a href="products/kalzip.html" class="bs-cell" aria-label="Kalzip"><img src="assets/logos/kalzip.png" alt="Kalzip"></a>
-    <a href="products/elzinc.html" class="bs-cell" aria-label="elZinc"><img src="assets/logos/elzinc.png" alt="elZinc"></a>
-    <a href="products/tac-thermal-spacer.html" class="bs-cell" aria-label="TAC"><img src="assets/logos/tac.png" alt="TAC"></a>
-    <a href="products/epic-metals.html" class="bs-cell" aria-label="EPIC Metals"><img src="assets/logos/epic.png" alt="EPIC Metals"></a>
-    <a href="products/radius-track.html" class="bs-cell" aria-label="Radius Track"><img src="assets/logos/radius-track.png" alt="Radius Track"></a>
-    <a href="products/forme-design.html" class="bs-cell" aria-label="ForMe Design"><img src="assets/logos/forme.png" alt="ForMe Design"></a>
-    <a href="products/terracotta-favemanc.html" class="bs-cell" aria-label="Favemanc"><img src="assets/logos/favemanc.png" alt="Favemanc"></a>
-    <a href="products/parklex-prodema.html" class="bs-cell" aria-label="Parklex Prodema"><img src="assets/logos/parklex.svg" alt="Parklex Prodema"></a>
   </div>
 </section>
 

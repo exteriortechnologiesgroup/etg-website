@@ -93,13 +93,16 @@
   align-self: flex-start;
 }
 .ph-logo-wrap img { height: 100%; width: auto; max-width: 320px; object-fit: contain; display: block; }
-#prd-hero .ph-logo-wrap { height: auto; padding: 22px 30px; }
-#prd-hero .ph-logo-wrap img { height: auto; width: 260px; max-width: 64vw; }
+#prd-hero .ph-logo-wrap { height: auto; padding: 20px 30px; }
+#prd-hero .ph-logo-wrap img { height: auto; width: 320px; max-width: 70vw; }
 .ph-logo-text { font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 38px; letter-spacing: .04em; text-transform: uppercase; color: var(--ink); line-height: 1; }
 .ph-logo-text span { color: var(--red); }
 .ph-h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(52px, 7.6vw, 124px); font-weight: 200; line-height: .88; letter-spacing: -.015em; text-transform: uppercase; margin: 0; }
 .ph-h1 em { font-style: italic; font-weight: 200; color: var(--red); }
 .ph-tagline { font-family: 'Barlow', sans-serif; font-size: clamp(17px, 1.6vw, 22px); font-weight: 300; max-width: 660px; color: rgba(255,255,255,.88); line-height: 1.5; }
+.ph-systems-row { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-top: 4px; }
+.ph-sys { font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 19px; letter-spacing: .08em; text-transform: uppercase; color: #fff; }
+.ph-sys-sep { color: var(--red); font-family: 'Barlow Condensed', sans-serif; font-size: 19px; }
 .ph-bottom { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; flex-wrap: wrap; }
 .ph-meta { display: grid; grid-template-columns: repeat(3, auto); gap: 40px; }
 .ph-meta-item { display: flex; flex-direction: column; gap: 6px; }
@@ -290,7 +293,20 @@
   </div>
   <ul class="nav-links">
     <li><a href="../index.html">Home</a></li>
-    <li><a href="../products.html" class="active">Products</a></li>
+    <li class="nav-has-dropdown">
+      <a href="../products.html" class="active nav-dropdown-toggle">Products <span class="nav-caret"></span></a>
+      <ul class="nav-dropdown">
+        <li><a href="alpolic-materials.html"><span class="nav-dd-num">01</span>Alpolic Materials</a></li>
+        <li><a href="kalzip.html"><span class="nav-dd-num">02</span>Kalzip</a></li>
+        <li><a href="elzinc.html"><span class="nav-dd-num">03</span>elZinc</a></li>
+        <li><a href="tac-thermal-spacer.html"><span class="nav-dd-num">04</span>TAC Thermal Spacer</a></li>
+        <li><a href="epic-metals.html"><span class="nav-dd-num">05</span>EPIC Metals</a></li>
+        <li><a href="radius-track.html"><span class="nav-dd-num">06</span>Radius Track</a></li>
+        <li><a href="forme-design.html"><span class="nav-dd-num">07</span>ForMe Design</a></li>
+        <li><a href="terracotta-favemanc.html"><span class="nav-dd-num">08</span>Terracotta Favemanc</a></li>
+        <li><a href="parklex-prodema.html"><span class="nav-dd-num">09</span>Parklex Prodema</a></li>
+      </ul>
+    </li>
     <li><a href="../services.html">Services</a></li>
     <li><a href="../news.html">News</a></li>
     <li><a href="../lunch-and-learn.html">Lunch &amp; Learn</a></li>
@@ -317,6 +333,15 @@
       </div>
       <h1 class="ph-h1">Real timber,<br><em>zero</em> maintenance.</h1>
       <p class="ph-tagline">Engineered natural-timber panels for ventilated façades, siding, and soffits — with a genuine wood surface, not a printed imitation. Maintenance-free, sustainably sourced, and backed by a 10-year warranty.</p>
+      <div class="ph-systems-row">
+        <span class="ph-sys">Cladding</span>
+        <span class="ph-sys-sep">/</span>
+        <span class="ph-sys">Siding</span>
+        <span class="ph-sys-sep">/</span>
+        <span class="ph-sys">Soffit</span>
+        <span class="ph-sys-sep">/</span>
+        <span class="ph-sys">Fireproof</span>
+      </div>
     </div>
 
     <div class="ph-bottom">

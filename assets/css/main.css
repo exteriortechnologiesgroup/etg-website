@@ -17,7 +17,7 @@
   --rule-lt:   #d8d4cd;
   --red:       #c5492a;
   --red-dk:    #9a3318;
-  --nav-h:     68px;
+  --nav-h:     80px;
 }
 
 html { scroll-behavior: smooth; }
@@ -108,6 +108,50 @@ nav.site-nav {
   height: 1px;
   background: var(--red);
 }
+
+/* ── PRODUCTS DROPDOWN ── */
+.nav-has-dropdown { position: relative; }
+.nav-dropdown-toggle { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+.nav-dropdown-toggle .nav-caret { display: inline-block; width: 7px; height: 7px; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: rotate(45deg) translateY(-2px); transition: transform .25s; opacity: .7; }
+.nav-has-dropdown:hover .nav-dropdown-toggle .nav-caret { transform: rotate(225deg) translateY(-2px); }
+.nav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  min-width: 280px;
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-top: 2px solid var(--red);
+  padding: 10px 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity .2s ease, transform .2s ease, visibility .2s;
+  box-shadow: 0 18px 40px -16px rgba(26,25,22,.28);
+  z-index: 600;
+}
+.nav-dropdown::before { content: ''; position: absolute; top: -18px; left: 0; right: 0; height: 18px; }
+.nav-has-dropdown:hover .nav-dropdown,
+.nav-has-dropdown:focus-within .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+.nav-dropdown li { display: block; }
+.nav-dropdown a {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 11px 24px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--ink2);
+  white-space: nowrap;
+  transition: background .18s, color .18s, padding .18s;
+}
+.nav-dropdown a:hover { background: var(--bg); color: var(--red); padding-left: 28px; }
+.nav-dropdown a .nav-dd-num { font-family: 'Share Tech Mono', monospace; font-size: 9px; letter-spacing: .12em; color: var(--ink3); }
+.nav-dropdown a:hover .nav-dd-num { color: var(--red); }
 .nav-cta {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 12px;
@@ -143,6 +187,24 @@ nav.site-nav {
     padding: 24px;
     gap: 20px;
   }
+  /* Mobile: show product dropdown inline, no hover needed */
+  .nav-dropdown {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    border-left: 2px solid var(--red);
+    border-top: none;
+    min-width: 0;
+    padding: 8px 0 4px;
+    margin: 8px 0 0 4px;
+    background: transparent;
+  }
+  .nav-dropdown a { padding: 8px 16px; font-size: 14px; }
+  .nav-dropdown a:hover { background: transparent; padding-left: 18px; }
+  .nav-dropdown-toggle .nav-caret { display: none; }
 }
 
 /* ── BUTTONS ── */
@@ -431,7 +493,7 @@ footer.site-footer {
 .nav-logo-mark {
   display: flex;
   align-items: center;
-  height: 54px;
+  height: 60px;
   text-decoration: none;
   flex-shrink: 0;
 }
