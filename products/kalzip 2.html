@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalzip — Standing Seam Aluminum Roofing & Cladding | Exterior Technologies Group Canada</title>
+<meta name="description" content="Kalzip standing seam aluminum roofing and wall cladding systems — over 1.3 billion sq ft installed worldwide. Distributed across Canada by Exterior Technologies Group. Projects include The Boulevard Club Toronto, TTC York University Station, and Conestoga Recreation Centre.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300&family=Barlow:wght@300;400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css">
+<style>
+/* ═══════════════ PRODUCT PAGE TEMPLATE ═══════════════ */
+
+/* ── HERO ── */
+#prd-hero {
+  margin-top: var(--nav-h);
+  position: relative;
+  height: calc(100vh - var(--nav-h));
+  min-height: 720px;
+  overflow: hidden;
+  background: #1a1916;
+}
+.ph-bg { position: absolute; inset: 0; z-index: 0; }
+.ph-bg img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(.62) contrast(1.05); }
+.ph-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.15) 45%, rgba(0,0,0,.75) 100%); }
+.ph-content { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 48px 6vw 56px; color: #fff; }
+.ph-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; }
+.ph-crumbs { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .18em; color: rgba(255,255,255,.6); text-transform: uppercase; }
+.ph-crumbs a { color: rgba(255,255,255,.78); text-decoration: none; transition: color .2s; }
+.ph-crumbs a:hover { color: var(--red); }
+.ph-crumbs .sep { margin: 0 8px; color: rgba(255,255,255,.3); }
+.ph-prd-id { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .14em; color: rgba(255,255,255,.5); text-align: right; }
+.ph-center { display: flex; flex-direction: column; gap: 26px; max-width: 1100px; }
+.ph-logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  height: 108px;
+  padding: 18px 28px;
+  background: rgba(255,255,255,.92);
+  border-radius: 2px;
+  align-self: flex-start;
+}
+.ph-logo-wrap img { height: 100%; width: auto; max-width: 320px; object-fit: contain; display: block; }
+.ph-h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(52px, 7.6vw, 124px); font-weight: 200; line-height: .88; letter-spacing: -.015em; text-transform: uppercase; margin: 0; }
+.ph-h1 em { font-style: italic; font-weight: 200; color: var(--red); }
+.ph-tagline { font-family: 'Barlow', sans-serif; font-size: clamp(17px, 1.6vw, 22px); font-weight: 300; max-width: 660px; color: rgba(255,255,255,.88); line-height: 1.5; }
+.ph-bottom { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; flex-wrap: wrap; }
+.ph-meta { display: grid; grid-template-columns: repeat(3, auto); gap: 40px; }
+.ph-meta-item { display: flex; flex-direction: column; gap: 6px; }
+.ph-meta-label { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .14em; color: rgba(255,255,255,.5); text-transform: uppercase; }
+.ph-meta-val { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 300; color: #fff; line-height: 1; letter-spacing: -.005em; }
+.ph-meta-val .red { color: var(--red); font-weight: 400; }
+.ph-cta-row { display: flex; gap: 12px; }
+.ph-btn { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; padding: 17px 26px; text-decoration: none; border: 1px solid; display: inline-flex; align-items: center; gap: 12px; transition: all .2s ease; }
+.ph-btn-primary { background: var(--red); border-color: var(--red); color: #fff; }
+.ph-btn-primary:hover { background: #fff; color: var(--ink); border-color: #fff; }
+.ph-btn-ghost { background: transparent; border-color: rgba(255,255,255,.5); color: #fff; }
+.ph-btn-ghost:hover { background: rgba(255,255,255,.1); border-color: #fff; }
+.ph-btn .ar { font-family: 'Barlow Condensed', sans-serif; font-size: 17px; }
+
+/* ── OVERVIEW ── */
+#prd-overview { background: var(--bg); padding: 110px 6vw 120px; }
+.ov-head { display: grid; grid-template-columns: 1fr 2fr; gap: 56px; align-items: end; padding-bottom: 56px; border-bottom: 1px solid var(--rule); margin-bottom: 56px; }
+.ov-eyebrow { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .18em; color: var(--ink3); text-transform: uppercase; display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+.ov-eyebrow::before { content: ""; width: 24px; height: 1px; background: var(--red); }
+.ov-head h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: clamp(40px, 4.6vw, 68px); line-height: .94; letter-spacing: -.01em; text-transform: uppercase; color: var(--ink); margin: 0; }
+.ov-head h2 em { font-style: italic; font-weight: 300; color: var(--red); }
+.ov-lead { font-family: 'Barlow', sans-serif; font-size: 19px; font-weight: 300; line-height: 1.55; color: var(--ink2); max-width: 640px; padding-bottom: 6px; }
+
+.ov-body { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+.ov-col { font-family: 'Barlow', sans-serif; font-size: 16px; font-weight: 300; line-height: 1.7; color: var(--ink2); }
+.ov-col p { margin: 0 0 20px; }
+.ov-col p strong { color: var(--ink); font-weight: 500; }
+.ov-features { margin-top: 56px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+.ov-feat { background: var(--white); padding: 30px 26px; }
+.ov-feat-icon { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .14em; color: var(--red); margin-bottom: 14px; }
+.ov-feat-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 22px; text-transform: uppercase; color: var(--ink); line-height: 1.1; margin-bottom: 10px; }
+.ov-feat-desc { font-family: 'Barlow', sans-serif; font-size: 13.5px; font-weight: 300; line-height: 1.55; color: var(--ink3); }
+
+/* ── PROJECT SHOWCASE (between overview and news) ── */
+#prd-showcase { background: var(--ink); padding: 0; position: relative; }
+.sh-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; grid-template-rows: 50vh 50vh; gap: 1px; background: rgba(255,255,255,.08); }
+.sh-img { position: relative; overflow: hidden; }
+.sh-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .9s cubic-bezier(.2,.7,.2,1); }
+.sh-img:hover img { transform: scale(1.04); }
+.sh-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,.6) 100%); pointer-events: none; }
+.sh-img-cap { position: absolute; left: 22px; bottom: 22px; right: 22px; z-index: 2; color: #fff; }
+.sh-img-cap-label { font-family: 'Share Tech Mono', monospace; font-size: 9px; letter-spacing: .14em; color: var(--red); margin-bottom: 8px; text-transform: uppercase; }
+.sh-img-cap-title { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 400; line-height: 1.1; text-transform: uppercase; }
+.sh-feature { grid-row: span 2; }
+
+/* ── NEWS ── */
+#prd-news { background: var(--bg); padding: 110px 6vw 120px; }
+.nw-head { display: flex; justify-content: space-between; align-items: end; padding-bottom: 48px; border-bottom: 1px solid var(--rule); margin-bottom: 56px; gap: 40px; flex-wrap: wrap; }
+.nw-head-left .ov-eyebrow { margin-bottom: 18px; }
+.nw-head h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: clamp(36px, 4vw, 56px); line-height: .96; letter-spacing: -.01em; text-transform: uppercase; color: var(--ink); margin: 0; }
+.nw-head h2 em { font-style: italic; font-weight: 300; color: var(--red); }
+.nw-all { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .14em; color: var(--ink2); text-decoration: none; text-transform: uppercase; padding: 14px 22px; border: 1px solid var(--ink); transition: all .2s; }
+.nw-all:hover { background: var(--ink); color: #fff; }
+
+.nw-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+.nw-card { background: var(--white); border: 1px solid var(--rule); display: flex; flex-direction: column; text-decoration: none; transition: transform .25s ease, border-color .2s; }
+.nw-card:hover { transform: translateY(-3px); border-color: var(--ink2); }
+.nw-card-img { aspect-ratio: 16/9; overflow: hidden; background: var(--bg3); position: relative; }
+.nw-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s ease; }
+.nw-card:hover .nw-card-img img { transform: scale(1.05); }
+.nw-card-img-tag { position: absolute; top: 14px; left: 14px; background: var(--ink); color: var(--bg); font-family: 'Share Tech Mono', monospace; font-size: 9px; letter-spacing: .12em; padding: 5px 9px; text-transform: uppercase; }
+.nw-card-body { padding: 28px 28px 32px; flex: 1; display: flex; flex-direction: column; }
+.nw-card-date { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .14em; color: var(--ink3); text-transform: uppercase; margin-bottom: 14px; }
+.nw-card-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 26px; line-height: 1.15; letter-spacing: -.005em; text-transform: uppercase; color: var(--ink); margin-bottom: 14px; }
+.nw-card-excerpt { font-family: 'Barlow', sans-serif; font-size: 14px; font-weight: 300; line-height: 1.55; color: var(--ink2); flex: 1; margin-bottom: 18px; }
+.nw-card-arrow { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .14em; color: var(--red); text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
+.nw-card-arrow .ar { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; transition: transform .2s; }
+.nw-card:hover .nw-card-arrow .ar { transform: translateX(4px); }
+
+/* ── DOWNLOADS ── */
+#prd-downloads { background: var(--white); padding: 100px 6vw 110px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.dl-head { margin-bottom: 56px; }
+.dl-head h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: clamp(36px, 4vw, 56px); line-height: .96; letter-spacing: -.01em; text-transform: uppercase; color: var(--ink); margin: 0; max-width: 700px; }
+.dl-head h2 em { font-style: italic; font-weight: 300; color: var(--red); }
+.dl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--rule); }
+.dl-item { padding: 32px 28px; border-right: 1px solid var(--rule); display: flex; flex-direction: column; gap: 18px; transition: background .2s; text-decoration: none; color: inherit; min-height: 220px; }
+.dl-item:hover { background: var(--bg); }
+.dl-item:last-child { border-right: none; }
+.dl-item-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.dl-item-type { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .14em; color: var(--red); text-transform: uppercase; }
+.dl-item-size { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--ink3); }
+.dl-item-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 22px; line-height: 1.15; text-transform: uppercase; color: var(--ink); flex: 1; }
+.dl-item-desc { font-family: 'Barlow', sans-serif; font-size: 13px; font-weight: 300; color: var(--ink3); line-height: 1.55; }
+.dl-item-action { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .14em; color: var(--ink); text-transform: uppercase; display: flex; align-items: center; justify-content: space-between; padding-top: 16px; border-top: 1px solid var(--rule); }
+.dl-item.coming-soon { opacity: .58; pointer-events: none; }
+.dl-item.coming-soon .dl-item-action { color: var(--ink3); }
+
+/* ── GALLERY ── */
+#prd-gallery { background: var(--bg); padding: 110px 6vw 120px; }
+.gl-head { margin-bottom: 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: end; }
+.gl-head h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: clamp(40px, 4.6vw, 68px); line-height: .94; letter-spacing: -.01em; text-transform: uppercase; color: var(--ink); margin: 0; }
+.gl-head h2 em { font-style: italic; font-weight: 300; color: var(--red); }
+.gl-intro { font-family: 'Barlow', sans-serif; font-size: 16px; font-weight: 300; line-height: 1.6; color: var(--ink2); max-width: 540px; padding-bottom: 4px; }
+
+.gl-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 14px; }
+.gl-item { overflow: hidden; position: relative; background: var(--bg3); }
+.gl-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1s cubic-bezier(.2,.7,.2,1); }
+.gl-item:hover img { transform: scale(1.05); }
+.gl-item::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,.55) 100%); pointer-events: none; opacity: 0; transition: opacity .3s; }
+.gl-item:hover::after { opacity: 1; }
+.gl-item-cap { position: absolute; left: 18px; bottom: 18px; right: 18px; z-index: 2; color: #fff; opacity: 0; transform: translateY(8px); transition: opacity .3s, transform .3s; }
+.gl-item:hover .gl-item-cap { opacity: 1; transform: none; }
+.gl-item-cap-label { font-family: 'Share Tech Mono', monospace; font-size: 9px; letter-spacing: .14em; color: var(--red); text-transform: uppercase; margin-bottom: 4px; }
+.gl-item-cap-title { font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 400; line-height: 1.15; text-transform: uppercase; }
+/* Grid spans */
+.gl-w6 { grid-column: span 6; }
+.gl-w4 { grid-column: span 4; }
+.gl-w3 { grid-column: span 3; }
+.gl-w8 { grid-column: span 8; }
+.gl-h-tall { aspect-ratio: 4/5; }
+.gl-h-med { aspect-ratio: 3/2; }
+.gl-h-wide { aspect-ratio: 16/9; }
+.gl-h-sq { aspect-ratio: 1/1; }
+
+/* ── CTA ── */
+#prd-cta { background: var(--ink); color: #fff; padding: 110px 6vw 120px; position: relative; overflow: hidden; }
+.cta-bg { position: absolute; inset: 0; opacity: .14; }
+.cta-bg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cta-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1.4fr 1fr; gap: 60px; align-items: center; max-width: 1400px; margin: 0 auto; }
+.cta-eyebrow { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .18em; color: rgba(255,255,255,.65); text-transform: uppercase; display: flex; align-items: center; gap: 14px; margin-bottom: 26px; }
+.cta-eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--red); }
+.cta-inner h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: clamp(48px, 5.5vw, 84px); line-height: .94; letter-spacing: -.01em; text-transform: uppercase; color: #fff; margin: 0 0 28px; }
+.cta-inner h2 em { font-style: italic; font-weight: 300; color: var(--red); }
+.cta-sub { font-family: 'Barlow', sans-serif; font-size: 17px; font-weight: 300; line-height: 1.6; color: rgba(255,255,255,.78); max-width: 620px; margin-bottom: 36px; }
+.cta-actions { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+.cta-btn { font-family: 'Share Tech Mono', monospace; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; padding: 22px 32px; text-decoration: none; border: 1px solid; display: flex; align-items: center; justify-content: space-between; gap: 24px; transition: all .2s ease; width: 100%; min-width: 320px; }
+.cta-btn-primary { background: var(--red); border-color: var(--red); color: #fff; }
+.cta-btn-primary:hover { background: #fff; color: var(--ink); border-color: #fff; }
+.cta-btn-ghost { background: transparent; border-color: rgba(255,255,255,.4); color: #fff; }
+.cta-btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+.cta-btn .ar { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; }
+.cta-contact { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .12em; color: rgba(255,255,255,.5); padding-top: 18px; border-top: 1px solid rgba(255,255,255,.12); margin-top: 8px; line-height: 1.8; }
+.cta-contact strong { color: #fff; font-weight: 400; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .ph-meta { grid-template-columns: repeat(3, auto); gap: 24px; }
+  .ph-meta-val { font-size: 22px; }
+  .ov-head { grid-template-columns: 1fr; gap: 28px; }
+  .ov-body { grid-template-columns: 1fr; gap: 28px; }
+  .ov-features { grid-template-columns: repeat(2, 1fr); }
+  .sh-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 40vh 40vh 40vh; }
+  .sh-feature { grid-column: span 2; grid-row: span 1; }
+  .nw-grid { grid-template-columns: 1fr; }
+  .dl-grid { grid-template-columns: 1fr; }
+  .dl-item { border-right: none; border-bottom: 1px solid var(--rule); }
+  .dl-item:last-child { border-bottom: none; }
+  .gl-head { grid-template-columns: 1fr; gap: 24px; }
+  .gl-w6, .gl-w4, .gl-w3, .gl-w8 { grid-column: span 12; }
+  .cta-inner { grid-template-columns: 1fr; gap: 36px; }
+}
+@media (max-width: 640px) {
+  .ph-content { padding: 32px 22px 36px; }
+  .ph-top { flex-direction: column; gap: 12px; }
+  .ph-prd-id { text-align: left; }
+  .ph-h1 { font-size: clamp(44px, 12vw, 72px); }
+  .ph-logo-wrap { height: 60px; padding: 10px 16px; }
+  .ph-meta { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .ph-bottom { flex-direction: column; align-items: flex-start; }
+  #prd-overview, #prd-news, #prd-downloads, #prd-gallery, #prd-cta { padding-left: 22px; padding-right: 22px; padding-top: 70px; padding-bottom: 70px; }
+  .ov-features { grid-template-columns: 1fr; }
+  .nw-head { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<nav class="site-nav">
+  <div class="nav-left">
+    <a href="../index.html" class="nav-logo-mark" aria-label="Exterior Technologies Group">
+      <img src="../assets/logos/etg.png" alt="Exterior Technologies Group">
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../products.html" class="active">Products</a></li>
+    <li><a href="../services.html">Services</a></li>
+    <li><a href="../news.html">News</a></li>
+    <li><a href="../lunch-and-learn.html">Lunch &amp; Learn</a></li>
+    <li><a href="../about.html">About Us</a></li>
+  </ul>
+  <a href="../contact.html" class="nav-cta">Contact Us</a>
+  <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- ═════════════════ HERO ═════════════════ -->
+<section id="prd-hero">
+  <div class="ph-bg">
+    <img src="../assets/products/kalzip/kalzip-exterior-wall-cladding-canada-exterior-technologies-group-ttc-york-university-station-aerial-01.jpg" alt="TTC York University Station — Kalzip standing seam aluminum roof aerial view, Exterior Technologies Group Canada">
+  </div>
+  <div class="ph-content">
+    <div class="ph-top">
+      <div class="ph-crumbs"><a href="../index.html">Home</a><span class="sep">/</span><a href="../products.html">Products</a><span class="sep">/</span>Kalzip</div>
+      <div class="ph-prd-id">// PRD-02 / STANDING SEAM CLADDING</div>
+    </div>
+
+    <div class="ph-center">
+      <div class="ph-logo-wrap">
+        <img src="../assets/logos/kalzip.png" alt="Kalzip">
+      </div>
+      <h1 class="ph-h1">Standing seam<br><em>aluminum</em>, perfected.</h1>
+      <p class="ph-tagline">The world-leading aluminum standing seam roofing and cladding system — over 1.3 billion square feet installed across six continents.</p>
+    </div>
+
+    <div class="ph-bottom">
+      <div class="ph-meta">
+        <div class="ph-meta-item">
+          <div class="ph-meta-label">// INSTALLED</div>
+          <div class="ph-meta-val"><span class="red">1.3B+</span> sq ft</div>
+        </div>
+        <div class="ph-meta-item">
+          <div class="ph-meta-label">// SYSTEM</div>
+          <div class="ph-meta-val">XT roll-form</div>
+        </div>
+        <div class="ph-meta-item">
+          <div class="ph-meta-label">// HERITAGE</div>
+          <div class="ph-meta-val"><span class="red">German</span> engineered</div>
+        </div>
+      </div>
+      <div class="ph-cta-row">
+        <a href="#prd-overview" class="ph-btn ph-btn-primary">Explore <span class="ar">↓</span></a>
+        <a href="../contact.html" class="ph-btn ph-btn-ghost">Request Specs <span class="ar">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════ OVERVIEW ═════════════════ -->
+<section id="prd-overview">
+  <div class="ov-head reveal">
+    <div class="ov-head-left">
+      <div class="ov-eyebrow">// PRODUCT OVERVIEW</div>
+      <h2>One system.<br><em>Infinite</em> geometries.</h2>
+    </div>
+    <p class="ov-lead">Kalzip is the world's first and most-installed standing seam aluminum roofing and cladding system. Profiled aluminum panels are precision-rolled on-site, mechanically seamed, and engineered to span curved, faceted, and free-form geometries that conventional metal roofing cannot achieve.</p>
+  </div>
+
+  <div class="ov-body reveal">
+    <div class="ov-col">
+      <p>Originating in Germany in 1968, Kalzip pioneered the modern standing seam roof — replacing rivets, screws, and fasteners with a continuous mechanical seam that eliminates penetrations through the weather barrier. The system uses lightweight, corrosion-resistant aluminum (one-third the weight of steel) and delivers exceptional spans without intermediate supports.</p>
+      <p>For Canadian projects, <strong>Kalzip's XT roll-forming technology</strong> allows panels to be manufactured on-site in lengths up to 300 feet — eliminating end-laps and the leakage risk they introduce. The result is a single-piece, watertight envelope from ridge to eave.</p>
+    </div>
+    <div class="ov-col">
+      <p>Beyond performance, Kalzip's sculptural potential is what draws architects: panels can be smooth-curved, tapered, perforated, and finished in coil-coated PVDF colors or natural mill aluminum. The <strong>E-Clip thermal break</strong> dramatically reduces conductive heat loss at substructure connections — critical for cold-climate energy codes.</p>
+      <p>ETG delivers Kalzip throughout Canada with full pre-construction support: shop drawings, structural analysis, thermal modeling, and installer coordination. From civic buildings to fire stations to transit hubs, Kalzip is the system architects specify when the envelope <em>is</em> the architecture.</p>
+    </div>
+  </div>
+
+  <div class="ov-features reveal">
+    <div class="ov-feat">
+      <div class="ov-feat-icon">// 01</div>
+      <div class="ov-feat-title">XT On-Site Rollform</div>
+      <p class="ov-feat-desc">Panels manufactured to length on site — no end laps, no leak points.</p>
+    </div>
+    <div class="ov-feat">
+      <div class="ov-feat-icon">// 02</div>
+      <div class="ov-feat-title">E-Clip Thermal Break</div>
+      <p class="ov-feat-desc">Engineered clip system that minimizes thermal bridging at substructure.</p>
+    </div>
+    <div class="ov-feat">
+      <div class="ov-feat-icon">// 03</div>
+      <div class="ov-feat-title">Smooth-Curved Panels</div>
+      <p class="ov-feat-desc">Factory-curved profiles support free-form architectural geometries.</p>
+    </div>
+    <div class="ov-feat">
+      <div class="ov-feat-icon">// 04</div>
+      <div class="ov-feat-title">PVDF Coil-Coated</div>
+      <p class="ov-feat-desc">Full color range with 30+ year fade warranty and recyclable aluminum substrate.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════ PROJECT SHOWCASE ═════════════════ -->
+<section id="prd-showcase">
+  <div class="sh-grid">
+    <div class="sh-img sh-feature">
+      <img src="../assets/products/kalzip/kalzip-exterior-wall-cladding-canada-exterior-technologies-group-ttc-york-university-station-aerial-01.jpg" alt="TTC York University Station — Kalzip aerial view">
+      <div class="sh-img-cap">
+        <div class="sh-img-cap-label">FEATURED · TRANSIT</div>
+        <div class="sh-img-cap-title">TTC York University Station</div>
+      </div>
+    </div>
+    <div class="sh-img">
+      <img src="../assets/products/kalzip/kalzip-exterior-wall-cladding-canada-exterior-technologies-group-taylor-centre-performing-arts-cantilever-03.jpg" alt="Taylor Centre for the Performing Arts cantilever — Kalzip cladding">
+      <div class="sh-img-cap">
+        <div class="sh-img-cap-label">CULTURAL</div>
+        <div class="sh-img-cap-title">Taylor Centre for the Performing Arts</div>
+      </div>
+    </div>
+    <div class="sh-img">
+      <img src="../assets/products/kalzip/kalzip-exterior-wall-cladding-canada-exterior-technologies-group-caserne-5-fire-station-roof-01.jpg" alt="Caserne 5 fire station — Kalzip roof">
+      <div class="sh-img-cap">
+        <div class="sh-img-cap-label">CIVIC</div>
+        <div class="sh-img-cap-title">Caserne 5 Fire Station</div>
+      </div>
+    </div>
+    <div class="sh-img">
+      <img src="../assets/products/kalzip/kalzip-exterior-wall-cladding-canada-exterior-technologies-group-conestoga-recreation-centre-arched-roof-01.jpg" alt="Conestoga Recreation Centre arched Kalzip roof">
+      <div class="sh-img-cap">
+        <div class="sh-img-cap-label">EDUCATION</div>
+        <div class="sh-img-cap-title">Conestoga Student Recreation Centre</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════ NEWS ═════════════════ -->
+<section id="prd-news">
+  <div class="nw-head reveal">
+    <div class="nw-head-left">
+      <div class="ov-eyebrow">// IN PRACTICE</div>
+      <h2>Kalzip <em>projects</em> &amp; insights</h2>
+    </div>
+    <a href="../news.html" class="nw-all">All News <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 16px; margin-left:6px;">→</span></a>
+  </div>
+
+  <div class="nw-grid reveal">
+    <a href="../news/boulevard-club-toronto-flowing-envelope.html" class="nw-card">
+      <div class="nw-card-img">
+        <span class="nw-card-img-tag">PROJECT FEATURE</span>
+        <img src="../assets/products/kalzip/kalzip-exterior-wall-cladding-canada-exterior-technologies-group-boulevard-club-toronto-waterfront-night-01.jpg" alt="Beautifully flowing building envelope minimises environmental impact">
+      </div>
+      <div class="nw-card-body">
+        <div class="nw-card-date">// APR-20-2026</div>
+        <h3 class="nw-card-title">Beautifully flowing building envelope minimises environmental impact</h3>
+        <p class="nw-card-excerpt">Toronto's prestigious Boulevard Club resolved to further develop their already impressive range of sporting and leisure facilities by replacing an aging boathouse with a stylish new west wing extension. As well as accommodating all the new facilities, the club was keen to ensure…</p>
+        <div class="nw-card-arrow">Read Article <span class="ar">→</span></div>
+      </div>
+    </a>
+
+    <a href="../news/pickering-pedestrian-bridge-kalzip.html" class="nw-card">
+      <div class="nw-card-img">
+        <span class="nw-card-img-tag">PROJECT FEATURE</span>
+        <img src="../assets/products/alpolic/alpolic-canada-exterior-technologies-group-custom-fabricated-mall-entrance-branch-pattern-01.jpg" alt="Pedestrian Bridge in Pickering, Canada: A Landmark in Modern Bridge Design">
+      </div>
+      <div class="nw-card-body">
+        <div class="nw-card-date">// APR-02-2026</div>
+        <h3 class="nw-card-title">Pedestrian Bridge in Pickering, Canada: A Landmark in Modern Bridge Design</h3>
+        <p class="nw-card-excerpt">Explore the Pickering GO Pedestrian Bridge in Canada—an award-winning example of modern bridge design using Kalzip metal cladding. Learn how innovative engineering and advanced cladding systems create architectural landmarks, with support from Exterior Technologies Group.</p>
+        <div class="nw-card-arrow">Read Article <span class="ar">→</span></div>
+      </div>
+    </a>
+
+    <a href="../news/kalzip-e-clip-energy-efficient.html" class="nw-card">
+      <div class="nw-card-img">
+        <span class="nw-card-img-tag">KALZIP</span>
+        <img src="../assets/products/kalzip/kalzip-exterior-wall-cladding-canada-exterior-technologies-group-taylor-centre-performing-arts-cantilever-03.jpg" alt="Energy-efficient thanks to the E-Clip">
+      </div>
+      <div class="nw-card-body">
+        <div class="nw-card-date">// FEB-17-2026</div>
+        <h3 class="nw-card-title">Energy-efficient thanks to the E-Clip</h3>
+        <p class="nw-card-excerpt">Sustainable building envelopes include roof constructions that are designed to reduce heat loss and promote energy efficiency within new and existing buildings The fully patented E-clip by Kalzip is designed to provide minimal thermal bridging through the Kalzip system and…</p>
+        <div class="nw-card-arrow">Read Article <span class="ar">→</span></div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ═════════════════ DOWNLOADS ═════════════════ -->
+<section id="prd-downloads">
+  <div class="dl-head reveal">
+    <div class="ov-eyebrow">// RESOURCES</div>
+    <h2>Specifications &amp; <em>technical</em> documents</h2>
+  </div>
+
+  <div class="dl-grid reveal">
+    <a href="#" class="dl-item coming-soon">
+      <div class="dl-item-top">
+        <span class="dl-item-type">PDF · BROCHURE</span>
+        <span class="dl-item-size">Coming soon</span>
+      </div>
+      <h3 class="dl-item-name">Kalzip Product Brochure</h3>
+      <p class="dl-item-desc">Complete overview of profile options, finishes, and substructure systems for Canadian projects.</p>
+      <div class="dl-item-action"><span>Coming Soon</span><span>—</span></div>
+    </a>
+    <a href="#" class="dl-item coming-soon">
+      <div class="dl-item-top">
+        <span class="dl-item-type">PDF · SPEC</span>
+        <span class="dl-item-size">Coming soon</span>
+      </div>
+      <h3 class="dl-item-name">CSC Master Specification</h3>
+      <p class="dl-item-desc">Three-part specification format compatible with Canadian standard CSC NMS workflows.</p>
+      <div class="dl-item-action"><span>Coming Soon</span><span>—</span></div>
+    </a>
+    <a href="#" class="dl-item coming-soon">
+      <div class="dl-item-top">
+        <span class="dl-item-type">PDF · GUIDE</span>
+        <span class="dl-item-size">Coming soon</span>
+      </div>
+      <h3 class="dl-item-name">Installation &amp; Detailing Guide</h3>
+      <p class="dl-item-desc">Standard details, fastening schedules, and thermal break configurations for design teams.</p>
+      <div class="dl-item-action"><span>Coming Soon</span><span>—</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- ═════════════════ GALLERY ═════════════════ -->
+<section id="prd-gallery">
+  <div class="gl-head reveal">
+    <div>
+      <div class="ov-eyebrow">// PROJECT GALLERY</div>
+      <h2>Kalzip <em>across</em> Canada</h2>
+    </div>
+    <p class="gl-intro">Selected Kalzip installations specified through ETG — civic, cultural, transit, and institutional projects from Toronto's waterfront to Calgary's performance halls.</p>
+  </div>
+
+  <div class="gl-grid reveal">
+    <div class="gl-item gl-w8 gl-h-wide">
+      <img src="../assets/products/kalzip/kalzip-exterior-wall-cladding-canada-exterior-technologies-group-boulevard-club-toronto-waterfront-night-01.jpg" alt="The Boulevard Club Toronto — Kalzip waterfront pavilion at night">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">TORONTO · WATERFRONT</div><div class="gl-item-cap-title">The Boulevard Club</div></div>
+    </div>
+    <div class="gl-item gl-w4 gl-h-wide">
+      <img src="../assets/products/kalzip/kalzip-exterior-wall-cladding-canada-exterior-technologies-group-boulevard-club-toronto-waterfront-harbour-02.jpg" alt="The Boulevard Club from harbour">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">TORONTO</div><div class="gl-item-cap-title">Boulevard Club — Harbour View</div></div>
+    </div>
+
+    <div class="gl-item gl-w4 gl-h-tall">
+      <img src="../assets/products/kalzip/kalzip-exterior-wall-cladding-canada-exterior-technologies-group-taylor-centre-performing-arts-cantilever-03.jpg" alt="Taylor Centre cantilever">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">CALGARY</div><div class="gl-item-cap-title">Taylor Centre — Cantilever</div></div>
+    </div>
+    <div class="gl-item gl-w4 gl-h-tall">
+      <img src="../assets/products/kalzip/kalzip-exterior-wall-cladding-canada-exterior-technologies-group-taylor-centre-performing-arts-night-01.jpg" alt="Taylor Centre at night">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">CALGARY · CULTURAL</div><div class="gl-item-cap-title">Taylor Centre for the Performing Arts</div></div>
+    </div>
+    <div class="gl-item gl-w4 gl-h-tall">
+      <img src="../assets/products/kalzip/kalzip-exterior-wall-cladding-canada-exterior-technologies-group-taylor-centre-performing-arts-facade-02.jpg" alt="Taylor Centre facade detail">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">CALGARY</div><div class="gl-item-cap-title">Taylor Centre — Façade</div></div>
+    </div>
+
+    <div class="gl-item gl-w6 gl-h-med">
+      <img src="../assets/products/kalzip/kalzip-exterior-wall-cladding-canada-exterior-technologies-group-conestoga-recreation-centre-arched-roof-01.jpg" alt="Conestoga Recreation Centre arched roof">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">KITCHENER · EDUCATION</div><div class="gl-item-cap-title">Conestoga Recreation Centre</div></div>
+    </div>
+    <div class="gl-item gl-w6 gl-h-med">
+      <img src="../assets/products/kalzip/kalzip-exterior-wall-cladding-canada-exterior-technologies-group-conestoga-recreation-centre-summer-elevation-02.jpg" alt="Conestoga summer elevation">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">KITCHENER</div><div class="gl-item-cap-title">Conestoga — Summer Elevation</div></div>
+    </div>
+
+    <div class="gl-item gl-w4 gl-h-sq">
+      <img src="../assets/products/kalzip/kalzip-exterior-wall-cladding-canada-exterior-technologies-group-conestoga-recreation-centre-front-entrance-03.jpg" alt="Conestoga front entrance">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">KITCHENER</div><div class="gl-item-cap-title">Conestoga — Entrance</div></div>
+    </div>
+    <div class="gl-item gl-w4 gl-h-sq">
+      <img src="../assets/products/kalzip/kalzip-exterior-wall-cladding-canada-exterior-technologies-group-caserne-5-fire-station-roof-01.jpg" alt="Caserne 5 fire station roof">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">QUÉBEC · CIVIC</div><div class="gl-item-cap-title">Caserne 5 Fire Station</div></div>
+    </div>
+    <div class="gl-item gl-w4 gl-h-sq">
+      <img src="../assets/products/kalzip/kalzip-exterior-wall-cladding-canada-exterior-technologies-group-caserne-5-fire-station-entrance-02.jpg" alt="Caserne 5 entrance">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">QUÉBEC</div><div class="gl-item-cap-title">Caserne 5 — Entrance</div></div>
+    </div>
+
+    <div class="gl-item gl-w4 gl-h-tall">
+      <img src="../assets/products/kalzip/kalzip-exterior-wall-cladding-canada-exterior-technologies-group-institutional-stairwell-02.jpg" alt="Institutional building stairwell façade">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">INSTITUTIONAL</div><div class="gl-item-cap-title">Stairwell Façade</div></div>
+    </div>
+    <div class="gl-item gl-w4 gl-h-tall">
+      <img src="../assets/products/kalzip/kalzip-exterior-wall-cladding-canada-exterior-technologies-group-institutional-skybridge-01.jpg" alt="Institutional skybridge">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">INSTITUTIONAL</div><div class="gl-item-cap-title">Glass Skybridge</div></div>
+    </div>
+    <div class="gl-item gl-w4 gl-h-tall">
+      <img src="../assets/products/kalzip/kalzip-exterior-wall-cladding-canada-exterior-technologies-group-conestoga-recreation-centre-corner-detail-04.jpg" alt="Conestoga corner detail">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">KITCHENER</div><div class="gl-item-cap-title">Conestoga — Corner Detail</div></div>
+    </div>
+
+    <div class="gl-item gl-w6 gl-h-wide">
+      <img src="../assets/products/kalzip/kalzip-exterior-wall-cladding-canada-exterior-technologies-group-boulevard-club-toronto-waterfront-courts-04.jpg" alt="Boulevard Club from tennis courts">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">TORONTO</div><div class="gl-item-cap-title">Boulevard Club — Tennis Courts</div></div>
+    </div>
+    <div class="gl-item gl-w6 gl-h-wide">
+      <img src="../assets/products/kalzip/kalzip-exterior-wall-cladding-canada-exterior-technologies-group-boulevard-club-toronto-waterfront-harbour-03.jpg" alt="Boulevard Club from harbour day">
+      <div class="gl-item-cap"><div class="gl-item-cap-label">TORONTO</div><div class="gl-item-cap-title">Boulevard Club — Day</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════ CTA ═════════════════ -->
+<section id="prd-cta">
+  <div class="cta-bg">
+    <img src="../assets/products/kalzip/kalzip-exterior-wall-cladding-canada-exterior-technologies-group-ttc-york-university-station-aerial-01.jpg" alt="">
+  </div>
+  <div class="cta-inner reveal">
+    <div>
+      <div class="cta-eyebrow">START A KALZIP PROJECT</div>
+      <h2>Let's build your <em>envelope</em>.</h2>
+      <p class="cta-sub">Whether you're at concept design, design development, or tendering — our team provides shop drawings, structural analysis, thermal modeling, and installer coordination for Kalzip projects across Canada.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="../contact.html" class="cta-btn cta-btn-primary"><span>Request a Consultation</span><span class="ar">→</span></a>
+      <a href="../lunch-and-learn/kalzip-lunch-and-learn.html" class="cta-btn cta-btn-ghost"><span>Book a Lunch &amp; Learn</span><span class="ar">→</span></a>
+      <a href="../products.html" class="cta-btn cta-btn-ghost"><span>Explore Other Products</span><span class="ar">→</span></a>
+      <div class="cta-contact">
+        <strong>Speak directly with our team</strong><br>
+        1 (844) 240-0452 &nbsp;·&nbsp; info@etgcc.com
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════ FOOTER ═════════════════ -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="../index.html" class="footer-logo">
+        <img src="../assets/logos/etg.png" alt="Exterior Technologies Group">
+      </a>
+      <p class="footer-tag">SMART Architecture — creative, simple, sustainable.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="alpolic-materials.html">Alpolic Materials</a></li>
+        <li><a href="kalzip.html">Kalzip</a></li>
+        <li><a href="elzinc.html">elZinc</a></li>
+        <li><a href="tac-thermal-spacer.html">TAC Thermal Spacer</a></li>
+        <li><a href="epic-metals.html">EPIC Metals</a></li>
+        <li><a href="radius-track.html">Radius Track</a></li>
+        <li><a href="forme-design.html">ForMe Design</a></li>
+        <li><a href="terracotta-favemanc.html">Terracotta Favemanc</a></li>
+        <li><a href="parklex-prodema.html">Parklex Prodema</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../news.html">News &amp; Projects</a></li>
+        <li><a href="../lunch-and-learn.html">Lunch &amp; Learn</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:18442400452">1 (844) 240-0452</a></li>
+        <li><a href="mailto:info@etgcc.com">info@etgcc.com</a></li>
+      </ul>
+      <p class="footer-loc">Toronto · Montréal · Calgary<br>Halifax · Vancouver</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 EXTERIOR TECHNOLOGIES GROUP. ALL RIGHTS RESERVED.</div>
+    <ul class="footer-policy">
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Terms</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
