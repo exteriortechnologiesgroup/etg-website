@@ -142,6 +142,30 @@
 .sh-feature { grid-row: span 2; }
 
 /* ── FINISHES (the elZinc product family) ── */
+/* ── NEWS ── */
+#prd-news { background: var(--bg); padding: 110px 6vw 120px; border-top: 1px solid var(--rule); }
+.nw-head { display: flex; justify-content: space-between; align-items: end; padding-bottom: 48px; border-bottom: 1px solid var(--rule); margin-bottom: 56px; gap: 40px; flex-wrap: wrap; }
+.nw-head-left .ov-eyebrow { margin-bottom: 18px; }
+.nw-head h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: clamp(36px, 4vw, 56px); line-height: .96; letter-spacing: -.01em; text-transform: uppercase; color: var(--ink); margin: 0; }
+.nw-head h2 em { font-style: italic; font-weight: 300; color: var(--red); }
+.nw-all { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: .14em; color: var(--ink2); text-decoration: none; text-transform: uppercase; padding: 14px 22px; border: 1px solid var(--ink); transition: all .2s; }
+.nw-all:hover { background: var(--ink); color: #fff; }
+.nw-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+.nw-card { background: var(--white); border: 1px solid var(--rule); display: flex; flex-direction: column; text-decoration: none; transition: transform .25s ease, border-color .2s; }
+.nw-card:hover { transform: translateY(-3px); border-color: var(--ink2); }
+.nw-card-img { aspect-ratio: 16/9; overflow: hidden; background: var(--bg3); position: relative; }
+.nw-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s ease; }
+.nw-card:hover .nw-card-img img { transform: scale(1.05); }
+.nw-card-img-tag { position: absolute; top: 14px; left: 14px; background: var(--ink); color: var(--bg); font-family: 'Share Tech Mono', monospace; font-size: 9px; letter-spacing: .12em; padding: 5px 9px; text-transform: uppercase; }
+.nw-card-body { padding: 28px 28px 32px; flex: 1; display: flex; flex-direction: column; }
+.nw-card-date { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .14em; color: var(--ink3); text-transform: uppercase; margin-bottom: 14px; }
+.nw-card-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 26px; line-height: 1.15; letter-spacing: -.005em; text-transform: uppercase; color: var(--ink); margin-bottom: 14px; }
+.nw-card-excerpt { font-family: 'Barlow', sans-serif; font-size: 14px; font-weight: 300; line-height: 1.55; color: var(--ink2); flex: 1; margin-bottom: 18px; }
+.nw-card-arrow { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: .14em; color: var(--red); text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
+.nw-card-arrow .ar { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; transition: transform .2s; }
+.nw-card:hover .nw-card-arrow .ar { transform: translateX(4px); }
+@media (max-width: 900px) { .nw-grid { grid-template-columns: 1fr; } }
+
 #prd-systems { background: var(--white); padding: 110px 6vw 120px; border-top: 1px solid var(--rule); }
 .sy-head { display: grid; grid-template-columns: 1fr 2fr; gap: 56px; align-items: end; padding-bottom: 56px; border-bottom: 1px solid var(--rule); margin-bottom: 56px; }
 .sy-head h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: clamp(40px, 4.6vw, 68px); line-height: .94; letter-spacing: -.01em; text-transform: uppercase; color: var(--ink); margin: 0; }
@@ -417,6 +441,46 @@
 </section>
 
 <!-- ═════════════════ FINISHES (SYSTEMS) ═════════════════ -->
+
+<!-- ═════════════════ NEWS ═════════════════ -->
+<section id="prd-news">
+  <div class="nw-head reveal">
+    <div class="nw-head-left">
+      <div class="ov-eyebrow">// IN PRACTICE</div>
+      <h2>elZinc <em>projects</em> &amp; insights</h2>
+    </div>
+    <a href="../news.html" class="nw-all">All News <span style="font-family: 'Barlow Condensed', sans-serif; font-size: 16px; margin-left:6px;">→</span></a>
+  </div>
+
+  <div class="nw-grid reveal">
+    <a href="../news/zinc-roofing-in-cold-climates.html" class="nw-card">
+      <div class="nw-card-img">
+        <span class="nw-card-img-tag">TECHNICAL</span>
+        <img src="../assets/products/elzinc/elzinc-canada-exterior-technologies-group-graphite-residential-standing-seam-roof-01.webp" alt="Zinc Roofing in Cold Climates: Design and Durability">
+      </div>
+      <div class="nw-card-body">
+        <div class="nw-card-date">// DEC-20-2023</div>
+        <h3 class="nw-card-title">Zinc Roofing in Cold Climates: Design and Durability</h3>
+        <p class="nw-card-excerpt">How architectural zinc performs through Canadian freeze-thaw cycles — the self-healing patina, detailing for snow and ice, and why zinc roofs routinely outlast the buildings beneath them.</p>
+        <div class="nw-card-arrow">Read Article <span class="ar">→</span></div>
+      </div>
+    </a>
+
+    <a href="../news/elzinc-epd-sustainability.html" class="nw-card">
+      <div class="nw-card-img">
+        <span class="nw-card-img-tag">SUSTAINABILITY</span>
+        <img src="../assets/products/elzinc/elzinc-canada-exterior-technologies-group-ottawa-civic-building-graphite-standing-seam-01.jpg" alt="Sustainability Innovation in Exterior Cladding: elZinc's EPDs and Our Commitment">
+      </div>
+      <div class="nw-card-body">
+        <div class="nw-card-date">// FEB-15-2024</div>
+        <h3 class="nw-card-title">Sustainability Innovation: elZinc's EPDs and Our Commitment</h3>
+        <p class="nw-card-excerpt">elZinc's Environmental Product Declarations give specifiers verified life-cycle data for zinc cladding and roofing — supporting LEED submissions and genuinely sustainable building envelopes.</p>
+        <div class="nw-card-arrow">Read Article <span class="ar">→</span></div>
+      </div>
+    </a>
+  </div>
+</section>
+
 <section id="prd-systems">
   <div class="sy-head reveal">
     <div>
